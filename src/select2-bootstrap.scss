@@ -87,10 +87,14 @@ $clear-selection-color: $dropdown-arrow-color !default;
             color: $input-color-placeholder;
         }
 
-        /* Firefox 19+ */
+        /**
+         * Firefox 19+
+         *
+         * @see http://stackoverflow.com/questions/24236240/color-for-styled-placeholder-text-is-muted-in-firefox
+         */
         &::-moz-placeholder {
-
             color: $input-color-placeholder;
+            opacity: 1;
         }
 
         &:-ms-input-placeholder {
@@ -395,7 +399,7 @@ $clear-selection-color: $dropdown-arrow-color !default;
         }
 
         .select2-selection__placeholder {
-            color: #999;
+            color: $input-color-placeholder;
             margin-top: 5px;
             float: left;
         }

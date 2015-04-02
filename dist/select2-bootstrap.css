@@ -66,7 +66,11 @@
 .select2-container--bootstrap .select2-search__field {
   outline: 0;
   /* Firefox 18- */
-  /* Firefox 19+ */
+  /**
+   * Firefox 19+
+   *
+   * @see http://stackoverflow.com/questions/24236240/color-for-styled-placeholder-text-is-muted-in-firefox
+   */
 }
 .select2-container--bootstrap .select2-search__field::-webkit-input-placeholder {
   color: #999;
@@ -76,6 +80,7 @@
 }
 .select2-container--bootstrap .select2-search__field::-moz-placeholder {
   color: #999;
+  opacity: 1;
 }
 .select2-container--bootstrap .select2-search__field:-ms-input-placeholder {
   color: #999;
