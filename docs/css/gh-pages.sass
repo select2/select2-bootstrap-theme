@@ -1,0 +1,103 @@
+---
+---
+@import ../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables
+@import variables
+@import extends
+@import mixins
+@import select2-result-repository
+
+a
+  &:hover,
+  &:focus
+    text-decoration: none
+
+.demo
+  padding: 80px 30px 0
+  .footer
+    padding-top: 200px
+    padding-bottom: 80px
+    @extend %background-image
+
+.home
+  padding-bottom: 30px
+  @extend %background-image
+  background-position: 50% 50%
+  body 
+    background-color: transparent
+  .container
+    max-width: 700px
+
+.jumbotron
+  background-color: transparent
+  text-align: center
+  font-weight: normal
+  &-title
+    margin-top: 40px
+    font-size: 28px
+  h2
+    text-align: center
+    font-size: 16px
+  hr
+    border-color: #eee
+    width: 100px
+  .lead
+    font-size: 16px
+    a
+      +link
+  .form-group
+    background: none
+  .select2-wrapper
+    width: 300px
+    text-align: left
+    margin: 0 auto $padding-large-horizontal
+    transition: all .1s ease-in-out
+  .btn
+    &-outline
+      border-color: $component-active-bg
+      font-size: inherit
+      padding: 18px 24px
+      transition: all .1s ease-in-out
+      &:hover,
+      &:active
+        color: $component-active-color
+        background-color: $component-active-bg
+    &-lg
+      padding: 10px 16px
+      font-size: 18px
+      line-height: 1.33
+      border-radius: 6px
+      margin-top: 15px
+      margin-bottom: 15px
+      margin-left: 0
+
+.footer-links
+  margin-top: $padding-large-horizontal
+  margin-bottom: 0
+  padding-bottom: $padding-large-horizontal
+  padding-left: 0
+  list-style: none
+  font-size: 14px
+  li 
+    display: inline
+    margin-left: 2px
+    margin-right: 2px
+
+.footer
+  text-align: center
+  color: #ccc
+  a
+    +link
+
+@media (min-width: $screen-sm)
+  .jumbotron
+    padding-top: 60px
+    padding-bottom: 60px
+    font-size: $lead-font-size
+    h1
+      font-size: 32px
+    .lead
+      font-size: $lead-font-size
+    .btn-lg
+      margin: 20px 0
+      padding: 18px 24px
+      font-size: $lead-font-size
