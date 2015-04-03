@@ -248,8 +248,8 @@
 								State
 							</button>
 						</div>
-						<select id="select2-button-addons-single-input-group-sm" class="form-control select2-remote">
-							<option value="select2/select2" selected="selected">select2/select2</option>
+						<select id="select2-button-addons-single-input-group-sm" class="form-control js-data-example-ajax">
+							<option value="2126244" selected="selected">twbs/bootstrap</option>
 						</select>
 					</div>
 				</div>
@@ -286,8 +286,8 @@
 								<li><a href="#">Separated link</a></li>
 							</ul>
 						</div>
-						<select id="select2-button-addons-single-input-group" class="form-control select2-remote">
-							<option value="select2/select2" selected="selected">select2/select2</option>
+						<select id="select2-button-addons-single-input-group" class="form-control js-data-example-ajax">
+							<option value="3620194" selected="selected">select2/select2</option>
 						</select>
 					</div>
 				</div>
@@ -312,8 +312,8 @@
 				<div class="col-md-7">
 					<label for="select2-button-addons-single-input-group-lg" class="control-label">Select2 custom data load</label>
 					<div class="input-group input-group-lg select2-bootstrap-append">
-						<select id="select2-button-addons-single-input-group-lg" class="form-control select2-remote">
-							<option value="select2/select2" selected="selected">select2/select2</option>
+						<select id="select2-button-addons-single-input-group-lg" class="form-control js-data-example-ajax">
+							<option value="33286882" selected="selected">fk/select2-bootstrap-theme</option>
 						</select>
 						<span class="input-group-btn">
 							<button class="btn btn-default" type="button" data-select2-open="select2-button-addons-single-input-group-lg">
@@ -394,7 +394,7 @@
 				width: "off"
 			} );
 
-			// @see https://github.com/ivaynberg/select2/commit/6661e3
+			// @see https://select2.github.io/examples.html#data-ajax
 			function formatRepo( repo ) {
 				if (repo.loading) return repo.text;
 
@@ -418,10 +418,10 @@
 			}
 
 			function formatRepoSelection( repo ) {
-				return repo.full_name;
+				return repo.full_name || repo.text;
 			}
 
-			$( ".select2-remote" ).select2({
+			$( ".js-data-example-ajax" ).select2({
 				theme: "bootstrap",
 				width : "off",
 				ajax: {
@@ -446,8 +446,8 @@
 				},
 				escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
 				minimumInputLength: 1,
-				templateResult: formatRepo, // omitted for brevity, see the source of this page
-				templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
+				templateResult: formatRepo,
+				templateSelection: formatRepoSelection
 			});
 
 			$( "button[data-select2-open]" ).click( function() {
@@ -464,7 +464,7 @@
 			// (was #select2-drop in Select2 v3.x, in Select2 v4 can be selected via
 			// body > .select2-container) if _any_ of the opened Select2's parents
 			// has one of these forementioned classes (YUCK! ;-))
-			$( ".select2, .select2-multiple, .select2-allow-clear, .select2-remote" ).on( "select2:open", function() {
+			$( ".select2, .select2-multiple, .select2-allow-clear, .js-data-example-ajax" ).on( "select2:open", function() {
 				if ( $( this ).parents( "[class*='has-']" ).length ) {
 					var classNames = $( this ).parents( "[class*='has-']" )[ 0 ].className.split( /\s+/ );
 
