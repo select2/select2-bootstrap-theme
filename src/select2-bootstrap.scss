@@ -316,7 +316,7 @@ $clear-selection-color: $dropdown-arrow-color !default;
     .select2-selection--single {
         height: $input-height-base;
         line-height: $line-height-base;
-        padding: $padding-base-vertical $padding-base-horizontal;
+        padding: $padding-base-vertical $padding-base-horizontal + $caret-width-base*3 $padding-base-vertical $padding-base-horizontal;
 
         /**
          * Clear the selection.
@@ -472,7 +472,7 @@ $clear-selection-color: $dropdown-arrow-color !default;
             font-size: $font-size-small;
             height: $input-height-small;
             line-height: $line-height-small;
-            padding: $padding-small-vertical $padding-small-horizontal;
+            padding: $padding-small-vertical $padding-small-horizontal + $caret-width-base*3 $padding-small-vertical $padding-small-horizontal;
 
             /* 2 */
             .select2-selection__arrow b {
@@ -506,7 +506,7 @@ $clear-selection-color: $dropdown-arrow-color !default;
             font-size: $font-size-large;
             height: $input-height-large;
             line-height: $line-height-large;
-            padding: $padding-large-vertical $padding-large-horizontal;
+            padding: $padding-large-vertical $padding-large-horizontal + $caret-width-large*3 $padding-large-vertical $padding-large-horizontal;
 
             /* 1 */
             .select2-selection__arrow {
@@ -569,6 +569,8 @@ $clear-selection-color: $dropdown-arrow-color !default;
          */
 
         .select2-selection--single {
+            padding-left: $padding-base-horizontal + $caret-width-base*3;
+            padding-right: $padding-base-horizontal;
             .select2-selection__rendered {
                 padding-right: 0;
                 padding-left: 0;
