@@ -78,7 +78,7 @@ $clear-selection-color: $dropdown-arrow-color !default;
     }
 
     /**
-     * Search field in dropdown.
+     * Search field in the Select2 dropdown.
      */
 
     .select2-search--dropdown {
@@ -322,9 +322,6 @@ $clear-selection-color: $dropdown-arrow-color !default;
 
         /**
          * Adjust the single Select2's dropdown arrow button appearance.
-         *
-         * @todo Bootstrap also knows a $caret-width-large; this size should be
-         *       used for the "large" sizing class
          */
 
         .select2-selection__arrow {
@@ -355,42 +352,6 @@ $clear-selection-color: $dropdown-arrow-color !default;
 
         .select2-selection__placeholder {
             color: $input-color-placeholder;
-        }
-
-        /**
-         * Address Bootstrap 3 control sizing classes
-         *
-         * 1. Adjust the dropdown arrow button icon position.
-         *
-         * @see http://getbootstrap.com/css/#forms-control-sizes
-         */
-
-        .input-sm &,
-        .input-group-sm & {
-            border-radius: $border-radius-small;
-            font-size: $font-size-small;
-            height: $input-height-small;
-            line-height: $line-height-small;
-            padding: $padding-small-vertical $padding-small-horizontal;
-
-            /* 1 */
-            .select2-selection__arrow b {
-                margin-left: -$padding-small-vertical;
-            }
-        }
-
-        .input-lg &,
-        .input-group-lg & {
-            border-radius: $border-radius-large;
-            font-size: $font-size-large;
-            height: $input-height-large;
-            line-height: $line-height-large;
-            padding: $padding-large-vertical $padding-large-horizontal;
-
-            /* 1 */
-            .select2-selection__arrow b {
-                margin-left: -$padding-large-vertical;
-            }
         }
     }
 
@@ -465,13 +426,45 @@ $clear-selection-color: $dropdown-arrow-color !default;
                 color: #333;
             }
         }
+    }
 
-        /**
-         * Address Bootstrap 3 control sizing classes
-         */
 
-        .input-sm &,
-        .input-group-sm & {
+
+
+
+    /**
+     * Address Bootstrap 3 control sizing classes
+     *
+     * 1. Adjust the dropdown arrow button icon position.
+     *
+     * @see http://getbootstrap.com/css/#forms-control-sizes
+     */
+
+    &.input-sm,
+    &.input-lg {
+        height: auto;
+        padding: 0;
+        font-size: 12px;
+        line-height: 1;
+        border-radius: 0;
+    }
+
+    &.input-sm,
+    .input-group-sm & {
+        .select2-selection--single {
+            border-radius: $border-radius-small;
+            font-size: $font-size-small;
+            height: $input-height-small;
+            line-height: $line-height-small;
+            padding: $padding-small-vertical $padding-small-horizontal;
+
+            /* 1 */
+            .select2-selection__arrow b {
+                margin-left: -$padding-small-vertical;
+            }
+        }
+
+        .select2-selection--multiple {
             min-height: $input-height-small;
 
             .select2-selection__choice {
@@ -488,9 +481,31 @@ $clear-selection-color: $dropdown-arrow-color !default;
                 line-height: $line-height-small;
             }
         }
+    }
 
-        .input-lg &,
-        .input-group-lg & {
+    &.input-lg,
+    .input-group-lg & {
+        .select2-selection--single {
+            border-radius: $border-radius-large;
+            font-size: $font-size-large;
+            height: $input-height-large;
+            line-height: $line-height-large;
+            padding: $padding-large-vertical $padding-large-horizontal;
+
+            /* 1 */
+            .select2-selection__arrow {
+                width: $caret-width-large;
+
+                b {
+                    border-width: $caret-width-large $caret-width-large 0 $caret-width-large;
+                    margin-left: -$caret-width-large;
+                    margin-left: -$padding-large-vertical;
+                    margin-top: -$caret-width-large/2;
+                }
+            }
+        }
+
+        .select2-selection--multiple {
             min-height: $input-height-large;
 
             .select2-selection__choice {
@@ -508,8 +523,8 @@ $clear-selection-color: $dropdown-arrow-color !default;
                 line-height: $line-height-large;
             }
         }
-    }
 
+    }
 
 
 
@@ -522,12 +537,16 @@ $clear-selection-color: $dropdown-arrow-color !default;
 
         /**
          * Single Select2
+         *
+         * 1. Makes sure that .select2-selection__placeholder is positioned
+         *    correctly.
          */
 
         .select2-selection--single {
             .select2-selection__rendered {
                 padding-right: 0;
                 padding-left: 0;
+                text-align: right; /* 1 */
             }
 
             .select2-selection__clear {
