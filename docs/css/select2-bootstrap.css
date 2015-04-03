@@ -39,12 +39,14 @@
       #MULTIPLE SELECT2
   \*------------------------------------*/
   /**
-   * Address Bootstrap 3 control sizing classes
+   * Address Bootstrap control sizing classes
    *
-   * 1. Adjust the dropdown arrow button icon position.
+   * 1. Reset Bootstrap defaults.
+   * 2. Adjust the dropdown arrow button icon position.
    *
    * @see http://getbootstrap.com/css/#forms-control-sizes
    */
+  /* 1 */
   /*------------------------------------*\
       #RTL SUPPORT
   \*------------------------------------*/
@@ -320,7 +322,7 @@
   height: 30px;
   line-height: 1.5;
   padding: 5px 10px;
-  /* 1 */
+  /* 2 */
 }
 .select2-container--bootstrap.input-sm .select2-selection--single .select2-selection__arrow b, .input-group-sm .select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
   margin-left: -5px;
@@ -372,6 +374,24 @@
   font-size: 18px;
   height: 44px;
   line-height: 1.3333333;
+}
+.select2-container--bootstrap.input-lg.select2-container--open .select2-selection--single {
+  /**
+   * Make the dropdown arrow point up while the dropdown is visible.
+   */
+}
+.select2-container--bootstrap.input-lg.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  border-color: transparent transparent #999 transparent;
+  border-width: 0 5px 5px 5px;
+}
+.input-group-lg .select2-container--bootstrap.select2-container--open .select2-selection--single {
+  /**
+   * Make the dropdown arrow point up while the dropdown is visible.
+   */
+}
+.input-group-lg .select2-container--bootstrap.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  border-color: transparent transparent #999 transparent;
+  border-width: 0 5px 5px 5px;
 }
 .select2-container--bootstrap[dir="rtl"] {
   /**

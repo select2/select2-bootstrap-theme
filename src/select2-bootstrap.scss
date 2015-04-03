@@ -57,6 +57,20 @@ $clear-selection-color: $dropdown-arrow-color !default;
     }
 }
 
+// dropdown arrow when dropdown is open
+@mixin dropdown-arrow {
+        .select2-selection--single {
+        /**
+         * Make the dropdown arrow point up while the dropdown is visible.
+         */
+
+        .select2-selection__arrow b {
+            border-color: transparent transparent $dropdown-arrow-color transparent;
+            border-width: 0 $caret-width-large $caret-width-large $caret-width-large;
+        }
+    }
+}
+
 
 
 
@@ -433,13 +447,15 @@ $clear-selection-color: $dropdown-arrow-color !default;
 
 
     /**
-     * Address Bootstrap 3 control sizing classes
+     * Address Bootstrap control sizing classes
      *
-     * 1. Adjust the dropdown arrow button icon position.
+     * 1. Reset Bootstrap defaults.
+     * 2. Adjust the dropdown arrow button icon position.
      *
      * @see http://getbootstrap.com/css/#forms-control-sizes
      */
 
+    /* 1 */
     &.input-sm,
     &.input-lg {
         height: auto;
@@ -458,7 +474,7 @@ $clear-selection-color: $dropdown-arrow-color !default;
             line-height: $line-height-small;
             padding: $padding-small-vertical $padding-small-horizontal;
 
-            /* 1 */
+            /* 2 */
             .select2-selection__arrow b {
                 margin-left: -$padding-small-vertical;
             }
@@ -523,8 +539,18 @@ $clear-selection-color: $dropdown-arrow-color !default;
                 line-height: $line-height-large;
             }
         }
-
     }
+
+    &.input-lg.select2-container--open {
+        @include dropdown-arrow;
+    }
+
+    .input-group-lg & {
+        &.select2-container--open {
+            @include dropdown-arrow;
+        }
+    }
+
 
 
 
