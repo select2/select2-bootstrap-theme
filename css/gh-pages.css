@@ -126,6 +126,8 @@ a:hover, a:focus {
       border-color: #23527c;
       border-width: 1px;
       color: #23527c; }
+  .footer small a {
+    color: #999; }
 
 @media (min-width: 768px) {
   .jumbotron {
