@@ -1,17 +1,24 @@
 /*! Select2 Bootstrap Theme v0.1.0-beta.1 | MIT License | github.com/fk/select2-bootstrap-theme */
 
+//
 // Variables
+// --------------------------------------------------
 
 // Bootstrap defaults not available as pre-defined variables
 // These should not be overridden.
 // @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_forms.scss#L127
+
 $form-control-default-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+
 // @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/mixins/_forms.scss#L43
 $form-control-focus-box-shadow: $form-control-default-box-shadow, 0 0 8px rgba($input-border-focus, 0.6);
+
 // @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_forms.scss#L128
 $form-control-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 
 // Custom variables
+// -------------------------
+
 $dropdown-arrow-color: $input-color-placeholder !default;
 $dropdown-box-shadow: 0 6px 12px rgba(0,0,0,.175) !default;
 $clear-selection-color: $dropdown-arrow-color !default;
@@ -20,17 +27,19 @@ $clear-selection-color: $dropdown-arrow-color !default;
 
 
 
+//
 // Mixins
+// --------------------------------------------------
 
 // @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_forms.scss#L115
 @mixin bootstrap-input-defaults {
     @include box-shadow($form-control-default-box-shadow);
+    background-color: $input-bg;
     border: 1px solid $input-border;
     border-radius: $input-border-radius;
     color: $input-color;
     font-family: $font-family-base;
     font-size: $font-size-base;
-    background-color: $input-bg;
 }
 
 // @see http://getbootstrap.com/css/#forms-control-validation
@@ -210,11 +219,11 @@ $clear-selection-color: $dropdown-arrow-color !default;
     }
 
     .select2-results__group {
+        color: $dropdown-header-color;
         display: block;
         padding: $padding-base-vertical $padding-base-horizontal;
         font-size: $font-size-small;
         line-height: $line-height-base;
-        color: $dropdown-header-color;
         white-space: nowrap;
     }
 
@@ -241,14 +250,14 @@ $clear-selection-color: $dropdown-arrow-color !default;
         &.select2-container--below {
             .select2-selection {
                 @include border-bottom-radius(0);
-                border-bottom: none;
+                border-bottom-color: transparent;
             }
         }
 
         &.select2-container--above {
             .select2-selection {
                 @include border-top-radius(0);
-                border-top: none;
+                border-top-color: transparent;
             }
         }
     }
@@ -294,6 +303,10 @@ $clear-selection-color: $dropdown-arrow-color !default;
         @include box-shadow($dropdown-box-shadow);
         border-color: $input-border-focus;
         overflow-x: hidden;
+        margin-top: -1px;
+        &--above {
+            margin-top: 1px;
+        }
     }
 
     /**
@@ -323,9 +336,9 @@ $clear-selection-color: $dropdown-arrow-color !default;
          */
 
         .select2-selection__clear {
+            color: $clear-selection-color;
             cursor: pointer;
             float: right;
-            color: $clear-selection-color;
             font-weight: bold;
             margin-right: 10px;
 
@@ -340,9 +353,9 @@ $clear-selection-color: $dropdown-arrow-color !default;
 
         .select2-selection__arrow {
             position: absolute;
-            top: 0;
-            right: $padding-base-horizontal;
             bottom: 0;
+            right: $padding-base-horizontal;
+            top: 0;
             width: $caret-width-base;
 
             b {
@@ -382,21 +395,21 @@ $clear-selection-color: $dropdown-arrow-color !default;
 
         .select2-selection__rendered {
             box-sizing: border-box;
+            display: block;
+            line-height: $line-height-base;
             list-style: none;
             margin: 0;
+            overflow: hidden;
             padding: 0;
             width: 100%;
-            display: block;
-            overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            line-height: $line-height-base;
         }
 
         .select2-selection__placeholder {
             color: $input-color-placeholder;
-            margin-top: 5px;
             float: left;
+            margin-top: 5px;
         }
 
         /**
@@ -420,11 +433,11 @@ $clear-selection-color: $dropdown-arrow-color !default;
 
         .select2-search--inline {
             .select2-search__field {
+                background: transparent;
                 padding: 0 $padding-base-horizontal;
                 height: $input-height-base - 2;
                 line-height: $line-height-base;
                 margin-top: 0;
-                background: transparent;
                 min-width: 5em;
             }
         }
@@ -458,11 +471,11 @@ $clear-selection-color: $dropdown-arrow-color !default;
     /* 1 */
     &.input-sm,
     &.input-lg {
-        height: auto;
-        padding: 0;
-        font-size: 12px;
-        line-height: 1;
         border-radius: 0;
+        font-size: 12px;
+        height: auto;
+        line-height: 1;
+        padding: 0;
     }
 
     &.input-sm,
