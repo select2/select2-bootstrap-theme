@@ -11,12 +11,7 @@ a
   &:focus
     text-decoration: none
 
-.demo
-  padding: 80px 30px 0
-  .footer
-    padding-top: 200px
-    padding-bottom: 80px
-    @extend %background-image
+
 
 .home
   padding-bottom: 30px
@@ -70,18 +65,6 @@ a
       margin-bottom: 15px
       margin-left: 0
 
-.footer-links
-  margin-top: $padding-large-horizontal
-  margin-bottom: 0
-  padding-bottom: $padding-large-horizontal
-  padding-left: 0
-  list-style: none
-  font-size: 14px
-  li
-    display: inline
-    margin-left: 2px
-    margin-right: 2px
-
 .footer
   text-align: center
   color: #ccc
@@ -89,6 +72,62 @@ a
     +link
   small a
     color: #999
+  &-links
+    margin-top: $padding-large-horizontal
+    margin-bottom: 0
+    padding-bottom: $padding-large-horizontal
+    padding-left: 0
+    list-style: none
+    font-size: 14px
+    li
+      display: inline
+      margin-left: 2px
+      margin-right: 2px
+  .demo &
+    padding-top: 200px
+    padding-bottom: 80px
+    @extend %background-image
+
+.navbar-default
+  background: rgba(#fff,.95)
+  border-width: 0 0 1px
+  border-radius: 0
+
+.alert
+  padding: 20px
+  margin: 20px 0
+  border: 1px solid #EEE
+  border-left-width: 5px
+  border-radius: 3px
+  &-info
+    border-left-color: #CE4844
+    background: white
+    color: #333
+    h4
+      color: #CE4844
+      margin-top: 0
+      margin-bottom: 5px
+      font-size: 18px
+
+.anchorjs-link
+  float: left
+  width: 1em
+  height: 1em
+  margin-left: -1.2em
+  opacity: 0
+  color: inherit
+  text-align: center
+  &:link,
+  &:visited
+    color: inherit
+
+.anchorjs-icon
+  font-size: 60%
+  vertical-align: .2em
+
+h1[id]
+  padding-top: 20px
+  margin-top: 0
 
 @media (min-width: $screen-sm)
   .jumbotron

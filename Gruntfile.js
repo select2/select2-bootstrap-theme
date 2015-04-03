@@ -65,6 +65,11 @@ module.exports = function(grunt) {
             expand: false
           },
           {
+            src: 'bower_components/anchor-js/anchor.css',
+            dest: 'docs/css/anchor.css',
+            expand: false
+          },
+          {
             src: 'bower_components/bootstrap/dist/js/bootstrap.min.js',
             dest: 'docs/js/bootstrap.min.js',
             expand: false
@@ -79,6 +84,11 @@ module.exports = function(grunt) {
             src: ['**/*'],
             dest: 'docs/fonts',
             expand: true
+          },
+          {
+            src: 'bower_components/anchor-js/anchor.min.js',
+            dest: 'docs/js/anchor.min.js',
+            expand: false
           }
         ]
       }
