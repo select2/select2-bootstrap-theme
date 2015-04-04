@@ -132,7 +132,9 @@
 
 			<div class="alert alert-info" role="alert">
 				<h4>Why are some Select2's not scaled?</h4>
-				<p>While <code>.select2-container--bootstrap.input-sm</code> and <code>.select2-container--bootstrap.input-lg</code> work as advertised, Select2 4 currently does not offer copying CSS classes from the original <code>&lt;select&gt;</code> element, so you have to fire up your developer consoles or take our word.</p>
+				<p>While <code>.select2-container--bootstrap.input-sm</code> and <code>.select2-container--bootstrap.input-lg</code> work as advertised, Select2 4 currently does not offer copying CSS classes from the original <code>&lt;select&gt;</code> element like version 3.x did.</p>
+				<p>As a workaround to the missing functionality, click the button:</p>
+				<button class='btn btn-sm btn-primary btn-outline btn-set-scaling-classes js-btn-set-scaling-classes'>Set Sizing Classes</button>
 			</div>
 
 			<div class="row">
@@ -215,8 +217,8 @@
 					</select>
 				</div>
 				<div class="col-md-3">
-					<label for="span-small" class="control-label">col-md-3</label>
-					<select id="span-small" class="form-control input-lg select2-multiple" dir="rtl">
+					<label for="select2-single-input-lg" class="control-label">col-md-3</label>
+					<select id="select2-single-input-lg" class="form-control input-lg select2-multiple" dir="rtl">
 						{% include select2-select.html %}
 					</select>
 				</div>
@@ -239,6 +241,75 @@
 					</div>
 				</div>
 			</div>
+
+			<h2 id="horizontal-form-group-sizes">
+				Horizontal form group sizes
+			</h2>
+
+			<p>The theme's styles work in <a href="http://getbootstrap.com/css/?#forms-horizontal">Bootstrap's Horizontal Forms</a> and offers support for <a href="http://getbootstrap.com/css/?#horizontal-form-group-sizes">Horizontal Form Group Sizes</a>, too.</p>
+
+			<form class="form-horizontal">
+				<div class="form-group form-group-lg">
+					<label class="col-sm-2 control-label" for="formGroupInputLarge">Large label</label>
+
+					<div class="col-sm-5">
+						<input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input">
+					</div>
+
+					<div class="col-sm-5">
+						<select id="select2-button-addons-single-input-group-sm" class="form-control js-data-example-ajax" dir="rtl">
+							<option value="2126244" selected="selected">twbs/bootstrap</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group form-group-sm">
+					<label class="col-sm-2 control-label" for="formGroupInputSmall">Small label</label>
+
+					<div class="col-sm-5">
+						<input class="form-control" type="text" id="formGroupInputSmall" placeholder="Small input">
+					</div>
+
+					<div class="col-sm-5">
+						<select id="select2-button-addons-single-input-group-sm" class="form-control js-data-example-ajax" dir="rtl">
+							<option value="2126244" selected="selected">twbs/bootstrap</option>
+					</select>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+					<div class="col-sm-10">
+						<select id="select2-button-addons-single-input-group-sm" class="form-control js-data-example-ajax" dir="rtl">
+							<option value="2126244" selected="selected">twbs/bootstrap</option>
+					</select>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+
+					<div class="col-sm-10">
+						<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> Remember me
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-default">Sign in</button>
+					</div>
+				</div>
+			</form>
 
 			<div class="page-header">
 				<h1 id="button-addons">
@@ -489,6 +560,12 @@
 						}
 					}
 				}
+			});
+
+			$( ".js-btn-set-scaling-classes" ).on( "click", function(){
+				$( "#select2-multiple-input-sm, #select2-single-input-sm" ).next( ".select2-container--bootstrap" ).addClass( "input-sm" );
+				$( "#select2-multiple-input-lg, #select2-single-input-lg" ).next( ".select2-container--bootstrap" ).addClass( "input-lg" );
+				$( this ).removeClass( "btn-primary btn-outline" ).prop( "disabled", true );
 			});
 
 		</script>

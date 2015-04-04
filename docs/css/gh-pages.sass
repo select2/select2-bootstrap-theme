@@ -48,14 +48,8 @@ a
     transition: all .1s ease-in-out
   .btn
     &-outline
-      border-color: $component-active-bg
-      font-size: inherit
       padding: 18px 24px
       transition: all .1s ease-in-out
-      &:hover,
-      &:active
-        color: $component-active-color
-        background-color: $component-active-bg
     &-lg
       padding: 10px 16px
       font-size: 18px
@@ -64,6 +58,15 @@ a
       margin-top: 15px
       margin-bottom: 15px
       margin-left: 0
+
+.btn-outline
+  border-color: $component-active-bg
+  color: $component-active-bg
+  background-color: transparent
+  &:hover,
+  &:active
+    color: $component-active-color
+    background-color: $component-active-bg
 
 .footer
   text-align: center
@@ -99,6 +102,8 @@ a
   border: 1px solid #EEE
   border-left-width: 5px
   border-radius: 3px
+  .btn-set-scaling-classes
+    margin-top: 5px
   &-info
     border-left-color: #CE4844
     background: white

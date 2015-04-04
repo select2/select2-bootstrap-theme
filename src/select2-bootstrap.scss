@@ -479,7 +479,8 @@ $clear-selection-color: $dropdown-arrow-color !default;
     }
 
     &.input-sm,
-    .input-group-sm & {
+    .input-group-sm &,
+    .form-group-sm & {
         .select2-selection--single {
             border-radius: $border-radius-small;
             font-size: $font-size-small;
@@ -513,7 +514,8 @@ $clear-selection-color: $dropdown-arrow-color !default;
     }
 
     &.input-lg,
-    .input-group-lg & {
+    .input-group-lg &,
+    .form-group-lg & {
         .select2-selection--single {
             border-radius: $border-radius-large;
             font-size: $font-size-large;
