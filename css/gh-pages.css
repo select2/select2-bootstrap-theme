@@ -80,13 +80,8 @@ a:hover, a:focus {
     margin: 0 auto 16px;
     transition: all 0.1s ease-in-out; }
   .jumbotron .btn-outline {
-    border-color: #337ab7;
-    font-size: inherit;
     padding: 18px 24px;
     transition: all 0.1s ease-in-out; }
-    .jumbotron .btn-outline:hover, .jumbotron .btn-outline:active {
-      color: #fff;
-      background-color: #337ab7; }
   .jumbotron .btn-lg {
     padding: 10px 16px;
     font-size: 18px;
@@ -95,6 +90,14 @@ a:hover, a:focus {
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 0; }
+
+.btn-outline {
+  border-color: #337ab7;
+  color: #337ab7;
+  background-color: transparent; }
+  .btn-outline:hover, .btn-outline:active {
+    color: #fff;
+    background-color: #337ab7; }
 
 .footer {
   text-align: center;
@@ -136,6 +139,8 @@ a:hover, a:focus {
   border: 1px solid #EEE;
   border-left-width: 5px;
   border-radius: 3px; }
+  .alert .btn-set-scaling-classes {
+    margin-top: 5px; }
   .alert-info {
     border-left-color: #CE4844;
     background: white;
