@@ -465,16 +465,20 @@
 		<script>
 			addAnchors('.container h1, .container h2, .container h3, .container h4, .container h5');
 
+			// Set the "bootstrap" theme as the default theme for all Select2
+			// widgets.
+			//
+			// @see https://github.com/select2/select2/issues/2927
+			$.fn.select2.defaults.set( "theme", "bootstrap" );
+
 			var placeholder = "Select a State";
 
 			$( ".select2, .select2-multiple" ).select2( {
-				theme: "bootstrap",
 				placeholder: placeholder,
 				width: "off"
 			} );
 
 			$( ".select2-allow-clear" ).select2( {
-				theme: "bootstrap",
 				allowClear: true,
 				placeholder: placeholder,
 				width: "off"
@@ -508,7 +512,6 @@
 			}
 
 			$( ".js-data-example-ajax" ).select2({
-				theme: "bootstrap",
 				width : "off",
 				ajax: {
 					url: "https://api.github.com/search/repositories",
