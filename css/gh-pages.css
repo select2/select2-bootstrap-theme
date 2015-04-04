@@ -170,6 +170,9 @@ h1[id] {
   padding-top: 20px;
   margin-top: 0; }
 
+.row {
+  padding-bottom: 20px; }
+
 @media (min-width: 768px) {
   .jumbotron {
     padding-top: 60px;

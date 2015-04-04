@@ -499,8 +499,8 @@
 
 			<div class="alert alert-info" role="alert">
 				<h4>Why are some Select2's not scaled?</h4>
-				<p>While <code>.select2-container--bootstrap.input-sm</code> and <code>.select2-container--bootstrap.input-lg</code> work as advertised, Select2 4 currently does not offer copying CSS classes from the original <code>&lt;select&gt;</code> element like version 3.x did.</p>
-				<p>As a workaround to the missing functionality, click the button:</p>
+				<p>While <code>.select2-container--bootstrap.input-sm</code> and <code>.select2-container--bootstrap.input-lg</code> work as advertised, Select2 4 currently does not offer copying CSS classes from the original <code>&lt;select&gt;</code> element in an easy way like version 3.x did.</p>
+				<p>Click the button for a demo setting the required classes on <code>.select2-container--bootstrap</code>:</p>
 				<button class='btn btn-sm btn-primary btn-outline btn-set-scaling-classes js-btn-set-scaling-classes'>Set Sizing Classes</button>
 			</div>
 
@@ -703,7 +703,7 @@
 				</div>
 			</div>
 
-			<hr>
+
 
 			<div class="row">
 				<div class="col-md-4 has-warning">
@@ -904,7 +904,7 @@
 				</div>
 			</div>
 
-			<hr>
+
 
 			<div class="row">
 				<div class="col-md-4">
@@ -1119,7 +1119,7 @@
 					</div>
 
 					<div class="col-sm-5">
-						<select id="select2-button-addons-single-input-group-sm" class="form-control js-data-example-ajax" dir="rtl">
+						<select id="select2-button-addons-single-input-group-sm" class="form-control js-data-example-ajax">
 							<option value="2126244" selected="selected">twbs/bootstrap</option>
 						</select>
 					</div>
@@ -1142,8 +1142,9 @@
 				<div class="form-group">
 					<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
 					<div class="col-sm-10">
-						<select id="select2-button-addons-single-input-group-sm" class="form-control js-data-example-ajax" dir="rtl">
+						<select id="select2-button-addons-single-input-group-sm" class="form-control js-data-example-ajax" multiple>
 							<option value="2126244" selected="selected">twbs/bootstrap</option>
+							<option value="3620194" selected="selected">select2/select2</option>
 					</select>
 					</div>
 				</div>
@@ -1265,7 +1266,7 @@
 				</div>
 			</div>
 
-			<hr>
+
 
 			<div class="row">
 				<div class="col-md-7">
@@ -1358,7 +1359,7 @@
 				</div>
 			</div>
 
-			<hr>
+
 
 			<div class="row">
 				<div class="col-md-7">
@@ -1614,23 +1615,27 @@
 
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="//select2.github.io/dist/js/select2.full.js"></script>
+<script src="//select2.github.io/dist/js/select2.min.js"></script>
 
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/anchor.min.js"></script>
 		<script>
 			addAnchors('.container h1, .container h2, .container h3, .container h4, .container h5');
 
+			// Set the "bootstrap" theme as the default theme for all Select2
+			// widgets.
+			//
+			// @see https://github.com/select2/select2/issues/2927
+			$.fn.select2.defaults.set( "theme", "bootstrap" );
+
 			var placeholder = "Select a State";
 
 			$( ".select2, .select2-multiple" ).select2( {
-				theme: "bootstrap",
 				placeholder: placeholder,
 				width: "off"
 			} );
 
 			$( ".select2-allow-clear" ).select2( {
-				theme: "bootstrap",
 				allowClear: true,
 				placeholder: placeholder,
 				width: "off"
@@ -1664,7 +1669,6 @@
 			}
 
 			$( ".js-data-example-ajax" ).select2({
-				theme: "bootstrap",
 				width : "off",
 				ajax: {
 					url: "https://api.github.com/search/repositories",
