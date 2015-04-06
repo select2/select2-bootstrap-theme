@@ -680,13 +680,17 @@ $clear-selection-color: $dropdown-arrow-color !default;
  * @see https://github.com/twbs/bootstrap/blob/master/less/input-groups.less
  */
 
-.input-group .select2-container--bootstrap {
-    display: table-cell;
-    position: relative;
-    z-index: 2;
-    float: left;
-    width: 100%;
-    margin-bottom: 0;
+.input-group,
+.form-group {
+    .select2-container--bootstrap {
+        display: table;
+        table-layout: fixed;
+        position: relative;
+        z-index: 2;
+        float: left;
+        width: 100%;
+        margin-bottom: 0;
+    }
 }
 
 .input-group.select2-bootstrap-prepend .select2-container--bootstrap {
