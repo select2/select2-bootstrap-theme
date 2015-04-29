@@ -11,7 +11,7 @@ exports.compileLess = function(test){
         args: ['--verbose', 'src/select2-bootstrap.less', 'tmp/'+filename]
       }, function() {
         var readFile = function(name) { return fs.readFileSync(name, {encoding: 'utf8'}) },
-            orig = readFile(filename),
+            orig = readFile('dist/'+filename),
             generated = readFile('tmp/'+filename),
             patch = readFile(patchfile),
             diff = jsdiff.createPatch(filename, orig, generated);
