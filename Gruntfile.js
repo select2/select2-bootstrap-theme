@@ -12,16 +12,15 @@ module.exports = function(grunt) {
       options: {
         style: 'expanded',
         sourcemap: 'none',
-        // Increase Sass' default (5) precision to 8.
+        // Increase Sass' default (5) precision to 9 to match Less output.
         //
         // @see https://github.com/twbs/bootstrap-sass#sass-number-precision
         // @see https://github.com/sass/node-sass/issues/673#issue-57581701
         // @see https://github.com/sass/sass/issues/1122
-        precision: 8
+        precision: 9
       },
       dist: {
         files: {
-          'docs/css/select2-bootstrap.css': 'src/build.scss',
           'docs/css/select2-bootstrap.css': 'src/build.scss',
           'dist/select2-bootstrap.css': 'src/build.scss'
         }
