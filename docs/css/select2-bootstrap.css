@@ -1,4 +1,4 @@
-/*! Select2 Bootstrap Theme v0.1.0-beta.2 | MIT License | github.com/fk/select2-bootstrap-theme */
+/*! Select2 Bootstrap Theme v0.1.0-beta.3 | MIT License | github.com/fk/select2-bootstrap-theme */
 .select2-container--bootstrap {
   display: block;
   /*------------------------------------*\
@@ -560,5 +560,5 @@
  * Temporary fix for https://github.com/fk/select2-bootstrap-theme/issues/9
  */
 .form-control.select2-hidden-accessible {
-  position: absolute;
+  position: absolute !important;
 }

@@ -1,6 +1,6 @@
 {
   "name": "select2-bootstrap-theme",
-  "version": "0.1.0-beta.2",
+  "version": "0.1.0-beta.3",
   "main": [
     "dist/select2-bootstrap.css",
     "dist/select2-bootstrap.min.css"
