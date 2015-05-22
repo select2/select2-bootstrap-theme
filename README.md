@@ -13,6 +13,7 @@ To use the theme, you must have select2 working on your page. Applying the theme
     <link href="~/Content/select2-bootstrap.css" rel="stylesheet" />
 
 To apply the theme, you must set it in the options when initializing the select2 dropdown:
+
     $(document).ready(function() {
         $("#MyDropdown").select2({
             theme: "bootstrap"
