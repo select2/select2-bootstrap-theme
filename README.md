@@ -15,10 +15,8 @@ The Select2 Bootstrap Theme only works with Select2 v4.x. Applying the theme req
 
 To apply the theme, tell Select2 to do so by passing `bootstrap` to the [`theme`](https://select2.github.io/examples.html#themes) option when initializing Select2:
 
-    $( document ).ready(function() {
-        $( "#dropdown" ).select2({
-            theme: "bootstrap"
-        });
+    $( "#dropdown" ).select2({
+        theme: "bootstrap"
     });
 
 ##### Known issues
