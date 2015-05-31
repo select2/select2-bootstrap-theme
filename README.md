@@ -6,21 +6,21 @@ http://fk.github.io/select2-bootstrap-theme/
 Tested with Bootstrap v3.3.4 and Select2 v4.0.0
 in latest Chrome.
 
-##### Install
-To use the theme, you must have select2 working on your page. Applying the theme requires the select2-bootstrap css referenced after the select2 main css:
+##### Installation
 
-    <link href="~/Content/select2.css" rel="stylesheet" />
-    <link href="~/Content/select2-bootstrap.css" rel="stylesheet" />
+The Select2 Bootstrap Theme only works with Select2 v4.x. Applying the theme requires `select2-bootstrap.css` referenced after the default `select2.css` that comes with Select2:
 
-To apply the theme, you must set it in the options when initializing the select2 dropdown:
+    <link rel="stylesheet" href="select2.css">
+    <link rel="stylesheet" href="select2-bootstrap.css">
 
-    $(document).ready(function() {
-        $("#MyDropdown").select2({
+To apply the theme, tell Select2 to do so by passing `bootstrap` to the [`theme`](https://select2.github.io/examples.html#themes) option when initializing Select2:
+
+    $( document ).ready(function() {
+        $( "#dropdown" ).select2({
             theme: "bootstrap"
         });
     });
-    
-This will tell select2 to use the bootstrap theme.
+
 ##### Known issues
 
 ##### Changelog
