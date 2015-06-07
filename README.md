@@ -1,7 +1,9 @@
 A Select2 v4 [Theme](https://select2.github.io/examples.html#themes) for Bootstrap 3
 
+**Note: Work in progress – depending on your use case, select2-bootstrap-theme might not be production-ready yet!**
+
 Demonstrations available at
-http://fk.github.io/select2-bootstrap-theme/
+http://select2.github.io/select2-bootstrap-theme/
 
 Tested with Bootstrap v3.3.4 and Select2 v4.0.0
 in latest Chrome.
@@ -22,6 +24,10 @@ To apply the theme, tell Select2 to do so by passing `bootstrap` to the [`theme`
 ##### Known issues
 
 ##### Changelog
+
+###### 0.1.0-beta.3
+
+ * Fix specifity problems with `.form-control.select2-hidden-accessible`.
 
 ###### 0.1.0-beta.2
 
