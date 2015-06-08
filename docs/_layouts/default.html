@@ -273,7 +273,7 @@
 					<div class="col-sm-5">
 						<select id="select2-button-addons-single-input-group-sm" class="form-control js-data-example-ajax" dir="rtl">
 							<option value="2126244" selected="selected">twbs/bootstrap</option>
-					</select>
+						</select>
 					</div>
 				</div>
 
@@ -283,7 +283,7 @@
 						<select id="select2-button-addons-single-input-group-sm" class="form-control js-data-example-ajax" multiple>
 							<option value="2126244" selected="selected">twbs/bootstrap</option>
 							<option value="3620194" selected="selected">select2/select2</option>
-					</select>
+						</select>
 					</div>
 				</div>
 
@@ -311,6 +311,56 @@
 					</div>
 				</div>
 			</form>
+
+			<div class="page-header">
+				<h1 id="inline-forms">
+					Inline Forms
+				</h1>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12">
+					<form class="form-inline">
+						<div class="form-group">
+							<label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+							<div class="input-group">
+								<div class="input-group-addon">$</div>
+								<select class="form-control select2">
+									<option></option>
+									{% include select2-select.html %}
+								</select>
+								<div class="input-group-addon">.00</div>
+							</div>
+						</div>
+						<button type="submit" class="btn btn-primary">Transfer cash</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12">
+					<form class="form-inline">
+						<div class="form-group">
+							<label class="sr-only" for="exampleInputEmail3">Email address</label>
+							<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+						</div>
+						<div class="form-group">
+							<label class="sr-only" for="exampleInputPassword3">Password</label>
+							<input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+						</div>
+						<select class="form-control select2">
+							<option></option>
+							{% include select2-select.html %}
+						</select>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> Remember me
+							</label>
+						</div>
+						<button type="submit" class="btn btn-default">Sign in</button>
+					</form>
+				</div>
+			</div>
 
 			<div class="page-header">
 				<h1 id="button-addons">
