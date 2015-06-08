@@ -21,8 +21,6 @@ To apply the theme, tell Select2 to do so by passing `bootstrap` to the [`theme`
         theme: "bootstrap"
     });
 
-##### Known issues
-
 ##### Changelog
 
 ###### 0.1.0-beta.3
@@ -34,8 +32,6 @@ To apply the theme, tell Select2 to do so by passing `bootstrap` to the [`theme`
  * Added Less version.
 
 ###### 0.1.0-beta.1
-
-##### Credits
 
 ##### Contributing
 
