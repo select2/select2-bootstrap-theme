@@ -263,6 +263,22 @@ $clear-selection-color: $dropdown-arrow-color !default;
     }
 
     /**
+     * Clear the selection.
+     */
+
+    .select2-selection__clear {
+        color: $clear-selection-color;
+        cursor: pointer;
+        float: right;
+        font-weight: bold;
+        margin-right: 10px;
+
+        &:hover {
+            color: #333;
+        }
+    }
+
+    /**
      * Address disabled Select2 styles.
      *
      * @see https://select2.github.io/examples.html#disabled
@@ -330,22 +346,6 @@ $clear-selection-color: $dropdown-arrow-color !default;
         height: $input-height-base;
         line-height: $line-height-base;
         padding: $padding-base-vertical $padding-base-horizontal + $caret-width-base*3 $padding-base-vertical $padding-base-horizontal;
-
-        /**
-         * Clear the selection.
-         */
-
-        .select2-selection__clear {
-            color: $clear-selection-color;
-            cursor: pointer;
-            float: right;
-            font-weight: bold;
-            margin-right: 10px;
-
-            &:hover {
-                color: #333;
-            }
-        }
 
         /**
          * Adjust the single Select2's dropdown arrow button appearance.
@@ -453,6 +453,14 @@ $clear-selection-color: $dropdown-arrow-color !default;
                 color: #333;
             }
         }
+
+        /**
+         * Clear the selection.
+         */
+
+        .select2-selection__clear {
+            margin-top: $padding-base-vertical;
+        }
     }
 
 
@@ -510,6 +518,10 @@ $clear-selection-color: $dropdown-arrow-color !default;
                 height: $input-height-small - 2;
                 line-height: $line-height-small;
             }
+
+            .select2-selection__clear {
+                margin-top: $padding-small-vertical;
+            }
         }
     }
 
@@ -552,6 +564,10 @@ $clear-selection-color: $dropdown-arrow-color !default;
                 font-size: $font-size-large;
                 height: $input-height-large - 2;
                 line-height: $line-height-large;
+            }
+
+            .select2-selection__clear {
+                margin-top: $padding-large-vertical;
             }
         }
     }
