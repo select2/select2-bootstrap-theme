@@ -14,7 +14,6 @@
     "bootstrap": "~3.3.4",
     "bootstrap-sass-official": "~3.3.4",
     "respond": "~1.4.2",
-    "select2": "4.0.0-rc.2",
-    "anchor-js": "~0.3.1"
+    "anchor-js": "~1.1.1"
   }
 }
