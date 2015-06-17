@@ -8,7 +8,7 @@ exports.compileLess = function(test){
 
       child = grunt.util.spawn({
         cmd: 'lessc',
-        args: ['--verbose', 'src/select2-bootstrap.less', 'tmp/'+filename]
+        args: ['--verbose', 'src/build.less', 'tmp/'+filename]
       }, function() {
         var readFile = function(name) { return fs.readFileSync(name, {encoding: 'utf8'}) },
             orig = readFile('dist/'+filename),
