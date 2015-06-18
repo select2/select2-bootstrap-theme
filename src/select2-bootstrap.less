@@ -729,7 +729,7 @@
 /**
  * Adjust alignment of Bootstrap buttons in Bootstrap Input Groups to address
  * Multi Select2's height which - depending on how many elements have been selected -
- * may grown higher than their initial size.
+ * may grow taller than its initial size.
  *
  * @see http://getbootstrap.com/components/#input-groups
  */
@@ -745,10 +745,17 @@
 
 /**
  * Temporary fix for https://github.com/select2/select2-bootstrap-theme/issues/9
+ *
+ * Provides `!important` for certain properties of the class applied to the
+ * original `<select>` element to hide it.
+ *
+ * @see https://github.com/select2/select2/pull/3301
+ * @see https://github.com/fk/select2/commit/31830c7b32cb3d8e1b12d5b434dee40a6e753ada
  */
 
 .form-control.select2-hidden-accessible {
     position: absolute !important;
+    width: 1px !important;
 }
 
 /**

@@ -545,7 +545,7 @@ Index: select2-bootstrap.css
   * Select2 widgets in Bootstrap Input Groups
   *
   * When Select2 widgets are combined with other elements using Bootstraps
-@@ -540,49 +595,43 @@
+@@ -540,42 +595,37 @@
    float: left;
    width: 100%;
    margin-bottom: 0;
@@ -571,7 +571,7 @@ Index: select2-bootstrap.css
  /**
   * Adjust alignment of Bootstrap buttons in Bootstrap Input Groups to address
   * Multi Select2's height which - depending on how many elements have been selected -
-  * may grown higher than their initial size.
+  * may grow taller than its initial size.
   *
   * @see http://getbootstrap.com/components/#input-groups
   */
@@ -588,9 +588,12 @@ Index: select2-bootstrap.css
 -
  /**
   * Temporary fix for https://github.com/select2/select2-bootstrap-theme/issues/9
-  */
+  *
+  * Provides `!important` for certain properties of the class applied to the
+@@ -587,9 +637,8 @@
  .form-control.select2-hidden-accessible {
    position: absolute !important;
+   width: 1px !important;
  }
 -
  /**
