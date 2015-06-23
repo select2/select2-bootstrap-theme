@@ -206,29 +206,33 @@ Index: select2-bootstrap.css
  .select2-container--bootstrap .select2-results__option .select2-results__option {
    padding: 6px 12px;
  }
-@@ -160,10 +179,11 @@
+@@ -158,9 +177,10 @@
+   font-size: 12px;
+   line-height: 1.428571429;
    white-space: nowrap;
  }
++.select2-container--bootstrap.select2-container--focus .select2-selection,
++.select2-container--bootstrap.select2-container--open .select2-selection {
+-.select2-container--bootstrap.select2-container--focus .select2-selection, .select2-container--bootstrap.select2-container--open .select2-selection {
+   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+@@ -168,16 +188,18 @@
+   border-color: #66afe9;
+ }
  .select2-container--bootstrap.select2-container--open {
+   /**
++         * Make the dropdown arrow point up while the dropdown is visible.
++         */
++
+-   * Make the dropdown arrow point up while the dropdown is visible.
+-   */
    /**
 +         * Handle border radii of the container when the dropdown is showing.
 +         */
 +
 -   * Handle border radii of the container when the dropdown is showing.
--   */
- }
- .select2-container--bootstrap.select2-container--open .select2-selection {
-   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
-   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
-@@ -171,13 +191,14 @@
-   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-   border-color: #66afe9;
-   /**
-+             * Make the dropdown arrow point up while the dropdown is visible.
-+             */
-+
--   * Make the dropdown arrow point up while the dropdown is visible.
 -   */
  }
  .select2-container--bootstrap.select2-container--open .select2-selection .select2-selection__arrow b {
@@ -238,7 +242,7 @@ Index: select2-bootstrap.css
  }
  .select2-container--bootstrap.select2-container--open.select2-container--below .select2-selection {
    border-bottom-right-radius: 0;
-@@ -189,9 +210,9 @@
+@@ -189,9 +211,9 @@
    border-top-left-radius: 0;
    border-top-color: transparent;
  }
@@ -249,7 +253,7 @@ Index: select2-bootstrap.css
    float: right;
    font-weight: bold;
    margin-right: 10px;
-@@ -229,10 +250,11 @@
+@@ -229,10 +251,11 @@
    height: 34px;
    line-height: 1.428571429;
    padding: 6px 24px 6px 12px;
@@ -263,7 +267,7 @@ Index: select2-bootstrap.css
  .select2-container--bootstrap .select2-selection--single .select2-selection__arrow {
    position: absolute;
    bottom: 0;
-@@ -240,9 +262,9 @@
+@@ -240,9 +263,9 @@
    top: 0;
    width: 4px;
  }
@@ -274,7 +278,7 @@ Index: select2-bootstrap.css
    border-width: 4px 4px 0 4px;
    height: 0;
    left: 0;
-@@ -256,21 +278,24 @@
+@@ -256,21 +279,24 @@
    color: #555555;
    padding: 0;
  }
@@ -306,7 +310,7 @@ Index: select2-bootstrap.css
  .select2-container--bootstrap .select2-selection--multiple .select2-selection__rendered {
    box-sizing: border-box;
    display: block;
-@@ -283,16 +308,16 @@
+@@ -283,16 +309,16 @@
    text-overflow: ellipsis;
    white-space: nowrap;
  }
@@ -326,7 +330,7 @@ Index: select2-bootstrap.css
    cursor: default;
    float: left;
    margin: 5px 0 0 6px;
-@@ -318,108 +343,141 @@
+@@ -318,108 +344,141 @@
  }
  .select2-container--bootstrap .select2-selection--multiple .select2-selection__clear {
    margin-top: 6px;
@@ -495,7 +499,7 @@ Index: select2-bootstrap.css
  .select2-container--bootstrap[dir="rtl"] .select2-selection--single {
    padding-left: 24px;
    padding-right: 12px;
-@@ -428,8 +486,9 @@
+@@ -428,8 +487,9 @@
    padding-right: 0;
    padding-left: 0;
    text-align: right;
@@ -505,7 +509,7 @@ Index: select2-bootstrap.css
  .select2-container--bootstrap[dir="rtl"] .select2-selection--single .select2-selection__clear {
    float: left;
  }
-@@ -451,9 +510,8 @@
+@@ -451,9 +511,8 @@
  .select2-container--bootstrap[dir="rtl"] .select2-selection--multiple .select2-selection__choice__remove {
    margin-left: 2px;
    margin-right: auto;
@@ -515,7 +519,7 @@ Index: select2-bootstrap.css
      #ADDITIONAL GOODIES
  \*------------------------------------*/
  /**
-@@ -480,9 +538,8 @@
+@@ -481,9 +540,8 @@
  }
  .has-warning.select2-drop-active.select2-drop.select2-drop-above {
    border-top-color: #66512c;
@@ -525,7 +529,7 @@ Index: select2-bootstrap.css
  .has-error .select2-selection {
    border-color: #a94442;
  }
-@@ -496,9 +553,8 @@
+@@ -498,9 +556,8 @@
  }
  .has-error.select2-drop-active.select2-drop.select2-drop-above {
    border-top-color: #843534;
@@ -535,7 +539,7 @@ Index: select2-bootstrap.css
  .has-success .select2-selection {
    border-color: #3c763d;
  }
-@@ -512,9 +568,8 @@
+@@ -515,9 +572,8 @@
  }
  .has-success.select2-drop-active.select2-drop.select2-drop-above {
    border-top-color: #2b542c;
@@ -545,7 +549,7 @@ Index: select2-bootstrap.css
   * Select2 widgets in Bootstrap Input Groups
   *
   * When Select2 widgets are combined with other elements using Bootstraps
-@@ -540,42 +595,37 @@
+@@ -543,42 +599,37 @@
    float: left;
    width: 100%;
    margin-bottom: 0;
@@ -590,7 +594,7 @@ Index: select2-bootstrap.css
   * Temporary fix for https://github.com/select2/select2-bootstrap-theme/issues/9
   *
   * Provides `!important` for certain properties of the class applied to the
-@@ -587,9 +637,8 @@
+@@ -590,9 +641,8 @@
  .form-control.select2-hidden-accessible {
    position: absolute !important;
    width: 1px !important;

@@ -159,20 +159,20 @@
   line-height: 1.428571429;
   white-space: nowrap;
 }
-.select2-container--bootstrap.select2-container--open {
-  /**
-   * Handle border radii of the container when the dropdown is showing.
-   */
-}
-.select2-container--bootstrap.select2-container--open .select2-selection {
+.select2-container--bootstrap.select2-container--focus .select2-selection, .select2-container--bootstrap.select2-container--open .select2-selection {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   border-color: #66afe9;
+}
+.select2-container--bootstrap.select2-container--open {
   /**
    * Make the dropdown arrow point up while the dropdown is visible.
+   */
+  /**
+   * Handle border radii of the container when the dropdown is showing.
    */
 }
 .select2-container--bootstrap.select2-container--open .select2-selection .select2-selection__arrow b {
@@ -470,6 +470,7 @@
 .has-warning .select2-selection {
   border-color: #8a6d3b;
 }
+.has-warning .select2-container--focus .select2-selection,
 .has-warning .select2-container--open .select2-selection {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
@@ -486,6 +487,7 @@
 .has-error .select2-selection {
   border-color: #a94442;
 }
+.has-error .select2-container--focus .select2-selection,
 .has-error .select2-container--open .select2-selection {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
@@ -502,6 +504,7 @@
 .has-success .select2-selection {
   border-color: #3c763d;
 }
+.has-success .select2-container--focus .select2-selection,
 .has-success .select2-container--open .select2-selection {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;

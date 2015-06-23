@@ -52,6 +52,7 @@
         border-color: @color;
     }
 
+    .select2-container--focus .select2-selection,
     .select2-container--open .select2-selection {
         .box-shadow(@shadow);
         border-color: darken(@color, 10%);
@@ -227,20 +228,23 @@
         white-space: nowrap;
     }
 
+    &.select2-container--focus,
     &.select2-container--open {
         .select2-selection {
             .box-shadow(@form-control-focus-box-shadow);
             .transition(@form-control-transition);
             border-color: @input-border-focus;
+        }
+    }
 
-            /**
-             * Make the dropdown arrow point up while the dropdown is visible.
-             */
+    &.select2-container--open {
+        /**
+         * Make the dropdown arrow point up while the dropdown is visible.
+         */
 
-            .select2-selection__arrow b {
-                border-color: transparent transparent @dropdown-arrow-color transparent;
-                border-width: 0 @caret-width-base @caret-width-base @caret-width-base;
-            }
+        .select2-selection .select2-selection__arrow b {
+            border-color: transparent transparent @dropdown-arrow-color transparent;
+            border-width: 0 @caret-width-base @caret-width-base @caret-width-base;
         }
 
         /**
