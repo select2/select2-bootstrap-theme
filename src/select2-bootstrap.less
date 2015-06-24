@@ -291,6 +291,11 @@
 
     &.select2-container--disabled {
 
+        .select2-selection {
+            border-color: @input-border;
+            .box-shadow(none);
+        }
+
         .select2-selection,
         .select2-search__field {
             cursor: @cursor-disabled;

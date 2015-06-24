@@ -253,7 +253,18 @@ Index: select2-bootstrap.css
    float: right;
    font-weight: bold;
    margin-right: 10px;
-@@ -229,10 +251,11 @@
+@@ -199,9 +221,9 @@
+ .select2-container--bootstrap .select2-selection__clear:hover {
+   color: #333;
+ }
+ .select2-container--bootstrap.select2-container--disabled .select2-selection {
++  border-color: #cccccc;
+-  border-color: #ccc;
+   -webkit-box-shadow: none;
+   box-shadow: none;
+ }
+ .select2-container--bootstrap.select2-container--disabled .select2-selection,
+@@ -234,10 +256,11 @@
    height: 34px;
    line-height: 1.428571429;
    padding: 6px 24px 6px 12px;
@@ -267,7 +278,7 @@ Index: select2-bootstrap.css
  .select2-container--bootstrap .select2-selection--single .select2-selection__arrow {
    position: absolute;
    bottom: 0;
-@@ -240,9 +263,9 @@
+@@ -245,9 +268,9 @@
    top: 0;
    width: 4px;
  }
@@ -278,7 +289,7 @@ Index: select2-bootstrap.css
    border-width: 4px 4px 0 4px;
    height: 0;
    left: 0;
-@@ -256,21 +279,24 @@
+@@ -261,21 +284,24 @@
    color: #555555;
    padding: 0;
  }
@@ -310,7 +321,7 @@ Index: select2-bootstrap.css
  .select2-container--bootstrap .select2-selection--multiple .select2-selection__rendered {
    box-sizing: border-box;
    display: block;
-@@ -283,16 +309,16 @@
+@@ -288,16 +314,16 @@
    text-overflow: ellipsis;
    white-space: nowrap;
  }
@@ -330,7 +341,7 @@ Index: select2-bootstrap.css
    cursor: default;
    float: left;
    margin: 5px 0 0 6px;
-@@ -318,108 +344,141 @@
+@@ -323,108 +349,141 @@
  }
  .select2-container--bootstrap .select2-selection--multiple .select2-selection__clear {
    margin-top: 6px;
@@ -499,7 +510,7 @@ Index: select2-bootstrap.css
  .select2-container--bootstrap[dir="rtl"] .select2-selection--single {
    padding-left: 24px;
    padding-right: 12px;
-@@ -428,8 +487,9 @@
+@@ -433,8 +492,9 @@
    padding-right: 0;
    padding-left: 0;
    text-align: right;
@@ -509,7 +520,7 @@ Index: select2-bootstrap.css
  .select2-container--bootstrap[dir="rtl"] .select2-selection--single .select2-selection__clear {
    float: left;
  }
-@@ -451,9 +511,8 @@
+@@ -456,9 +516,8 @@
  .select2-container--bootstrap[dir="rtl"] .select2-selection--multiple .select2-selection__choice__remove {
    margin-left: 2px;
    margin-right: auto;
@@ -519,7 +530,7 @@ Index: select2-bootstrap.css
      #ADDITIONAL GOODIES
  \*------------------------------------*/
  /**
-@@ -481,9 +540,8 @@
+@@ -486,9 +545,8 @@
  }
  .has-warning.select2-drop-active.select2-drop.select2-drop-above {
    border-top-color: #66512c;
@@ -529,7 +540,7 @@ Index: select2-bootstrap.css
  .has-error .select2-selection {
    border-color: #a94442;
  }
-@@ -498,9 +556,8 @@
+@@ -503,9 +561,8 @@
  }
  .has-error.select2-drop-active.select2-drop.select2-drop-above {
    border-top-color: #843534;
@@ -539,7 +550,7 @@ Index: select2-bootstrap.css
  .has-success .select2-selection {
    border-color: #3c763d;
  }
-@@ -515,9 +572,8 @@
+@@ -520,9 +577,8 @@
  }
  .has-success.select2-drop-active.select2-drop.select2-drop-above {
    border-top-color: #2b542c;
@@ -549,7 +560,7 @@ Index: select2-bootstrap.css
   * Select2 widgets in Bootstrap Input Groups
   *
   * When Select2 widgets are combined with other elements using Bootstraps
-@@ -543,35 +599,31 @@
+@@ -548,35 +604,31 @@
    float: left;
    width: 100%;
    margin-bottom: 0;
@@ -587,7 +598,7 @@ Index: select2-bootstrap.css
   * Temporary fix for https://github.com/select2/select2-bootstrap-theme/issues/9
   *
   * Provides `!important` for certain properties of the class applied to the
-@@ -583,9 +635,8 @@
+@@ -588,9 +640,8 @@
  .form-control.select2-hidden-accessible {
    position: absolute !important;
    width: 1px !important;
