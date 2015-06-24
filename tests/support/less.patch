@@ -549,7 +549,7 @@ Index: select2-bootstrap.css
   * Select2 widgets in Bootstrap Input Groups
   *
   * When Select2 widgets are combined with other elements using Bootstraps
-@@ -543,42 +599,37 @@
+@@ -543,35 +599,31 @@
    float: left;
    width: 100%;
    margin-bottom: 0;
@@ -563,13 +563,6 @@ Index: select2-bootstrap.css
  .input-group.select2-bootstrap-append .select2-container--bootstrap .select2-selection {
    border-bottom-right-radius: 0;
    border-top-right-radius: 0;
- }
--
- /**
-  * Inline forms
-  */
- .input-group .select2-container--bootstrap:not(:first-child):not(:last-child) .select2-selection {
-   border-radius: 0;
  }
 -
  /**
@@ -594,7 +587,7 @@ Index: select2-bootstrap.css
   * Temporary fix for https://github.com/select2/select2-bootstrap-theme/issues/9
   *
   * Provides `!important` for certain properties of the class applied to the
-@@ -590,9 +641,8 @@
+@@ -583,9 +635,8 @@
  .form-control.select2-hidden-accessible {
    position: absolute !important;
    width: 1px !important;
