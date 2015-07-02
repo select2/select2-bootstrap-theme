@@ -5,7 +5,7 @@ A Select2 v4 [Theme](https://select2.github.io/examples.html#themes) for Bootstr
 Demonstrations available at
 http://select2.github.io/select2-bootstrap-theme/
 
-Tested with Bootstrap v3.3.4 and Select2 v4.0.0
+Tested with Bootstrap v3.3.5 and Select2 v4.0.0
 in latest Chrome.
 
 ##### Installation
@@ -23,9 +23,16 @@ To apply the theme, tell Select2 to do so by passing `bootstrap` to the [`theme`
 
 ##### Changelog
 
+###### 0.1.0-beta.4
+
+ * Added missing styles for `.select2-container--focus`. [[#18](https://github.com/select2/select2-bootstrap-theme/issues/18)]
+ * Added support for Bootstrap's [`.form-inline`](http://getbootstrap.com/css/#forms-inline). [[#13](https://github.com/select2/select2-bootstrap-theme/pull/13)]
+ * Added basic styles for `.select2-selection__clear` in `.select2-selection--multiple`. [[#11](https://github.com/select2/select2-bootstrap-theme/issues/11)]
+ * Brought Less source in line with the Sass version and fixed Less patch file and test. [[`3e86f34](https://github.com/select2/select2-bootstrap-theme/commit/3e86f34f6c94302cd8b4d6c3d751c5fb70fe61f6)]
+
 ###### 0.1.0-beta.3
 
- * Fix specifity problems with `.form-control.select2-hidden-accessible`.
+ * Fixed specifity problems with `.form-control.select2-hidden-accessible`.
 
 ###### 0.1.0-beta.2
 
