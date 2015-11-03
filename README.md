@@ -12,15 +12,16 @@ in latest Chrome.
 
 The Select2 Bootstrap Theme only works with Select2 v4.x. Applying the theme requires `select2-bootstrap.css` referenced after the default `select2.css` that comes with Select2:
 
+```html
     <link rel="stylesheet" href="select2.css">
     <link rel="stylesheet" href="select2-bootstrap.css">
-
+```
 To apply the theme, tell Select2 to do so by passing `bootstrap` to the [`theme`](https://select2.github.io/examples.html#themes) option when initializing Select2:
-
+```js
     $( "#dropdown" ).select2({
         theme: "bootstrap"
     });
-
+```
 ##### Changelog
 
 ###### 0.1.0-beta.4
@@ -45,9 +46,9 @@ To apply the theme, tell Select2 to do so by passing `bootstrap` to the [`theme`
 The project offers [Less](http://lesscss.org/) and [Sass](http://sass-lang.com/) sources for building `select2-bootstrap.css`; both make use of variables from either [Bootstrap](https://github.com/twbs/bootstrap) (Less) or [Bootstrap for Sass](https://github.com/twbs/bootstrap-sass). The demo pages are built using [Jekyll](http://jekyllrb.com/) and there are a bunch of [Grunt](http://gruntjs.com/) tasks to ease development.
 
 With [Ruby](https://www.ruby-lang.org/en/downloads/) and [RubyGems](http://rubygems.org/pages/download), [Jekyll](http://jekyllrb.com/), [Bower](http://bower.io/), [node.js](http://nodejs.org/), [Less](http://lesscss.org/) and [Sass](http://sass-lang.com/) installed, run
-
+```sh
     npm install && bower install
-
+```
 to install all necessary development dependencies.
 
  * `grunt copy` copies assets from `components` to `_jekyll` – use this in case a new version of Twitter Bootstrap or Select2 are out and need to be tested
