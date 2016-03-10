@@ -180,7 +180,7 @@ $clear-selection-color: $dropdown-arrow-color !default;
          * Selected state.
          */
 
-        &--highlighted[aria-selected] {
+        &--highlighted[aria-selected=true] {
             background-color: $dropdown-link-active-bg;
             color: $dropdown-link-active-color;
         }
