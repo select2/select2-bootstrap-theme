@@ -12,14 +12,18 @@ in latest Chrome.
 
 The Select2 Bootstrap Theme only works with Select2 v4.x. Applying the theme requires `select2-bootstrap.css` referenced after the default `select2.css` that comes with Select2:
 
-    <link rel="stylesheet" href="select2.css">
-    <link rel="stylesheet" href="select2-bootstrap.css">
+```html
+<link rel="stylesheet" href="select2.css">
+<link rel="stylesheet" href="select2-bootstrap.css">
+```
 
 To apply the theme, tell Select2 to do so by passing `bootstrap` to the [`theme`](https://select2.github.io/examples.html#themes) option when initializing Select2:
 
-    $( "#dropdown" ).select2({
-        theme: "bootstrap"
-    });
+```js
+$( "#dropdown" ).select2({
+    theme: "bootstrap"
+});
+```
 
 ##### Changelog
 
@@ -46,7 +50,9 @@ The project offers [Less](http://lesscss.org/) and [Sass](http://sass-lang.com/)
 
 With [Ruby](https://www.ruby-lang.org/en/downloads/) and [RubyGems](http://rubygems.org/pages/download), [Jekyll](http://jekyllrb.com/), [Bower](http://bower.io/), [node.js](http://nodejs.org/), [Less](http://lesscss.org/) and [Sass](http://sass-lang.com/) installed, run
 
-    npm install && bower install
+```sh
+npm install && bower install
+```
 
 to install all necessary development dependencies.
 
