@@ -5,8 +5,8 @@ A Select2 v4 [Theme](https://select2.github.io/examples.html#themes) for Bootstr
 Demonstrations available at
 http://select2.github.io/select2-bootstrap-theme/
 
-Tested with Bootstrap v3.3.5 and Select2 v4.0.0
-in latest Chrome.
+Tested with Bootstrap v3.3.5 and Select2 v4.0.3
+in latest Chrome, Firefox and Safari (Mac) and Internet Explorer 11 and 10.
 
 ##### Installation
 
@@ -26,6 +26,14 @@ $( "#dropdown" ).select2({
 ```
 
 ##### Changelog
+
+###### 0.1.0-beta.5
+
+* Updated all development dependencies.
+* Added Browsersync, Autoprefixer (as required by bootstrap-sass) and scss2less to the build process.
+* Built on Bootstrap 3 v3.3.6 and corresponding bootstrap-sass.
+* Rewrote the sizing class CSS to work with `containerCssClass` option available with the full Select2 build. [[#34](https://github.com/select2/select2-bootstrap-theme/issues/34)]
+* Added copyright and license information. [[#43](https://github.com/select2/select2-bootstrap-theme/issues/43)]
 
 ###### 0.1.0-beta.4
 
@@ -62,3 +70,9 @@ to install all necessary development dependencies.
  * `grunt watch` watches for changes in `src/select2-bootstrap.scss` ([livereload](https://github.com/gruntjs/grunt-contrib-watch#optionslivereload) is enabled)
 
 Develop in `src/select2-bootstrap.scss` and test your changes using `grunt watch` and `grunt serve`. Ideally, port your changes to `lib/select2-bootstrap.less` and make sure tests are passing to verify that Less and Sass compile down to the target CSS via `npm test`.
+
+`grunt scss2less` helps in converting the Sass source to its Less counterpart (and overwrites the existing `src/select2-bootstrap.less`), but doesn't do the full job – please review the changes to the Less source file and make the necessary adjustments.
+
+##### Copyright and license
+
+The license is available within the repository in the [LICENSE][LICENSE] file.

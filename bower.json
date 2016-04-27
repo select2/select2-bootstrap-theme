@@ -11,9 +11,9 @@
     "components"
   ],
   "devDependencies": {
-    "bootstrap": "~3.3.5",
-    "bootstrap-sass-official": "~3.3.5",
-    "respond": "~1.4.2",
-    "anchor-js": "~1.1.1"
+    "bootstrap": "^3.3.6",
+    "bootstrap-sass": "bootstrap-sass-official#^3.3.6",
+    "respond": "^1.4.2",
+    "anchor-js": "^3.1.0"
   }
 }
