@@ -3,7 +3,7 @@ Index: select2-bootstrap.css
 --- select2-bootstrap.css
 +++ select2-bootstrap.css
 @@ -1,59 +1,59 @@
- /*! Select2 Bootstrap Theme v0.1.0-beta.5 | MIT License | github.com/select2/select2-bootstrap-theme */
+ /*! Select2 Bootstrap Theme v0.1.0-beta.7 | MIT License | github.com/select2/select2-bootstrap-theme */
  .select2-container--bootstrap {
    display: block;
    /*------------------------------------*\

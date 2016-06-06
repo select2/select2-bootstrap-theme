@@ -5,7 +5,7 @@ A Select2 v4 [Theme](https://select2.github.io/examples.html#themes) for Bootstr
 Demonstrations available at
 http://select2.github.io/select2-bootstrap-theme/
 
-Tested with Bootstrap v3.3.5 and Select2 v4.0.3
+Tested with Bootstrap v3.3.6 and Select2 v4.0.3
 in latest Chrome, Firefox and Safari (Mac) and Internet Explorer 11 and 10.
 
 ##### Installation
@@ -26,6 +26,10 @@ $( "#dropdown" ).select2({
 ```
 
 ##### Changelog
+
+###### 0.1.0-beta.7
+
+* Fixed version number in distribution files.
 
 ###### 0.1.0-beta.6
 
