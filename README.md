@@ -75,4 +75,4 @@ Develop in `src/select2-bootstrap.scss` and test your changes using `grunt watch
 
 ##### Copyright and license
 
-The license is available within the repository in the [LICENSE][LICENSE] file.
+The license is available within the repository in the [LICENSE](LICENSE) file.
