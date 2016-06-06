@@ -162,6 +162,11 @@ module.exports = function(grunt) {
           'docs/_site/css/select2-bootstrap.css',
           'dist/select2-bootstrap.css'
         ]
+      },
+      test: {
+        src: [
+          'tmp/select2-bootstrap.css'
+        ]
       }
     },
 

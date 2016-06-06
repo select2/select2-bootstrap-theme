@@ -358,7 +358,7 @@ $clear-selection-color: $dropdown-arrow-color !default;
     .select2-selection--single {
         height: $input-height-base;
         line-height: $line-height-base;
-        padding: $padding-base-vertical $padding-base-horizontal + $caret-width-base*3 $padding-base-vertical $padding-base-horizontal;
+        padding: $padding-base-vertical ($padding-base-horizontal + $caret-width-base*3) $padding-base-vertical $padding-base-horizontal;
 
         /**
          * Adjust the single Select2's dropdown arrow button appearance.

@@ -27,6 +27,12 @@ $( "#dropdown" ).select2({
 
 ##### Changelog
 
+###### 0.1.0-beta.6
+
+* Fixed a bug where math would not compile correctly in Less v2.6.0 [[#36](https://github.com/select2/select2-bootstrap-theme/pull/36)].
+* Fixed version number for Bower and NPM.
+* Docs: Updated AnchorJS to latest version.
+
 ###### 0.1.0-beta.5
 
 * Updated all development dependencies.
