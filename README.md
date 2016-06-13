@@ -1,14 +1,35 @@
-A Select2 v4 [Theme](https://select2.github.io/examples.html#themes) for Bootstrap 3
+A [Select2](https://select2.github.io/) v4 [Theme](https://select2.github.io/examples.html#themes) for Bootstrap 3  
+![select2-bootstrap-theme version](https://img.shields.io/badge/select2--bootstrap--theme-v0.1.0--beta.7-brightgreen.svg)
+[![License](http://img.shields.io/badge/License-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
-**Note: Work in progress – depending on your use case, select2-bootstrap-theme might not be production-ready yet!**
+Demonstrations available at  
+[select2.github.io/select2-bootstrap-theme](http://select2.github.io/select2-bootstrap-theme/)
 
-Demonstrations available at
-http://select2.github.io/select2-bootstrap-theme/
+##### Compatibility
 
-Tested with Bootstrap v3.3.6 and Select2 v4.0.3
-in latest Chrome, Firefox and Safari (Mac) and Internet Explorer 11 and 10.
+Tested with Bootstrap v3.3.6 and Select2 v4.0.3 in latest Chrome, Firefox and Safari (Mac) and Internet Explorer 11 and 10.
 
 ##### Installation
+
+You can [download select2-bootstrap-theme from this GitHub repo](https://github.com/select2/select2-bootstrap-theme/releases), install it using Bower or npm, or source it directly from CDNJS.
+
+###### Install using Bower or npm
+
+You may install select2-bootstrap-theme with [Bower](https://bower.io/) or [npm](https://www.npmjs.com/):
+
+```shell
+// Bower
+bower install select2-bootstrap-theme
+
+// npm
+npm install select2-bootstrap-theme
+```
+
+###### Source select2-bootstrap-theme from CDNJS
+
+select2-bootstrap-theme [is also available on CDNJS](https://cdnjs.com/libraries/select2-bootstrap-theme/).
+
+##### Usage
 
 The Select2 Bootstrap Theme only works with Select2 v4.x. Applying the theme requires `select2-bootstrap.css` referenced after the default `select2.css` that comes with Select2:
 
