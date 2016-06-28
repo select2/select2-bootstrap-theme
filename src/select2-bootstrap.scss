@@ -8,13 +8,13 @@
 // These should not be overridden.
 // @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_forms.scss#L127
 
-$form-control-default-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+$form-control-default-box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !default;
 
 // @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/mixins/_forms.scss#L43
-$form-control-focus-box-shadow: $form-control-default-box-shadow, 0 0 8px rgba($input-border-focus, 0.6);
+$form-control-focus-box-shadow: $form-control-default-box-shadow, 0 0 8px rgba($input-border-focus, 0.6) !default;
 
 // @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_forms.scss#L128
-$form-control-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+$form-control-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s !default;
 
 // Custom variables
 // -------------------------
