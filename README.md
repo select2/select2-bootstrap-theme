@@ -1,5 +1,5 @@
 A [Select2](https://select2.github.io/) v4 [Theme](https://select2.github.io/examples.html#themes) for Bootstrap 3  
-![select2-bootstrap-theme version](https://img.shields.io/badge/select2--bootstrap--theme-v0.1.0--beta.7-brightgreen.svg)
+![select2-bootstrap-theme version](https://img.shields.io/badge/select2--bootstrap--theme-v0.1.0--beta.8-brightgreen.svg)
 [![License](http://img.shields.io/badge/License-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
 Demonstrations available at  
@@ -48,6 +48,11 @@ $( "#dropdown" ).select2({
 
 ##### Changelog
 
+###### 0.1.0-beta.8
+
+* Fixed bower.jsons "main" field [[#45](https://github.com/select2/select2-bootstrap-theme/pull/45)].
+* Do no re-assign the `$form-control-default-box-shadow`, `$form-control-focus-box-shadow`, and `$form-control-transition` Sass variables if they are already assigned [[#45](https://github.com/select2/select2-bootstrap-theme/pull/45)].
+
 ###### 0.1.0-beta.7
 
 * Fixed version number in distribution files.
@@ -71,7 +76,7 @@ $( "#dropdown" ).select2({
  * Added missing styles for `.select2-container--focus`. [[#18](https://github.com/select2/select2-bootstrap-theme/issues/18)]
  * Added support for Bootstrap's [`.form-inline`](http://getbootstrap.com/css/#forms-inline). [[#13](https://github.com/select2/select2-bootstrap-theme/pull/13)]
  * Added basic styles for `.select2-selection__clear` in `.select2-selection--multiple`. [[#11](https://github.com/select2/select2-bootstrap-theme/issues/11)]
- * Brought Less source in line with the Sass version and fixed Less patch file and test. [[`3e86f34](https://github.com/select2/select2-bootstrap-theme/commit/3e86f34f6c94302cd8b4d6c3d751c5fb70fe61f6)]
+ * Brought Less source in line with the Sass version and fixed Less patch file and test. [[3e86f34](https://github.com/select2/select2-bootstrap-theme/commit/3e86f34f6c94302cd8b4d6c3d751c5fb70fe61f6)]
 
 ###### 0.1.0-beta.3
 
