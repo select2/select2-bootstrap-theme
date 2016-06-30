@@ -2,8 +2,8 @@
   "name": "select2-bootstrap-theme",
   "version": "0.1.0-beta.8",
   "main": [
-    "src/build.scss",
-    "src/build.less"
+    "src/select2-bootstrap.scss",
+    "src/select2-bootstrap.less"
   ],
   "ignore": [
     "**/.*",
