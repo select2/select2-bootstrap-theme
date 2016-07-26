@@ -8,7 +8,7 @@ exports.compileScss = function(test){
 
       child = grunt.util.spawn({
         cmd: 'grunt',
-        args: ['sass:test']
+        args: ['sass:test', 'postcss:test']
       }, function() {
         var readFile = function(name) { return fs.readFileSync(name, {encoding: 'utf8'}) },
             orig = readFile('dist/'+filename),

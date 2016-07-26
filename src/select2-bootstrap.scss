@@ -1,4 +1,4 @@
-/*! Select2 Bootstrap Theme v0.1.0-beta.4 | MIT License | github.com/select2/select2-bootstrap-theme */
+/*! Select2 Bootstrap Theme v0.1.0-beta.8 | MIT License | github.com/select2/select2-bootstrap-theme */
 
 //
 // Variables
@@ -8,13 +8,13 @@
 // These should not be overridden.
 // @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_forms.scss#L127
 
-$form-control-default-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+$form-control-default-box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !default;
 
 // @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/mixins/_forms.scss#L43
-$form-control-focus-box-shadow: $form-control-default-box-shadow, 0 0 8px rgba($input-border-focus, 0.6);
+$form-control-focus-box-shadow: $form-control-default-box-shadow, 0 0 8px rgba($input-border-focus, 0.6) !default;
 
 // @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_forms.scss#L128
-$form-control-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+$form-control-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s !default;
 
 // Custom variables
 // -------------------------
@@ -70,7 +70,7 @@ $selection-choice-color-hover: #333 !default;
 
 // dropdown arrow when dropdown is open
 @mixin dropdown-arrow {
-        .select2-selection--single {
+    .select2-selection--single {
         /**
          * Make the dropdown arrow point up while the dropdown is visible.
          */
@@ -92,7 +92,6 @@ $selection-choice-color-hover: #333 !default;
 
 
 
-
     /*------------------------------------*\
             #COMMON STYLES
     \*------------------------------------*/
@@ -100,7 +99,12 @@ $selection-choice-color-hover: #333 !default;
     .select2-selection {
         @include bootstrap-input-defaults;
         outline: 0;
+        &.form-control {
+            border-radius: $border-radius-base;
+        }
     }
+
+
 
     /**
      * Search field in the Select2 dropdown.
@@ -355,7 +359,7 @@ $selection-choice-color-hover: #333 !default;
     .select2-selection--single {
         height: $input-height-base;
         line-height: $line-height-base;
-        padding: $padding-base-vertical $padding-base-horizontal + $caret-width-base*3 $padding-base-vertical $padding-base-horizontal;
+        padding: $padding-base-vertical ($padding-base-horizontal + $caret-width-base*3) $padding-base-vertical $padding-base-horizontal;
 
         /**
          * Adjust the single Select2's dropdown arrow button appearance.
@@ -402,6 +406,8 @@ $selection-choice-color-hover: #333 !default;
 
     .select2-selection--multiple {
         min-height: $input-height-base;
+        padding: 0;
+        height: auto;
 
         .select2-selection__rendered {
             box-sizing: border-box;
@@ -487,106 +493,101 @@ $selection-choice-color-hover: #333 !default;
      */
 
     /* 1 */
-    &.input-sm,
-    &.input-lg {
-        border-radius: 0;
-        font-size: 12px;
-        height: auto;
-        line-height: 1;
-        padding: 0;
+
+
+    .select2-selection--single.input-sm,
+    .input-group-sm & .select2-selection--single,
+    .form-group-sm & .select2-selection--single {
+        border-radius: $border-radius-small;
+        font-size: $font-size-small;
+        height: $input-height-small;
+        line-height: $line-height-small;
+        padding: $padding-small-vertical $padding-small-horizontal + $caret-width-base*3 $padding-small-vertical $padding-small-horizontal;
+
+        /* 2 */
+        .select2-selection__arrow b {
+            margin-left: -$padding-small-vertical;
+        }
     }
 
-    &.input-sm,
-    .input-group-sm &,
-    .form-group-sm & {
-        .select2-selection--single {
-            border-radius: $border-radius-small;
+    .select2-selection--multiple.input-sm,
+    .input-group-sm & .select2-selection--multiple,
+    .form-group-sm & .select2-selection--multiple {
+        min-height: $input-height-small;
+        border-radius: $border-radius-small;
+
+        .select2-selection__choice {
             font-size: $font-size-small;
-            height: $input-height-small;
             line-height: $line-height-small;
-            padding: $padding-small-vertical $padding-small-horizontal + $caret-width-base*3 $padding-small-vertical $padding-small-horizontal;
-
-            /* 2 */
-            .select2-selection__arrow b {
-                margin-left: -$padding-small-vertical;
-            }
+            margin: ($padding-small-vertical - 1) 0 0 $padding-small-horizontal/2;
+            padding: 0 $padding-small-vertical;
         }
 
-        .select2-selection--multiple {
-            min-height: $input-height-small;
+        .select2-search--inline .select2-search__field {
+            padding: 0 $padding-small-horizontal;
+            font-size: $font-size-small;
+            height: $input-height-small - 2;
+            line-height: $line-height-small;
+        }
 
-            .select2-selection__choice {
-                font-size: $font-size-small;
-                line-height: $line-height-small;
-                margin: ($padding-small-vertical - 1) 0 0 $padding-small-horizontal/2;
-                padding: 0 $padding-small-vertical;
-            }
+        .select2-selection__clear {
+            margin-top: $padding-small-vertical;
+        }
+    }
 
-            .select2-search--inline .select2-search__field {
-                padding: 0 $padding-small-horizontal;
-                font-size: $font-size-small;
-                height: $input-height-small - 2;
-                line-height: $line-height-small;
-            }
+    .select2-selection--single.input-lg,
+    .input-group-lg & .select2-selection--single,
+    .form-group-lg & .select2-selection--single {
+        border-radius: $border-radius-large;
+        font-size: $font-size-large;
+        height: $input-height-large;
+        line-height: $line-height-large;
+        padding: $padding-large-vertical $padding-large-horizontal + $caret-width-large*3 $padding-large-vertical $padding-large-horizontal;
 
-            .select2-selection__clear {
-                margin-top: $padding-small-vertical;
+        /* 1 */
+        .select2-selection__arrow {
+            width: $caret-width-large;
+
+            b {
+                border-width: $caret-width-large $caret-width-large 0 $caret-width-large;
+                margin-left: -$caret-width-large;
+                margin-left: -$padding-large-vertical;
+                margin-top: -$caret-width-large/2;
             }
         }
     }
 
-    &.input-lg,
-    .input-group-lg &,
-    .form-group-lg & {
-        .select2-selection--single {
-            border-radius: $border-radius-large;
+    .select2-selection--multiple.input-lg,
+    .input-group-lg & .select2-selection--multiple,
+    .form-group-lg & .select2-selection--multiple {
+        min-height: $input-height-large;
+        border-radius: $border-radius-large;
+
+        .select2-selection__choice {
             font-size: $font-size-large;
-            height: $input-height-large;
             line-height: $line-height-large;
-            padding: $padding-large-vertical $padding-large-horizontal + $caret-width-large*3 $padding-large-vertical $padding-large-horizontal;
-
-            /* 1 */
-            .select2-selection__arrow {
-                width: $caret-width-large;
-
-                b {
-                    border-width: $caret-width-large $caret-width-large 0 $caret-width-large;
-                    margin-left: -$caret-width-large;
-                    margin-left: -$padding-large-vertical;
-                    margin-top: -$caret-width-large/2;
-                }
-            }
+            border-radius: 4px;
+            margin: ($padding-large-vertical - 1) 0 0 $padding-large-horizontal/2;
+            padding: 0 $padding-large-vertical;
         }
 
-        .select2-selection--multiple {
-            min-height: $input-height-large;
+        .select2-search--inline .select2-search__field {
+            padding: 0 $padding-large-horizontal;
+            font-size: $font-size-large;
+            height: $input-height-large - 2;
+            line-height: $line-height-large;
+        }
 
-            .select2-selection__choice {
-                font-size: $font-size-large;
-                line-height: $line-height-large;
-                border-radius: 4px;
-                margin: ($padding-large-vertical - 1) 0 0 $padding-large-horizontal/2;
-                padding: 0 $padding-large-vertical;
-            }
-
-            .select2-search--inline .select2-search__field {
-                padding: 0 $padding-large-horizontal;
-                font-size: $font-size-large;
-                height: $input-height-large - 2;
-                line-height: $line-height-large;
-            }
-
-            .select2-selection__clear {
-                margin-top: $padding-large-vertical;
-            }
+        .select2-selection__clear {
+            margin-top: $padding-large-vertical;
         }
     }
 
-    &.input-lg.select2-container--open {
+    .select2-selection.input-lg.select2-container--open {
         @include dropdown-arrow;
     }
 
-    .input-group-lg & {
+    .input-group-lg & .select2-selection {
         &.select2-container--open {
             @include dropdown-arrow;
         }
@@ -714,6 +715,16 @@ $selection-choice-color-hover: #333 !default;
     float: left;
     width: 100%;
     margin-bottom: 0;
+
+    /**
+     * Adjust z-index like Bootstrap does to show the focus-box-shadow
+     * above appended buttons in .input-group and .form-group.
+     */
+
+    &.select2-container--open, /* .form-group */
+    &.select2-container--focus /* .input-group */ {
+        z-index: 3;
+    }
 }
 
 .input-group.select2-bootstrap-prepend .select2-container--bootstrap {

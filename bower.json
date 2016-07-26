@@ -1,9 +1,9 @@
 {
   "name": "select2-bootstrap-theme",
-  "version": "0.1.0-beta.4",
+  "version": "0.1.0-beta.8",
   "main": [
-    "dist/select2-bootstrap.css",
-    "dist/select2-bootstrap.min.css"
+    "src/build.scss",
+    "src/build.less"
   ],
   "ignore": [
     "**/.*",
@@ -11,9 +11,9 @@
     "components"
   ],
   "devDependencies": {
-    "bootstrap": "~3.3.5",
-    "bootstrap-sass-official": "~3.3.5",
-    "respond": "~1.4.2",
-    "anchor-js": "~1.1.1"
+    "bootstrap": "^3.3.6",
+    "bootstrap-sass": "bootstrap-sass-official#^3.3.6",
+    "respond": "^1.4.2",
+    "anchor-js": "^3.1.1"
   }
 }

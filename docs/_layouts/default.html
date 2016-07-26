@@ -13,7 +13,7 @@
 
 			<div class="form-group">
 				<label for="single" class="control-label">Select2 single select</label>
-				<select id="single" class="form-control select2">
+				<select id="single" class="form-control select2-single">
 					<option></option>
 					{% include select2-select.html %}
 				</select>
@@ -81,7 +81,7 @@
 							<span class="glyphicon glyphicon-search"></span>
 						</button>
 					</span>
-					<select id="single-prepend-text" class="form-control select2">
+					<select id="single-prepend-text" class="form-control select2-single">
 						<option></option>
 						<option value="A">A</option>
 						<option value="B">B</option>
@@ -93,7 +93,7 @@
 			<div class="form-group">
 				<label for="multi-append" class="control-label">Select2 multi append</label>
 				<div class="input-group select2-bootstrap-append">
-					<select id="multi-append" class="form-control select2" multiple>
+					<select id="multi-append" class="form-control select2-multiple" multiple>
 						<option></option>
 						<option value="A">A</option>
 						<option value="B">B</option>
@@ -115,7 +115,7 @@
 							State
 						</button>
 					</span>
-					<select id="multi-prepend" class="form-control select2" multiple>
+					<select id="multi-prepend" class="form-control select2-multiple" multiple>
 						<option></option>
 							{% include select2-select.html %}
 					</select>
@@ -131,10 +131,8 @@
 			<p>The theme offers styles to display "small" and "large" Select2 widgets in <a href="http://getbootstrap.com/components/#input-groups">Bootstrap Input Groups</a> with <a href="http://getbootstrap.com/css/#forms-control-sizes">Bootstrap Control Sizing</a> classes applied (e. g. Select2 in <code>.input-group.input-group-sm</code> or <code>.input-group.input-group-lg</code>). You may also apply the <a href="http://getbootstrap.com/css/#forms-control-sizes">Bootstrap Control Sizing</a> classes directly to the <code>.select2-container</code> to alter its appearance.</p>
 
 			<div class="alert alert-info" role="alert">
-				<h4>Why are some Select2's not scaled?</h4>
-				<p>While <code>.select2-container--bootstrap.input-sm</code> and <code>.select2-container--bootstrap.input-lg</code> work as advertised, Select2 4 currently does not offer copying CSS classes from the original <code>&lt;select&gt;</code> element in an easy way like version 3.x did.</p>
-				<p>Click the button for a demo setting the required classes on <code>.select2-container--bootstrap</code>:</p>
-				<button class='btn btn-sm btn-primary btn-outline btn-set-scaling-classes js-btn-set-scaling-classes'>Set Sizing Classes</button>
+				<h4>Requires select2.full.js</h4>
+				<p>Those of you familiar with Select2 v3 remember that the default behavior was to copy the original elements CSS-classes to the container of the Select2 element. Select2 v4 provides a similar functionality in its full build, <a href="https://github.com/select2/select2/blob/master/dist/js/select2.full.js">select2.full.js</a>. It contains a compatibility module which behaves similar to v3 in copying CSS classes from the original <code>&lt;select&gt;</code> element. To invoke, set the <code>containerCssClass</code> option to <code>:all:</code>.</p>
 			</div>
 
 			<div class="row">
@@ -162,7 +160,7 @@
 							<span class="input-group-addon">
 								<input type="radio">
 							</span>
-							<select id="select2-single-input-group-sm" class="form-control select2">
+							<select id="select2-single-input-group-sm" class="form-control select2-single">
 								<option></option>
 								{% include select2-select.html %}
 							</select>
@@ -183,7 +181,7 @@
 				</div>
 				<div class="col-md-3">
 					<label for="span_small" class="control-label">col-md-3</label>
-					<select id="span_small" class="form-control select2">
+					<select id="span_small" class="form-control select2-single">
 						{% include select2-select.html %}
 					</select>
 				</div>
@@ -198,7 +196,7 @@
 							<span class="input-group-addon">
 								<input type="checkbox" checked>
 							</span>
-							<select id="span_large" class="form-control select2">
+							<select id="span_large" class="form-control select2-single">
 								<option></option>
 								{% include select2-select.html %}
 							</select>
@@ -233,7 +231,7 @@
 							<span class="input-group-addon">
 								<input type="radio">
 							</span>
-							<select id="select2-multiple-input-group-lg" class="form-control select2">
+							<select id="select2-multiple-input-group-lg" class="form-control select2-single">
 								<option></option>
 								{% include select2-select.html %}
 							</select>
@@ -325,7 +323,7 @@
 							<label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
 							<div class="input-group select2-bootstrap-append select2-bootstrap-prepend">
 								<div class="input-group-addon">$</div>
-								<select class="form-control select2">
+								<select class="form-control select2-single">
 									<option></option>
 									{% include select2-select.html %}
 								</select>
@@ -348,7 +346,7 @@
 							<label class="sr-only" for="exampleInputPassword3">Password</label>
 							<input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
 						</div>
-						<select class="form-control select2">
+						<select class="form-control select2-single">
 							<option></option>
 							{% include select2-select.html %}
 						</select>
@@ -483,7 +481,7 @@
 							<span class="input-group-addon">
 								<input type="checkbox">
 							</span>
-							<select id="select2-disabled-inputs-single" class="form-control select2" disabled>
+							<select id="select2-disabled-inputs-single" class="form-control select2-single" disabled>
 								<option></option>
 								{% include select2-select.html %}
 							</select>
@@ -525,15 +523,17 @@
 
 			var placeholder = "Select a State";
 
-			$( ".select2, .select2-multiple" ).select2( {
+			$( ".select2-single, .select2-multiple" ).select2( {
 				placeholder: placeholder,
-				width: null
+				width: null,
+				containerCssClass: ':all:'
 			} );
 
 			$( ".select2-allow-clear" ).select2( {
 				allowClear: true,
 				placeholder: placeholder,
-				width: null
+				width: null,
+				containerCssClass: ':all:'
 			} );
 
 			// @see https://select2.github.io/examples.html#data-ajax
@@ -564,7 +564,8 @@
 			}
 
 			$( ".js-data-example-ajax" ).select2({
-				width : "off",
+				width : null,
+				containerCssClass: ':all:',
 				ajax: {
 					url: "https://api.github.com/search/repositories",
 					dataType: 'json',
@@ -605,7 +606,7 @@
 			// (was #select2-drop in Select2 v3.x, in Select2 v4 can be selected via
 			// body > .select2-container) if _any_ of the opened Select2's parents
 			// has one of these forementioned classes (YUCK! ;-))
-			$( ".select2, .select2-multiple, .select2-allow-clear, .js-data-example-ajax" ).on( "select2:open", function() {
+			$( ".select2-single, .select2-multiple, .select2-allow-clear, .js-data-example-ajax" ).on( "select2:open", function() {
 				if ( $( this ).parents( "[class*='has-']" ).length ) {
 					var classNames = $( this ).parents( "[class*='has-']" )[ 0 ].className.split( /\s+/ );
 
@@ -616,13 +617,6 @@
 					}
 				}
 			});
-
-			$( ".js-btn-set-scaling-classes" ).on( "click", function(){
-				$( "#select2-multiple-input-sm, #select2-single-input-sm" ).next( ".select2-container--bootstrap" ).addClass( "input-sm" );
-				$( "#select2-multiple-input-lg, #select2-single-input-lg" ).next( ".select2-container--bootstrap" ).addClass( "input-lg" );
-				$( this ).removeClass( "btn-primary btn-outline" ).prop( "disabled", true );
-			});
-
 		</script>
 	</body>
 </html>
