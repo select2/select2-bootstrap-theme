@@ -22,7 +22,8 @@ $form-control-transition: border-color ease-in-out .15s, box-shadow ease-in-out 
 $dropdown-arrow-color: $input-color-placeholder !default;
 $dropdown-box-shadow: 0 6px 12px rgba(0,0,0,.175) !default;
 $clear-selection-color: $dropdown-arrow-color !default;
-
+$selection-choice-color: #999 !default;
+$selection-choice-color-hover: #333 !default;
 
 
 
@@ -227,7 +228,7 @@ $clear-selection-color: $dropdown-arrow-color !default;
         color: $dropdown-header-color;
         display: block;
         padding: $padding-base-vertical $padding-base-horizontal;
-        font-size: $font-size-small;
+        font-size: $font-size-base;
         line-height: $line-height-base;
         white-space: nowrap;
     }
@@ -432,7 +433,7 @@ $clear-selection-color: $dropdown-arrow-color !default;
          */
 
         .select2-selection__choice {
-            color: $input-color;
+            color: $btn-default-color;
             background: $btn-default-bg;
             border: 1px solid $btn-default-border;
             border-radius: 4px;
@@ -458,14 +459,14 @@ $clear-selection-color: $dropdown-arrow-color !default;
         }
 
         .select2-selection__choice__remove {
-            color: #999;
+            color: $selection-choice-color;
             cursor: pointer;
             display: inline-block;
             font-weight: bold;
             margin-right: $padding-base-vertical / 2;
 
             &:hover {
-                color: #333;
+                color: $selection-choice-color-hover;
             }
         }
 
