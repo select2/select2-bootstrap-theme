@@ -10,14 +10,14 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
-        style: 'expanded',
+        outputStyle: 'expanded',
         sourcemap: 'none',
-        // Increase Sass' default (5) precision to 9 to match Less output.
+        // Increase Sass' number "precision" to 8 to match Less output.
         //
         // @see https://github.com/twbs/bootstrap-sass#sass-number-precision
         // @see https://github.com/sass/node-sass/issues/673#issue-57581701
         // @see https://github.com/sass/sass/issues/1122
-        precision: 9
+        precision: 8
       },
       dist: {
         files: {
@@ -48,11 +48,11 @@ module.exports = function(grunt) {
     bump: {
       options: {
         files: [
-          'package.json',
-          'bower.json'
+          'package.json'
         ],
         push: false,
-        createTag: false
+        createTag: false,
+        commit: false
       }
     },
 
@@ -143,7 +143,7 @@ module.exports = function(grunt) {
         processors: [
           // Autoprefixer browser settings as required by Bootstrap
           //
-          // @see https://github.com/twbs/bootstrap-sass/tree/master/#sass-autoprefixer
+          // @see https://github.com/twbs/bootstrap-sass#sass-autoprefixer
           require('autoprefixer')({browsers: [
             "Android 2.3",
             "Android >= 4",
@@ -176,6 +176,17 @@ module.exports = function(grunt) {
           src: 'src/select2-bootstrap.scss',
           dest: 'src/select2-bootstrap.less'
         }]
+      }
+    },
+
+    // Only used to generate CSS for the tests.
+    less: {
+      test: {
+        options: {
+          sourceMap: false
+        },
+        src: 'src/build.less',
+        dest: 'tmp/select2-bootstrap.css'
       }
     }
 

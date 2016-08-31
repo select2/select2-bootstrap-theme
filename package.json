@@ -1,6 +1,6 @@
 {
   "name": "select2-bootstrap-theme",
-  "version": "0.1.0-beta.8",
+  "version": "0.1.0-beta.9",
   "description": "A theme for Select2 v4 and Bootstrap 3.",
   "main": "",
   "style": "select2-bootstrap.css",
@@ -27,20 +27,21 @@
   },
   "readmeFilename": "README.md",
   "devDependencies": {
-    "autoprefixer": "^6.3.6",
-    "diff": "^2.2.2",
+    "autoprefixer": "^6.4.0",
+    "diff": "^2.2.3",
     "grunt": "^1.0.1",
     "grunt-browser-sync": "^2.2.0",
     "grunt-bump": "^0.8.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^1.0.1",
     "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-less": "^1.4.0",
     "grunt-contrib-nodeunit": "^1.0.0",
-    "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-gh-pages": "^1.1.0",
+    "grunt-gh-pages": "^1.2.0",
     "grunt-jekyll": "^0.4.4",
     "grunt-postcss": "^0.8.0",
+    "grunt-sass": "^1.2.1",
     "grunt-scss2less": "0.0.1",
     "matchdep": "^1.0.1"
   }

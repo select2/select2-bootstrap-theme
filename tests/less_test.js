@@ -7,8 +7,8 @@ exports.compileLess = function(test){
       patchfile = 'tests/support/less.patch',
 
       child = grunt.util.spawn({
-        cmd: 'lessc',
-        args: ['--verbose', 'src/build.less', 'tmp/'+filename]
+        cmd: 'grunt',
+        args: ['less:test', 'postcss:test']
       }, function() {
         var readFile = function(name) { return fs.readFileSync(name, {encoding: 'utf8'}) },
             orig = readFile('dist/'+filename),

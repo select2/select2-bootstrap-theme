@@ -9,10 +9,18 @@
     "node_modules",
     "components"
   ],
+  "dependencies": {
+    "bootstrap": "^3.3.4",
+    "select2": "^4.0.0"
+  },
   "devDependencies": {
-    "bootstrap": "^3.3.6",
-    "bootstrap-sass": "bootstrap-sass-official#^3.3.6",
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
     "respond": "^1.4.2",
-    "anchor-js": "^3.1.1"
+    "anchor-js": "^3.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:select2/select2-bootstrap-theme.git"
   }
 }
