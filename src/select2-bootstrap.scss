@@ -49,7 +49,7 @@ $s2bs-input-height-small: $input-height-small !default;
 
 $s2bs-dropdown-arrow-color: $s2bs-input-color-placeholder !default;
 $s2bs-dropdown-box-shadow: 0 6px 12px rgba(0,0,0,.175) !default;
-$s2bs-dropdown-box-shadow-above: 0px -6px 12px rgba(0,0,0,.175);
+$s2bs-dropdown-box-shadow-above: 0px -6px 12px rgba(0,0,0,.175) !default;
 $s2bs-clear-selection-color: $s2bs-dropdown-arrow-color !default;
 $s2bs-clear-selection-hover-color: $btn-default-color !default;
 $s2bs-remove-choice-color: $input-color-placeholder !default;
