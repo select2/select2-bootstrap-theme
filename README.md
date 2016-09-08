@@ -119,20 +119,18 @@ $.fn.select2.defaults.set( "theme", "bootstrap" );
 
 The project offers [Less](http://lesscss.org/) and [Sass](http://sass-lang.com/) sources for building `select2-bootstrap.css`; both make use of variables from either [Bootstrap](https://github.com/twbs/bootstrap) (Less) or [Bootstrap for Sass](https://github.com/twbs/bootstrap-sass). The demo pages are built using [Jekyll](http://jekyllrb.com/) and there are a bunch of [Grunt](http://gruntjs.com/) tasks to ease development.
 
-With [Ruby](https://www.ruby-lang.org/en/downloads/) and [RubyGems](http://rubygems.org/pages/download), [Jekyll](http://jekyllrb.com/), [Bower](http://bower.io/), [node.js](http://nodejs.org/), [Less](http://lesscss.org/) and [Sass](http://sass-lang.com/) installed, run
+With [Jekyll](http://jekyllrb.com/), [node.js](http://nodejs.org/) and [Less](http://lesscss.org/) installed, run
 
 ```sh
-npm install && bower install
+npm install
 ```
 
-to install all necessary development dependencies.
+to install all necessary development dependencies (Sass is compiled v[LibSass](https://github.com/sass/libsass/)/[node-sass](https://github.com/sass/node-sass)).
 
- * `grunt copy` copies assets from `components` to `_jekyll` – use this in case a new version of Twitter Bootstrap or Select2 are out and need to be tested
  * `grunt build` builds `docs`
  * `grunt serve` builds `docs` and serves them via Jekyll's `--watch` flag on http://localhost:4000
- * `grunt watch` watches for changes in `src/select2-bootstrap.scss` ([livereload](https://github.com/gruntjs/grunt-contrib-watch#optionslivereload) is enabled)
 
-Develop in `src/select2-bootstrap.scss` and test your changes using `grunt watch` and `grunt serve`. Ideally, port your changes to `lib/select2-bootstrap.less` and make sure tests are passing to verify that Less and Sass compile down to the target CSS via `npm test`.
+Develop in `src/select2-bootstrap.scss` and test your changes using `grunt serve`. Ideally, port your changes to `lib/select2-bootstrap.less` and make sure tests are passing to verify that both Less and Sass compile down to the target CSS via `npm test`.
 
 `grunt scss2less` helps in converting the Sass source to its Less counterpart (and overwrites the existing `src/select2-bootstrap.less`), but doesn't do the full job – please review the changes to the Less source file and make the necessary adjustments.
 
