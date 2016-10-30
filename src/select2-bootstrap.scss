@@ -773,18 +773,22 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
   }
 }
 
-.input-group.select2-bootstrap-prepend .select2-container--bootstrap {
-  .select2-selection {
+/**
+ * Input group styles, without extra classes.
+ * @author odahcam
+ */
+.input-group > .select2-container--bootstrap {
+  &:first-child > .selection > .select2-selection {
     @include border-left-radius(0);
   }
-}
-
-.input-group.select2-bootstrap-append .select2-container--bootstrap {
-  .select2-selection {
+  &:not(:first-child):not(:last-child) {
+    border-radius: 0;
+  }
+  &:last-child > .selection > .select2-selection {
     @include border-right-radius(0);
   }
 }
-
+    
 /**
  * Adjust alignment of Bootstrap buttons in Bootstrap Input Groups to address
  * Multi Select2's height which - depending on how many elements have been selected -
