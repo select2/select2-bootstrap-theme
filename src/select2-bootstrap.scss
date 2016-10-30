@@ -779,13 +779,13 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
  */
 .input-group > .select2-container--bootstrap {
   &:first-child > .selection > .select2-selection {
-    @include border-left-radius(0);
+    @include border-right-radius(0);
   }
   &:not(:first-child):not(:last-child) {
     border-radius: 0;
   }
   &:last-child > .selection > .select2-selection {
-    @include border-right-radius(0);
+    @include border-left-radius(0);
   }
 }
     
