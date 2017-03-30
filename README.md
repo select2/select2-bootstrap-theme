@@ -60,7 +60,7 @@ $.fn.select2.defaults.set( "theme", "bootstrap" );
 ##### 0.1.0-beta.10
 
 * Compiled with grunt-sass v2.0.0 (was v1.2.1).
-* Merged pull request [#54](https://github.com/select2/select2-bootstrap-theme/pull/54) by @odahcam (and fixed it: `:first-child/:not(:first-child)/:last-child` for `.select2-container--bootstrap` won’t play nice in our case; we have to take the original <select> element (with `.select2-hidden-accessible` applied) into account): Select2’s border-radii now are correctly styled in Bootstrap’s “Input Groups” without the need for helper classes (`.select2-bootstrap-append`, `.select2-bootstrap-prepend`).
+* Merged pull request [#54](https://github.com/select2/select2-bootstrap-theme/pull/54) by @odahcam (and fixed it: `:first-child/:not(:first-child)/:last-child` for `.select2-container--bootstrap` won’t play nice in our case; we have to take the original `<select>` element (with `.select2-hidden-accessible` applied) into account): Select2’s border-radii now are correctly styled in Bootstrap’s “Input Groups” without the need for helper classes (`.select2-bootstrap-append`, `.select2-bootstrap-prepend`).
 * Fixed [#63](https://github.com/select2/select2-bootstrap-theme/issues/63): "Cursor position of multiselect in RTL state is in incorrect position"
 * Fixed [#20](https://github.com/select2/select2-bootstrap-theme/issues/20): "Select2 inside inline form does not fall back to `display: block` when resizing window to 'extra small'"
 * Added new Sass/Less variable `$s2bs-btn-default-color`/`@s2bs-btn-default-color` – defaults to Bootstrap’s `$btn-default-color`/`@btn-default-color`.
