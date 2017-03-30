@@ -8,7 +8,7 @@ exports.compileLess = function(test){
 
       child = grunt.util.spawn({
         cmd: 'grunt',
-        args: ['less:test', 'postcss:test']
+        args: ['less:test', 'postcss:test', 'stamp:test']
       }, function() {
         var readFile = function(name) { return fs.readFileSync(name, {encoding: 'utf8'}) },
             orig = readFile('dist/'+filename),

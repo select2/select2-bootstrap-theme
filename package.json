@@ -1,6 +1,6 @@
 {
   "name": "select2-bootstrap-theme",
-  "version": "0.1.0-beta.9",
+  "version": "0.1.0-beta.10",
   "description": "A theme for Select2 v4 and Bootstrap 3.",
   "main": "",
   "style": "select2-bootstrap.css",
@@ -15,6 +15,9 @@
     "type": "git",
     "url": "git://github.com/select2/select2-bootstrap-theme.git"
   },
+  "bugs": {
+    "url": "https://github.com/select2/select2-bootstrap-theme/issues"
+  },
   "keywords": [
     "bootstrap",
     "select2",
@@ -23,10 +26,7 @@
     "less"
   ],
   "author": "Florian Kissling",
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/select2/select2-bootstrap-theme/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "readmeFilename": "README.md",
   "devDependencies": {
     "Respond.js": "github:scottjehl/Respond#1.4.2",
@@ -47,7 +47,7 @@
     "grunt-gh-pages": "^1.2.0",
     "grunt-jekyll": "^0.4.4",
     "grunt-postcss": "^0.8.0",
-    "grunt-sass": "^1.2.1",
+    "grunt-sass": "^2.0.0",
     "grunt-scss2less": "0.0.1",
     "grunt-stamp": "^0.3.0",
     "matchdep": "^1.0.1"

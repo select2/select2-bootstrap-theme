@@ -2,8 +2,9 @@ Index: select2-bootstrap.css
 ===================================================================
 --- select2-bootstrap.css
 +++ select2-bootstrap.css
-@@ -1,8 +1,9 @@
- /*! Select2 Bootstrap Theme v0.1.0-beta.9 | MIT License | github.com/select2/select2-bootstrap-theme */
+@@ -5,9 +5,10 @@
+  */
+ 
  .select2-container--bootstrap {
    display: block;
 -  /*------------------------------------*      #COMMON STYLES
@@ -13,7 +14,7 @@ Index: select2-bootstrap.css
    /**
     * Search field in the Select2 dropdown.
     */
-@@ -24,19 +25,22 @@
+@@ -29,19 +30,22 @@
     *
     * @see https://select2.github.io/examples.html#disabled
     * @see http://getbootstrap.com/css/#forms-control-disabled
@@ -39,7 +40,7 @@ Index: select2-bootstrap.css
    /**
     * Address Bootstrap control sizing classes
     *
-@@ -45,12 +49,12 @@
+@@ -50,12 +54,12 @@
     *
     * @see http://getbootstrap.com/css/#forms-control-sizes
     */
@@ -54,7 +55,7 @@ Index: select2-bootstrap.css
    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
    background-color: #fff;
-@@ -59,13 +63,11 @@
+@@ -64,13 +68,11 @@
    color: #555555;
    font-size: 14px;
    outline: 0;
@@ -68,7 +69,7 @@ Index: select2-bootstrap.css
    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
    background-color: #fff;
-@@ -73,9 +75,8 @@
+@@ -78,9 +80,8 @@
    border-radius: 4px;
    color: #555555;
    font-size: 14px;
@@ -78,7 +79,7 @@ Index: select2-bootstrap.css
    outline: 0;
    /* Firefox 18- */
    /**
-@@ -83,26 +84,21 @@
+@@ -88,26 +89,21 @@
       *
       * @see http://stackoverflow.com/questions/24236240/color-for-styled-placeholder-text-is-muted-in-firefox
       */
@@ -105,7 +106,7 @@ Index: select2-bootstrap.css
    padding: 6px 12px;
    /**
       * Disabled results.
-@@ -115,71 +111,59 @@
+@@ -120,71 +116,59 @@
    /**
       * Selected state.
       */
@@ -179,7 +180,7 @@ Index: select2-bootstrap.css
    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-@@ -188,104 +172,88 @@
+@@ -193,104 +177,88 @@
    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
    border-color: #66afe9;
@@ -284,7 +285,7 @@ Index: select2-bootstrap.css
    border-color: #999 transparent transparent transparent;
    border-style: solid;
    border-width: 4px 4px 0 4px;
-@@ -296,18 +264,15 @@
+@@ -301,18 +269,15 @@
    position: absolute;
    top: 50%;
    width: 0;
@@ -303,7 +304,7 @@ Index: select2-bootstrap.css
    min-height: 34px;
    padding: 0;
    height: auto;
-@@ -320,9 +285,8 @@
+@@ -325,9 +290,8 @@
    /**
       * Clear the selection.
       */
@@ -313,7 +314,7 @@ Index: select2-bootstrap.css
    -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
            box-sizing: border-box;
-@@ -335,15 +299,13 @@
+@@ -340,15 +304,13 @@
    width: 100%;
    text-overflow: ellipsis;
    white-space: nowrap;
@@ -329,7 +330,7 @@ Index: select2-bootstrap.css
    color: #555555;
    background: #fff;
    border: 1px solid #ccc;
-@@ -352,34 +314,29 @@
+@@ -357,34 +319,29 @@
    float: left;
    margin: 5px 0 0 6px;
    padding: 0 6px;
@@ -364,7 +365,7 @@ Index: select2-bootstrap.css
  .input-group-sm .select2-container--bootstrap .select2-selection--single,
  .form-group-sm .select2-container--bootstrap .select2-selection--single {
    border-radius: 3px;
-@@ -388,46 +345,40 @@
+@@ -393,46 +350,40 @@
    line-height: 1.5;
    padding: 5px 22px 5px 10px;
    /* 2 */
@@ -411,7 +412,7 @@ Index: select2-bootstrap.css
  .input-group-lg .select2-container--bootstrap .select2-selection--single,
  .form-group-lg .select2-container--bootstrap .select2-selection--single {
    border-radius: 6px;
-@@ -436,31 +387,27 @@
+@@ -441,31 +392,27 @@
    line-height: 1.3333333;
    padding: 10px 31px 10px 16px;
    /* 1 */
@@ -443,7 +444,7 @@ Index: select2-bootstrap.css
  .input-group-lg .select2-container--bootstrap .select2-selection--multiple .select2-selection__choice,
  .form-group-lg .select2-container--bootstrap .select2-selection--multiple .select2-selection__choice {
    font-size: 18px;
-@@ -468,46 +415,39 @@
+@@ -473,46 +420,39 @@
    border-radius: 4px;
    margin: 9px 0 0 8px;
    padding: 0 10px;
@@ -490,7 +491,7 @@ Index: select2-bootstrap.css
    /**
       * Single Select2
       *
-@@ -517,50 +457,42 @@
+@@ -522,51 +462,43 @@
    /**
       * Multiple Select2
       */
@@ -522,7 +523,8 @@ Index: select2-bootstrap.css
  }
 -
  .select2-container--bootstrap[dir="rtl"] .select2-selection--multiple .select2-selection__choice,
- .select2-container--bootstrap[dir="rtl"] .select2-selection--multiple .select2-selection__placeholder {
+ .select2-container--bootstrap[dir="rtl"] .select2-selection--multiple .select2-selection__placeholder,
+ .select2-container--bootstrap[dir="rtl"] .select2-selection--multiple .select2-search--inline {
    float: right;
  }
 -
@@ -543,7 +545,7 @@ Index: select2-bootstrap.css
  /**
   * Address Bootstrap's validation states
   *
-@@ -574,64 +506,52 @@
+@@ -580,64 +512,52 @@
  .has-warning .select2-dropdown,
  .has-warning .select2-selection {
    border-color: #8a6d3b;
@@ -607,44 +609,47 @@ Index: select2-bootstrap.css
  /**
   * Select2 widgets in Bootstrap Input Groups
   *
-  * When Select2 widgets are combined with other elements using Bootstraps
-@@ -661,39 +581,35 @@
-    * Adjust z-index like Bootstrap does to show the focus-box-shadow
-    * above appended buttons in .input-group and .form-group.
-    */
- }
--
--.input-group .select2-container--bootstrap.select2-container--open, .input-group .select2-container--bootstrap.select2-container--focus {
-+.input-group .select2-container--bootstrap.select2-container--open,
-+.input-group .select2-container--bootstrap.select2-container--focus {
-   z-index: 3;
- }
--
- .input-group.select2-bootstrap-prepend .select2-container--bootstrap .select2-selection {
-   border-bottom-left-radius: 0;
-   border-top-left-radius: 0;
- }
--
- .input-group.select2-bootstrap-append .select2-container--bootstrap .select2-selection {
+  * @see http://getbootstrap.com/components/#input-groups
+@@ -650,20 +570,17 @@
+ .input-group > .select2-hidden-accessible:first-child + .select2-container--bootstrap > .selection > .select2-selection.form-control {
    border-bottom-right-radius: 0;
    border-top-right-radius: 0;
  }
 -
- /**
-  * Adjust alignment of Bootstrap buttons in Bootstrap Input Groups to address
-  * Multi Select2's height which - depending on how many elements have been selected -
-  * may grow taller than its initial size.
-  *
-  * @see http://getbootstrap.com/components/#input-groups
-  */
- .select2-bootstrap-append .select2-container--bootstrap,
-+.select2-bootstrap-prepend .select2-container--bootstrap,
- .select2-bootstrap-append .input-group-btn,
-+.select2-bootstrap-prepend .input-group-btn,
- .select2-bootstrap-append .input-group-btn .btn,
--.select2-bootstrap-prepend .select2-container--bootstrap,
--.select2-bootstrap-prepend .input-group-btn,
- .select2-bootstrap-prepend .input-group-btn .btn {
+ .input-group > .select2-hidden-accessible:not(:first-child) + .select2-container--bootstrap:not(:last-child) > .selection > .select2-selection,
+ .input-group > .select2-hidden-accessible:not(:first-child) + .select2-container--bootstrap:not(:last-child) > .selection > .select2-selection.form-control {
+   border-radius: 0;
+ }
+-
+ .input-group > .select2-hidden-accessible:not(:first-child):not(:last-child) + .select2-container--bootstrap:last-child > .selection > .select2-selection,
+ .input-group > .select2-hidden-accessible:not(:first-child):not(:last-child) + .select2-container--bootstrap:last-child > .selection > .select2-selection.form-control {
+   border-bottom-left-radius: 0;
+   border-top-left-radius: 0;
+ }
+-
+ .input-group > .select2-container--bootstrap {
+   display: table;
+   table-layout: fixed;
+   position: relative;
+@@ -681,23 +598,20 @@
+    *
+    * @see http://getbootstrap.com/components/#input-groups
+    */
+ }
+-
+ .input-group > .select2-container--bootstrap > .selection > .select2-selection.form-control {
+   float: none;
+ }
+-
+-.input-group > .select2-container--bootstrap.select2-container--open, .input-group > .select2-container--bootstrap.select2-container--focus {
++.input-group > .select2-container--bootstrap.select2-container--open,
++.input-group > .select2-container--bootstrap.select2-container--focus {
+   z-index: 3;
+ }
+-
+ .input-group > .select2-container--bootstrap,
+ .input-group > .select2-container--bootstrap .input-group-btn,
+ .input-group > .select2-container--bootstrap .input-group-btn .btn {
    vertical-align: top;
  }
 -
@@ -652,7 +657,7 @@ Index: select2-bootstrap.css
   * Temporary fix for https://github.com/select2/select2-bootstrap-theme/issues/9
   *
   * Provides `!important` for certain properties of the class applied to the
-@@ -705,9 +621,8 @@
+@@ -709,9 +623,8 @@
  .form-control.select2-hidden-accessible {
    position: absolute !important;
    width: 1px !important;
@@ -661,4 +666,4 @@ Index: select2-bootstrap.css
  /**
   * Display override for inline forms
   */
- .form-inline .select2-container--bootstrap {
+ @media (min-width: 768px) {

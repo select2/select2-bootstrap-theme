@@ -24,6 +24,11 @@ module.exports = function(grunt) {
         files: {
           'dist/select2-bootstrap.css': 'src/build.scss'
         }
+      },
+      test: {
+        files: {
+          'tmp/select2-bootstrap.css': 'src/build.scss'
+        }
       }
     },
 
@@ -162,6 +167,11 @@ module.exports = function(grunt) {
         src: [
           'dist/select2-bootstrap.css'
         ]
+      },
+      test: {
+        src: [
+          'tmp/select2-bootstrap.css'
+        ]
       }
     },
 
@@ -190,12 +200,17 @@ module.exports = function(grunt) {
         banner: '/*!\n' +
                 ' * Select2 Bootstrap Theme v<%= package.version %> (<%= package.homepage %>)\n' +
                 ' * Copyright 2015-<%= grunt.template.today("yyyy") %> <%= package.author %> and contributors (https://github.com/select2/select2-bootstrap-theme/graphs/contributors)\n' +
-                ' * Licensed under MIT (<%= package.license.url %>)\n' +
+                ' * Licensed under MIT (https://github.com/select2/select2-bootstrap-theme/blob/master/LICENSE)\n' +
                 ' */\n'
       },
       dist: {
         files: {
           src: 'dist/*'
+        }
+      },
+      test: {
+        files: {
+          src: 'tmp/*'
         }
       }
     }
