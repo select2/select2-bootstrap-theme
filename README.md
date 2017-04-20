@@ -52,7 +52,9 @@ $( "#dropdown" ).select2({
 You may also set it as the default theme for all Select2 widgets like so:
 
 ```js
-$.fn.select2.defaults.set( "theme", "bootstrap" );
+if ($.fn.select2) {
+  $.fn.select2.defaults.set( "theme", "bootstrap" );
+}
 ```
 
 #### Changelog
