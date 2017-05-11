@@ -1,0 +1,31 @@
+// Overrides of Select2 SASS variables to make it work with Bootstrap 4 and match its look.
+// Import this BEFORE https://github.com/select2/select2-bootstrap-theme SASS files or SASS compilation will fail
+// Since there is no official Bootstrap 4 theme for Select 2 this is a good fallback.
+
+$s2bs-input-border: $input-border-color !default;
+$s2bs-clear-selection-hover-color: $btn-secondary-color !default;
+$s2bs-remove-choice-hover-color: $btn-secondary-color !default;
+$s2bs-border-radius-base: $border-radius !default;
+$s2bs-border-radius-large: $border-radius-lg !default;
+$s2bs-border-radius-small: $border-radius-sm !default;
+$s2bs-btn-default-bg: $btn-secondary-bg !default;
+$s2bs-btn-default-border: $btn-secondary-border !default;
+$s2bs-caret-width-base: .25rem !default; // 4px
+$s2bs-caret-width-large: .3125rem !default; // 5px
+$s2bs-font-size-base: $font-size-base !default;
+$s2bs-font-size-large: $font-size-lg !default;
+$s2bs-font-size-small: $font-size-sm !default;
+$s2bs-padding-base-horizontal: $input-padding-x !default;
+$s2bs-padding-large-horizontal: $input-padding-x-lg !default;
+$s2bs-padding-small-horizontal: $input-padding-x-sm !default;
+$s2bs-padding-base-vertical: $input-padding-y  !default;
+$s2bs-padding-large-vertical: $input-padding-y-lg !default;
+$s2bs-padding-small-vertical: $input-padding-y-sm !default;
+$s2bs-line-height-base: $input-line-height !default;
+$s2bs-line-height-large: $input-line-height !default;
+$s2bs-line-height-small: $input-line-height !default;
+$s2bs-input-height-base: calc(#{$input-padding-y * 2 + $input-line-height} + #{$border-width * 2}) !default;
+$s2bs-input-height-large: calc(#{$input-padding-y-lg * 2 + $input-line-height} + #{$border-width * 2}) !default;
+$s2bs-input-height-small: calc(#{$input-padding-y-sm * 2 + $input-line-height} + #{$border-width * 2}) !default;
+
+$s2bs-selection-choice-border-radius: $border-radius !default;
