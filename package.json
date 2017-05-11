@@ -32,7 +32,7 @@
     "Respond.js": "github:scottjehl/Respond#1.4.2",
     "anchor-js": "^3.2.1",
     "autoprefixer": "^6.4.0",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^4.0.0-alpha.6",
     "bootstrap-sass": "^3.3.7",
     "diff": "^2.2.3",
     "grunt": "^1.0.1",
