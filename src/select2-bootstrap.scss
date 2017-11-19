@@ -793,15 +793,19 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
 }
 
 .input-group > .select2-container--bootstrap {
-  display: table;
-  table-layout: fixed;
+  flex: 1 1 auto;
   position: relative;
   z-index: 2;
   width: 100%;
   margin-bottom: 0;
 
-  > .selection > .select2-selection.form-control {
-    float: none;
+  > .selection {
+    display: flex;
+    flex: 1 1 auto;
+
+    > .select2-selection.form-control {
+      float: none;
+    }
   }
 
   /**

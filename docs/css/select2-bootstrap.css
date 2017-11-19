@@ -660,8 +660,10 @@
 }
 
 .input-group > .select2-container--bootstrap {
-  display: table;
-  table-layout: fixed;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   position: relative;
   z-index: 2;
   width: 100%;
@@ -677,6 +679,17 @@
    *
    * @see http://getbootstrap.com/components/#input-groups
    */
+}
+
+.input-group > .select2-container--bootstrap > .selection {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .input-group > .select2-container--bootstrap > .selection > .select2-selection.form-control {
