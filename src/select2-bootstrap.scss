@@ -29,7 +29,7 @@
 $s2bs-border-radius-base: $border-radius !default;
 $s2bs-border-radius-large: $border-radius-lg !default;
 $s2bs-border-radius-small: $border-radius-sm !default;
-$s2bs-btn-default-bg: lighten(theme-color("secondary"), $theme-color-interval * 2) !default;
+$s2bs-btn-default-bg: $input-group-addon-bg !default; // or $gray-200
 $s2bs-btn-default-border: theme-color("secondary") !default;
 $s2bs-btn-default-color: bs4-color-yiq($s2bs-btn-default-bg) !default;
 $s2bs-caret-width-base: .25rem !default; // 4px
@@ -857,7 +857,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
  */
 
 .form-inline .select2-container--bootstrap {
-  @media (min-width: $screen-sm-min) {
+  @include media-breakpoint-up(sm) {
     display: inline-block;
   }
 }

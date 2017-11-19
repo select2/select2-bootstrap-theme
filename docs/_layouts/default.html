@@ -63,8 +63,8 @@
 						{% include select2-select.html %}
 					</select>
 					<span class="input-group-btn">
-						<button class="btn btn-default" type="button" data-select2-open="single-append-text">
-							<span class="glyphicon glyphicon-search"></span>
+						<button class="btn btn-secondary" type="button" data-select2-open="single-append-text">
+							<span class="fa fa-search"></span>
 						</button>
 					</span>
 				</div>
@@ -74,8 +74,8 @@
 				<label for="single-prepend-text" class="control-label">Select2 prepend</label>
 				<div class="input-group">
 					<span class="input-group-btn">
-						<button class="btn btn-default" type="button" data-select2-open="single-prepend-text">
-							<span class="glyphicon glyphicon-search"></span>
+						<button class="btn btn-secondary" type="button" data-select2-open="single-prepend-text">
+							<span class="fa fa-search"></span>
 						</button>
 					</span>
 					<select id="single-prepend-text" class="form-control select2-single">
@@ -97,8 +97,8 @@
 						<option value="C">C</option>
 					</select>
 					<span class="input-group-btn">
-						<button class="btn btn-default" type="button" data-select2-open="multi-append">
-							<span class="glyphicon glyphicon-search"></span>
+						<button class="btn btn-secondary" type="button" data-select2-open="multi-append">
+							<span class="fa fa-search"></span>
 						</button>
 					</span>
 				</div>
@@ -108,7 +108,7 @@
 				<label for="multi-prepend" class="control-label">Select2 multi prepend</label>
 				<div class="input-group">
 					<span class="input-group-btn">
-						<button class="btn btn-default" type="button" data-select2-open="multi-prepend">
+						<button class="btn btn-secondary" type="button" data-select2-open="multi-prepend">
 							State
 						</button>
 					</span>
@@ -123,7 +123,7 @@
 				<label for="multi-prepend-append" class="control-label">Select2 multi append + prepend</label>
 				<div class="input-group">
 					<span class="input-group-btn">
-						<button class="btn btn-default" type="button" data-select2-open="multi-prepend-append">
+						<button class="btn btn-secondary" type="button" data-select2-open="multi-prepend-append">
 							State
 						</button>
 					</span>
@@ -260,65 +260,63 @@
 			<p>The theme's styles work in <a href="http://getbootstrap.com/css/?#forms-horizontal">Bootstrap's Horizontal Forms</a> and offers support for <a href="http://getbootstrap.com/css/?#horizontal-form-group-sizes">Horizontal Form Group Sizes</a>, too.</p>
 
 			<form class="form-horizontal">
-				<div class="form-group form-group-lg">
-					<label class="col-sm-2 control-label" for="formGroupInputLarge">Large label</label>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label col-form-label-lg" for="formGroupInputLarge">Large label</label>
 
 					<div class="col-sm-5">
-						<input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input">
+						<input class="form-control form-control-lg" type="text" id="formGroupInputLarge" placeholder="Large input">
 					</div>
 
 					<div class="col-sm-5">
-						<select id="select2-button-addons-single-input-group-sm" class="form-control js-data-example-ajax">
+						<select class="form-control form-control-lg js-data-example-ajax">
 							<option value="2126244" selected="selected">twbs/bootstrap</option>
 						</select>
 					</div>
 				</div>
 
-				<div class="form-group form-group-sm">
-					<label class="col-sm-2 control-label" for="formGroupInputSmall">Small label</label>
+				<div class="form-group form-group-sm row">
+					<label class="col-sm-2 col-form-label col-form-label-sm" for="formGroupInputSmall">Small label</label>
 
 					<div class="col-sm-5">
-						<input class="form-control" type="text" id="formGroupInputSmall" placeholder="Small input">
+						<input class="form-control form-control-sm" type="text" id="formGroupInputSmall" placeholder="Small input">
 					</div>
 
 					<div class="col-sm-5">
-						<select id="select2-button-addons-single-input-group-sm" class="form-control js-data-example-ajax" dir="rtl">
+						<select class="form-control form-control-sm js-data-example-ajax" dir="rtl">
 							<option value="2126244" selected="selected">twbs/bootstrap</option>
 						</select>
 					</div>
 				</div>
 
-				<div class="form-group">
-					<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+				<div class="form-group row">
+					<label for="select2-horizontal-3" class="col-sm-2 col-form-label">Email</label>
 					<div class="col-sm-10">
-						<select id="select2-button-addons-single-input-group-sm" class="form-control js-data-example-ajax" multiple>
+						<select id="select2-horizontal-3" class="form-control js-data-example-ajax" multiple>
 							<option value="2126244" selected="selected">twbs/bootstrap</option>
 							<option value="3620194" selected="selected">select2/select2</option>
 						</select>
 					</div>
 				</div>
 
-				<div class="form-group">
-					<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+				<div class="form-group row">
+					<label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
 
 					<div class="col-sm-10">
 						<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
 					</div>
 				</div>
 
-				<div class="form-group">
-					<div class="col-sm-offset-2 col-sm-10">
-						<div class="checkbox">
-							<label>
-								<input type="checkbox"> Remember me
-							</label>
-						</div>
+				<div class="form-group row">
+					<div class="form-check col-sm-offset-2 col-sm-10">
+						<label class="form-check-label">
+							<input type="checkbox" class="form-check-input"> Remember me
+						</label>
 					</div>
 				</div>
 
-				<div class="form-group">
+				<div class="form-group row">
 					<div class="col-sm-offset-2 col-sm-10">
-						<button type="submit" class="btn btn-default">Sign in</button>
+						<button type="submit" class="btn btn-secondary">Sign in</button>
 					</div>
 				</div>
 			</form>
@@ -332,7 +330,7 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<form class="form-inline">
-						<div class="form-group">
+						<div class="form-group mb-2 mr-sm-2 mb-sm-0">
 							<label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
 							<div class="input-group">
 								<div class="input-group-addon">$</div>
@@ -351,24 +349,24 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<form class="form-inline">
-						<div class="form-group">
+						<div class="form-group mb-2 mr-sm-2 mb-sm-0">
 							<label class="sr-only" for="exampleInputEmail3">Email address</label>
 							<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
 						</div>
-						<div class="form-group">
+						<div class="form-group mb-2 mr-sm-2 mb-sm-0">
 							<label class="sr-only" for="exampleInputPassword3">Password</label>
 							<input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
 						</div>
-						<select class="form-control select2-single">
+						<select class="form-control select2-single mb-2 mr-sm-2 mb-sm-0">
 							<option></option>
 							{% include select2-select.html %}
 						</select>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox"> Remember me
+						<div class="form-check mb-2 mr-sm-2 mb-sm-0">
+							<label class="form-check-label">
+								<input type="checkbox" class="form-check-input"> Remember me
 							</label>
 						</div>
-						<button type="submit" class="btn btn-default">Sign in</button>
+						<button type="submit" class="btn btn-secondary">Sign in</button>
 					</form>
 				</div>
 			</div>
@@ -386,7 +384,7 @@
 					<label for="select2-button-addons-single-input-group-sm" class="control-label">Select2 custom data load</label>
 					<div class="input-group input-group-sm">
 						<div class="input-group-btn">
-							<button class="btn btn-default" type="button" data-select2-open="select2-button-addons-single-input-group-sm">
+							<button class="btn btn-secondary" type="button" data-select2-open="select2-button-addons-single-input-group-sm">
 								State
 							</button>
 						</div>
@@ -399,8 +397,8 @@
 					<label for="select2-button-addons-multiple-input-group-sm" class="control-label">col-md-5</label>
 					<div class="input-group input-group-sm">
 						<span class="input-group-btn">
-							<button class="btn btn-default" type="button" data-select2-open="select2-button-addons-multiple-input-group-sm">
-								<span class="glyphicon glyphicon-search"></span>
+							<button class="btn btn-secondary" type="button" data-select2-open="select2-button-addons-multiple-input-group-sm">
+								<span class="fa fa-search"></span>
 							</button>
 						</span>
 						<select id="select2-button-addons-multiple-input-group-sm" class="form-control select2-multiple" multiple>
@@ -417,7 +415,7 @@
 					<label for="select2-button-addons-single-input-group" class="control-label">Select2 custom data load</label>
 					<div class="input-group">
 						<div class="input-group-btn">
-							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
 								Action <span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu">
@@ -437,8 +435,8 @@
 					<label for="select2-input-group-append" class="control-label">col-md-5</label>
 					<div class="input-group has-warning">
 						<span class="input-group-btn">
-							<button class="btn btn-default" type="button" data-select2-open="select2-input-group-append">
-								<span class="glyphicon glyphicon-search"></span>
+							<button class="btn btn-secondary" type="button" data-select2-open="select2-input-group-append">
+								<span class="fa fa-search"></span>
 							</button>
 						</span>
 						<select id="select2-input-group-append" class="form-control select2-multiple" multiple>
@@ -459,8 +457,8 @@
 							<option value="3620194" selected="selected">select2/select2</option>
 						</select>
 						<span class="input-group-btn">
-							<button class="btn btn-default" type="button" data-select2-open="select2-button-addons-single-input-group-lg">
-								<span class="glyphicon glyphicon-search"></span>
+							<button class="btn btn-secondary" type="button" data-select2-open="select2-button-addons-single-input-group-lg">
+								<span class="fa fa-search"></span>
 							</button>
 						</span>
 					</div>
@@ -469,8 +467,8 @@
 					<label for="select2-button-addons-multi-input-group-lg" class="control-label">col-md-5</label>
 					<div class="input-group input-group-lg">
 						<span class="input-group-btn">
-							<button class="btn btn-default" type="button" data-select2-open="select2-button-addons-multi-input-group-lg">
-								<span class="glyphicon glyphicon-search"></span>
+							<button class="btn btn-secondary" type="button" data-select2-open="select2-button-addons-multi-input-group-lg">
+								<span class="fa fa-search"></span>
 							</button>
 						</span>
 						<select id="select2-button-addons-multi-input-group-lg" class="form-control select2-multiple" multiple>
@@ -563,9 +561,9 @@
 				}
 
 				markup += "<div class='select2-result-repository__statistics'>" +
-							"<div class='select2-result-repository__forks'><span class='glyphicon glyphicon-flash'></span> " + repo.forks_count + " Forks</div>" +
-							"<div class='select2-result-repository__stargazers'><span class='glyphicon glyphicon-star'></span> " + repo.stargazers_count + " Stars</div>" +
-							"<div class='select2-result-repository__watchers'><span class='glyphicon glyphicon-eye-open'></span> " + repo.watchers_count + " Watchers</div>" +
+							"<div class='select2-result-repository__forks'><span class='fa fa-flash'></span> " + repo.forks_count + " Forks</div>" +
+							"<div class='select2-result-repository__stargazers'><span class='fa fa-star'></span> " + repo.stargazers_count + " Stars</div>" +
+							"<div class='select2-result-repository__watchers'><span class='fa fa-ey'></span> " + repo.watchers_count + " Watchers</div>" +
 						"</div>" +
 					"</div></div>";
 

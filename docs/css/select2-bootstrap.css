@@ -342,7 +342,7 @@
 
 .select2-container--bootstrap .select2-selection--multiple .select2-selection__choice {
   color: #495057;
-  background: #b2b7bc;
+  background: #e9ecef;
   border: 1px solid #868e96;
   border-radius: 0.25rem;
   cursor: default;
@@ -727,7 +727,7 @@
 /**
  * Display override for inline forms
  */
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .form-inline .select2-container--bootstrap {
     display: inline-block;
   }
