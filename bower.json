@@ -1,6 +1,6 @@
 {
   "name": "select2-bootstrap-theme",
-  "description": "A theme for Select2 v4 and Bootstrap 3.",
+  "description": "A theme for Select2 v4 and Bootstrap 4.",
   "keywords": [
     "bootstrap",
     "select2",
@@ -20,7 +20,7 @@
     "components"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.4",
+    "bootstrap": "^4.0.0-beta",
     "select2": "^4.0.0"
   },
   "repository": {

@@ -1,7 +1,7 @@
 {
   "name": "select2-bootstrap-theme",
   "version": "0.1.0-beta.10",
-  "description": "A theme for Select2 v4 and Bootstrap 3.",
+  "description": "A theme for Select2 v4 and Bootstrap 4.",
   "main": "",
   "style": "select2-bootstrap.css",
   "homepage": "https://select2.github.io/select2-bootstrap-theme",
@@ -32,8 +32,7 @@
     "Respond.js": "github:scottjehl/Respond#1.4.2",
     "anchor-js": "^3.2.1",
     "autoprefixer": "^6.4.0",
-    "bootstrap": "^3.3.7",
-    "bootstrap-sass": "^3.3.7",
+    "bootstrap": "^4.0.0-beta",
     "diff": "^2.2.3",
     "grunt": "^1.0.1",
     "grunt-browser-sync": "^2.2.0",

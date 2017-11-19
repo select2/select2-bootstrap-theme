@@ -1,19 +1,41 @@
 //
+// Functions
+// --------------------------------------------------
+
+/**
+ * We need a clone of bootstrap color-yiq mixin so we can get the same value for color
+ */
+@function bs4-color-yiq($color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+  @if ($yiq >= 150) {
+    @return "#111";
+  } @else {
+    @return "#fff";
+  }
+}
+
+//
 // Variables
 // --------------------------------------------------
 
 // Variables directly translating Bootstrap variables
 // -------------------------
 
-$s2bs-border-radius-base: $border-radius-base !default;
-$s2bs-border-radius-large: $border-radius-large !default;
-$s2bs-border-radius-small: $border-radius-small !default;
-$s2bs-btn-default-bg: $btn-default-bg !default;
-$s2bs-btn-default-border: $btn-default-border !default;
-$s2bs-btn-default-color: $btn-default-color !default;
-$s2bs-caret-width-base: $caret-width-base !default;
-$s2bs-caret-width-large: $caret-width-large !default;
-$s2bs-cursor-disabled: $cursor-disabled !default;
+$s2bs-border-radius-base: $border-radius !default;
+$s2bs-border-radius-large: $border-radius-lg !default;
+$s2bs-border-radius-small: $border-radius-sm !default;
+$s2bs-btn-default-bg: lighten(theme-color("secondary"), $theme-color-interval * 2) !default;
+$s2bs-btn-default-border: theme-color("secondary") !default;
+$s2bs-btn-default-color: bs4-color-yiq($s2bs-btn-default-bg) !default;
+$s2bs-caret-width-base: .25rem !default; // 4px
+$s2bs-caret-width-large: .3125rem !default; // 5px
+
+$s2bs-cursor-disabled: not-allowed !default;
 $s2bs-dropdown-header-color: $dropdown-header-color !default;
 $s2bs-dropdown-link-active-bg: $dropdown-link-active-bg !default;
 $s2bs-dropdown-link-active-color: $dropdown-link-active-color !default;
@@ -21,27 +43,34 @@ $s2bs-dropdown-link-disabled-color: $dropdown-link-disabled-color !default;
 $s2bs-dropdown-link-hover-bg: $dropdown-link-hover-bg !default;
 $s2bs-dropdown-link-hover-color: $dropdown-link-hover-color !default;
 $s2bs-font-size-base: $font-size-base !default;
-$s2bs-font-size-large: $font-size-large !default;
-$s2bs-font-size-small: $font-size-small !default;
-$s2bs-padding-base-horizontal: $padding-base-horizontal !default;
-$s2bs-padding-large-horizontal: $padding-large-horizontal !default;
-$s2bs-padding-small-horizontal: $padding-small-horizontal !default;
-$s2bs-padding-base-vertical: $padding-base-vertical !default;
-$s2bs-padding-large-vertical: $padding-large-vertical !default;
-$s2bs-padding-small-vertical: $padding-small-vertical !default;
-$s2bs-line-height-base: $line-height-base !default;
-$s2bs-line-height-large: $line-height-large !default;
-$s2bs-line-height-small: $line-height-small !default;
+$s2bs-font-size-large: $font-size-lg !default;
+$s2bs-font-size-small: $font-size-sm !default;
+$s2bs-padding-base-horizontal: $input-btn-padding-x !default;
+$s2bs-padding-large-horizontal: $input-btn-padding-x-lg !default;
+$s2bs-padding-small-horizontal: $input-btn-padding-x-sm !default;
+$s2bs-padding-base-vertical: $input-btn-padding-y  !default;
+$s2bs-padding-large-vertical: $input-btn-padding-y-lg !default;
+$s2bs-padding-small-vertical: $input-btn-padding-y-sm !default;
+$s2bs-line-height-base: $input-btn-line-height !default;
+$s2bs-line-height-large: $input-btn-line-height !default;
+$s2bs-line-height-small: $input-btn-line-height !default;
 $s2bs-input-bg: $input-bg !default;
-$s2bs-input-bg-disabled: $input-bg-disabled !default;
+$s2bs-input-bg-disabled: $input-disabled-bg !default;
 $s2bs-input-color: $input-color !default;
-$s2bs-input-color-placeholder: $input-color-placeholder !default;
-$s2bs-input-border: $input-border !default;
-$s2bs-input-border-focus: $input-border-focus !default;
+$s2bs-input-color-placeholder: $input-placeholder-color !default;
+$s2bs-input-border: $input-border-color !default;
+$s2bs-input-border-focus: $input-focus-border-color !default;
 $s2bs-input-border-radius: $input-border-radius !default;
-$s2bs-input-height-base: $input-height-base !default;
-$s2bs-input-height-large: $input-height-large !default;
-$s2bs-input-height-small: $input-height-small !default;
+$s2bs-input-height-base: calc(#{$input-btn-padding-y * 2 + $input-btn-line-height * $font-size-base} + #{$border-width * 2}) !default;
+$s2bs-input-height-large: calc(#{$input-btn-padding-y-lg * 2 + $input-btn-line-height * $font-size-lg} + #{$border-width * 2}) !default;
+$s2bs-input-height-small: calc(#{$input-btn-padding-y-sm * 2 + $input-btn-line-height * $font-size-sm} + #{$border-width * 2}) !default;
+
+// Required Bootstrap 3 vars used in mixins
+// Replace with $s2bs-... variables
+$state-warning-text: theme-color("warning") !default;
+$state-danger-text: theme-color("danger") !default;
+$state-success-text: theme-color("secondary") !default;
+$screen-sm-min: breakpoint-min("md") !default;
 
 // Theme-specific variables
 // -------------------------
@@ -487,7 +516,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
       border-radius: $s2bs-selection-choice-border-radius;
       cursor: default;
       float: left;
-      margin: ($s2bs-padding-base-vertical - 1) 0 0 $s2bs-padding-base-horizontal/2;
+      margin: calc(#{$s2bs-padding-base-vertical} - 1px) 0 0 $s2bs-padding-base-horizontal/2;
       padding: 0 $s2bs-padding-base-vertical;
     }
 
@@ -499,7 +528,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
       .select2-search__field {
         background: transparent;
         padding: 0 $s2bs-padding-base-horizontal;
-        height: $s2bs-input-height-base - 2;
+        height: $s2bs-input-height-base;
         line-height: $s2bs-line-height-base;
         margin-top: 0;
         min-width: 5em;
@@ -565,14 +594,14 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
     .select2-selection__choice {
       font-size: $s2bs-font-size-small;
       line-height: $s2bs-line-height-small;
-      margin: ($s2bs-padding-small-vertical - 1) 0 0 $s2bs-padding-small-horizontal/2;
+      margin: calc(#{$s2bs-padding-small-vertical} - 1px) 0 0 $s2bs-padding-small-horizontal/2;
       padding: 0 $s2bs-padding-small-vertical;
     }
 
     .select2-search--inline .select2-search__field {
       padding: 0 $s2bs-padding-small-horizontal;
       font-size: $s2bs-font-size-small;
-      height: $s2bs-input-height-small - 2;
+      height: $s2bs-input-height-small;
       line-height: $s2bs-line-height-small;
     }
 
@@ -613,14 +642,14 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
       font-size: $s2bs-font-size-large;
       line-height: $s2bs-line-height-large;
       border-radius: $s2bs-selection-choice-border-radius;
-      margin: ($s2bs-padding-large-vertical - 1) 0 0 $s2bs-padding-large-horizontal/2;
+      margin: calc(#{$s2bs-padding-large-vertical} - 1px) 0 0 $s2bs-padding-large-horizontal/2;
       padding: 0 $s2bs-padding-large-vertical;
     }
 
     .select2-search--inline .select2-search__field {
       padding: 0 $s2bs-padding-large-horizontal;
       font-size: $s2bs-font-size-large;
-      height: $s2bs-input-height-large - 2;
+      height: $s2bs-input-height-large;
       line-height: $s2bs-line-height-large;
     }
 
