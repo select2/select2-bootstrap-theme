@@ -570,7 +570,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
    */
 
   /* 1 */
-  .select2-selection--single.input-sm,
+  .select2-selection--single.form-control-sm,
   .input-group-sm & .select2-selection--single,
   .form-group-sm & .select2-selection--single {
     border-radius: $s2bs-border-radius-small;
@@ -585,7 +585,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
     }
   }
 
-  .select2-selection--multiple.input-sm,
+  .select2-selection--multiple.form-control-sm,
   .input-group-sm & .select2-selection--multiple,
   .form-group-sm & .select2-selection--multiple {
     min-height: $s2bs-input-height-small;
@@ -610,7 +610,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
     }
   }
 
-  .select2-selection--single.input-lg,
+  .select2-selection--single.form-control-lg,
   .input-group-lg & .select2-selection--single,
   .form-group-lg & .select2-selection--single {
     border-radius: $s2bs-border-radius-large;
@@ -632,7 +632,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
     }
   }
 
-  .select2-selection--multiple.input-lg,
+  .select2-selection--multiple.form-control-lg,
   .input-group-lg & .select2-selection--multiple,
   .form-group-lg & .select2-selection--multiple {
     min-height: $s2bs-input-height-large;
@@ -658,7 +658,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
     }
   }
 
-  .select2-selection.input-lg.select2-container--open {
+  .select2-selection.form-control-lg.select2-container--open {
     @include dropdown-arrow;
   }
 
