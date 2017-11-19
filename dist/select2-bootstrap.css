@@ -567,6 +567,10 @@
   margin-right: auto;
 }
 
+.select2-container--bootstrap .select2-results__options {
+  text-align: right;
+}
+
 /*------------------------------------*  #ADDITIONAL GOODIES
 \*------------------------------------*/
 /**
