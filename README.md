@@ -7,7 +7,7 @@ Demonstrations available at
 
 #### Compatibility
 
-Built and tested with Bootstrap v3.3.7 and Select2 v4.0.3 in latest Chrome, Firefox and Safari (Mac) and Internet Explorer 11, 10 and 9 (should work in IE8).
+Built and tested with Bootstrap v4.0.0-beta2 and Select2 v4.0.3 in latest Chrome, Firefox and Safari (Mac) and Internet Explorer 11.
 
 #### Installation
 

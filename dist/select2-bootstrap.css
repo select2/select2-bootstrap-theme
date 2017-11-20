@@ -621,20 +621,20 @@
 
 .has-success .select2-dropdown,
 .has-success .select2-selection {
-  border-color: #868e96;
+  border-color: #28a745;
 }
 
 .has-success .select2-container--focus .select2-selection,
 .has-success .select2-container--open .select2-selection {
-  border-color: #6c757d;
+  border-color: #1e7e34;
 }
 
 .has-success.select2-drop-active {
-  border-color: #6c757d;
+  border-color: #1e7e34;
 }
 
 .has-success.select2-drop-active.select2-drop.select2-drop-above {
-  border-top-color: #6c757d;
+  border-top-color: #1e7e34;
 }
 
 /**

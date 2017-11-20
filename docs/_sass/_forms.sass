@@ -1,0 +1,22 @@
+@mixin input-group-addon($border-color, $bg-lighten)
+  .input-group-addon
+    background-color: lighten($border-color, $bg-lighten)
+    border: $input-btn-border-width solid $border-color
+
+    &:not(:last-child)
+      border-right: 0 none
+
+.has-warning
+  @include input-group-addon(theme-color("warning"), $theme-color-interval * 2)
+  .control-label
+    color: darken(theme-color("warning"), $theme-color-interval * 2)
+
+.has-error
+  @include input-group-addon($form-feedback-invalid-color, $theme-color-interval * 5)
+  .control-label
+    color: $form-feedback-invalid-color
+
+.has-success
+  @include input-group-addon($form-feedback-valid-color, $theme-color-interval * 7)
+  .control-label
+    color: $form-feedback-valid-color

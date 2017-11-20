@@ -64,13 +64,9 @@ $s2bs-input-border-radius: $input-border-radius !default;
 $s2bs-input-height-base: calc(#{$input-btn-padding-y * 2 + $input-btn-line-height * $font-size-base} + #{$border-width * 2}) !default;
 $s2bs-input-height-large: calc(#{$input-btn-padding-y-lg * 2 + $input-btn-line-height * $font-size-lg} + #{$border-width * 2}) !default;
 $s2bs-input-height-small: calc(#{$input-btn-padding-y-sm * 2 + $input-btn-line-height * $font-size-sm} + #{$border-width * 2}) !default;
-
-// Required Bootstrap 3 vars used in mixins
-// Replace with $s2bs-... variables
-$state-warning-text: theme-color("warning") !default;
-$state-danger-text: theme-color("danger") !default;
-$state-success-text: theme-color("secondary") !default;
-$screen-sm-min: breakpoint-min("md") !default;
+$s2bs-state-warning-text: theme-color("warning") !default;
+$s2bs-state-danger-text: $form-feedback-invalid-color !default;
+$s2bs-state-success-text: $form-feedback-valid-color !default;
 
 // Theme-specific variables
 // -------------------------
@@ -757,15 +753,15 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
  */
 
 .has-warning {
-  @include validation-state-focus($state-warning-text);
+  @include validation-state-focus($s2bs-state-warning-text);
 }
 
 .has-error {
-  @include validation-state-focus($state-danger-text);
+  @include validation-state-focus($s2bs-state-danger-text);
 }
 
 .has-success {
-  @include validation-state-focus($state-success-text);
+  @include validation-state-focus($s2bs-state-success-text);
 }
 
 /**
