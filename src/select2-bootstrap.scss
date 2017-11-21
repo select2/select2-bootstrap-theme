@@ -127,6 +127,10 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
   .select2-container--open .select2-selection {
     @include box-shadow($shadow);
     border-color: darken($color, 10%);
+
+    &:focus {
+      box-shadow: 0 0 0 .2rem rgba($color,.25);
+    }
   }
 
   &.select2-drop-active {
@@ -752,6 +756,15 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
  * @see http://getbootstrap.com/css/#forms-control-validation
  */
 
+.is-valid {
+  @include validation-state-focus($s2bs-state-success-text);
+}
+
+.is-invalid {
+  @include validation-state-focus($s2bs-state-danger-text);
+}
+
+/* Validation classes on parent element */
 .has-warning {
   @include validation-state-focus($s2bs-state-warning-text);
 }

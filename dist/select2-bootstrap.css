@@ -583,6 +583,55 @@
  *
  * @see http://getbootstrap.com/css/#forms-control-validation
  */
+.is-valid .select2-dropdown,
+.is-valid .select2-selection {
+  border-color: #28a745;
+}
+
+.is-valid .select2-container--focus .select2-selection,
+.is-valid .select2-container--open .select2-selection {
+  border-color: #1e7e34;
+}
+
+.is-valid .select2-container--focus .select2-selection:focus,
+.is-valid .select2-container--open .select2-selection:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.is-valid.select2-drop-active {
+  border-color: #1e7e34;
+}
+
+.is-valid.select2-drop-active.select2-drop.select2-drop-above {
+  border-top-color: #1e7e34;
+}
+
+.is-invalid .select2-dropdown,
+.is-invalid .select2-selection {
+  border-color: #dc3545;
+}
+
+.is-invalid .select2-container--focus .select2-selection,
+.is-invalid .select2-container--open .select2-selection {
+  border-color: #bd2130;
+}
+
+.is-invalid .select2-container--focus .select2-selection:focus,
+.is-invalid .select2-container--open .select2-selection:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.is-invalid.select2-drop-active {
+  border-color: #bd2130;
+}
+
+.is-invalid.select2-drop-active.select2-drop.select2-drop-above {
+  border-top-color: #bd2130;
+}
+
+/* Validation classes on parent element */
 .has-warning .select2-dropdown,
 .has-warning .select2-selection {
   border-color: #ffc107;
@@ -591,6 +640,12 @@
 .has-warning .select2-container--focus .select2-selection,
 .has-warning .select2-container--open .select2-selection {
   border-color: #d39e00;
+}
+
+.has-warning .select2-container--focus .select2-selection:focus,
+.has-warning .select2-container--open .select2-selection:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
 }
 
 .has-warning.select2-drop-active {
@@ -611,6 +666,12 @@
   border-color: #bd2130;
 }
 
+.has-error .select2-container--focus .select2-selection:focus,
+.has-error .select2-container--open .select2-selection:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
 .has-error.select2-drop-active {
   border-color: #bd2130;
 }
@@ -627,6 +688,12 @@
 .has-success .select2-container--focus .select2-selection,
 .has-success .select2-container--open .select2-selection {
   border-color: #1e7e34;
+}
+
+.has-success .select2-container--focus .select2-selection:focus,
+.has-success .select2-container--open .select2-selection:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 }
 
 .has-success.select2-drop-active {

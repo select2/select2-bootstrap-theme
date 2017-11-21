@@ -1,11 +1,3 @@
-@mixin input-group-addon($border-color, $bg-lighten)
-  .input-group-addon
-    background-color: lighten($border-color, $bg-lighten)
-    border: $input-btn-border-width solid $border-color
-
-    &:not(:last-child)
-      border-right: 0 none
-
 .has-warning
   @include input-group-addon(theme-color("warning"), $theme-color-interval * 2)
   .control-label
