@@ -20,9 +20,9 @@
    */
   /**
    * Adjust Select2's choices hover and selected styles to match
-   * Bootstrap 3's default dropdown styles.
+   * Bootstrap 4's default dropdown styles.
    *
-   * @see http://getbootstrap.com/components/#dropdowns
+   * @see https://getbootstrap.com/docs/4.0/components/dropdowns/
    */
   /**
    * Clear the selection.
@@ -31,7 +31,7 @@
    * Address disabled Select2 styles.
    *
    * @see https://select2.github.io/examples.html#disabled
-   * @see http://getbootstrap.com/css/#forms-control-disabled
+   * @see hhttps://getbootstrap.com/docs/4.0/components/forms/#disabled-forms
    */
   /*------------------------------------*      #DROPDOWN
   \*------------------------------------*/
@@ -51,7 +51,7 @@
    * 1. Reset Bootstrap defaults.
    * 2. Adjust the dropdown arrow button icon position.
    *
-   * @see http://getbootstrap.com/css/#forms-control-sizes
+   * @see https://getbootstrap.com/docs/4.0/components/forms/#sizing
    */
   /* 1 */
   /*------------------------------------*    #RTL SUPPORT
@@ -309,7 +309,7 @@
   padding: 0;
   height: auto;
   /**
-     * Make Multi Select2's choices match Bootstrap 3's default button styles.
+     * Make Multi Select2's choices match Bootstrap 4's default button styles.
      */
   /**
      * Minus 2px borders.
@@ -581,7 +581,7 @@
  * You may apply said classes to the Select2 dropdown (body > .select2-container)
  * via JavaScript match Bootstraps' to make its styles match.
  *
- * @see http://getbootstrap.com/css/#forms-control-validation
+ * @see https://getbootstrap.com/docs/4.0/components/forms/#validation
  */
 .is-valid .select2-dropdown,
 .is-valid .select2-selection {
@@ -631,7 +631,7 @@
   border-top-color: #bd2130;
 }
 
-/* Validation classes on parent element */
+/* Validation classes on parent element. Preserved Bootstrap 3 validation classes */
 .has-warning .select2-dropdown,
 .has-warning .select2-selection {
   border-color: #ffc107;
@@ -707,8 +707,8 @@
 /**
  * Select2 widgets in Bootstrap Input Groups
  *
- * @see http://getbootstrap.com/components/#input-groups
- * @see https://github.com/twbs/bootstrap/blob/master/less/input-groups.less
+ * @see https://getbootstrap.com/docs/4.0/components/input-group/
+ * @see https://github.com/twbs/bootstrap/blob/v4.0.0-beta.2/scss/_input-group.scss
  */
 /**
  * Reset rounded corners
@@ -748,7 +748,7 @@
    * Multi Select2's height which - depending on how many elements have been selected -
    * may grow taller than its initial size.
    *
-   * @see http://getbootstrap.com/components/#input-groups
+   * @see https://github.com/twbs/bootstrap/blob/v4.0.0-beta.2/scss/_input-group.scss
    */
 }
 

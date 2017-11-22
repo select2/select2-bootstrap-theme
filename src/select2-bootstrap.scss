@@ -82,28 +82,17 @@ $s2bs-selection-choice-border-radius: $s2bs-border-radius-base !default;
 $s2bs-dropdown-header-padding-vertical: $s2bs-padding-base-vertical !default;
 $s2bs-dropdown-header-font-size: $s2bs-font-size-small !default;
 
-
-// Bootstrap defaults not available as pre-defined variables
-// These should not be overridden.
+// Form control variables
 // -------------------------
-
-// @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_forms.scss#L126
-$s2bs-form-control-default-box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !default;
-
-// @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/mixins/_forms.scss#L60
-$s2bs-form-control-focus-box-shadow: $s2bs-form-control-default-box-shadow, 0 0 8px rgba($s2bs-input-border-focus, 0.6) !default;
-
-// @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_forms.scss#L127
-$s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s !default;
-
-
-
+$s2bs-form-control-default-box-shadow: $input-box-shadow !default;
+$s2bs-form-control-focus-box-shadow: $input-box-shadow, $input-btn-focus-box-shadow !default;
+$s2bs-form-control-transition: $input-transition !default;
 
 //
 // Mixins
 // --------------------------------------------------
 
-// @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_forms.scss#L115
+// @see https://github.com/twbs/bootstrap/blob/v4.0.0-beta.2/scss/_forms.scss#L8
 @mixin bootstrap-input-defaults {
   @include box-shadow($s2bs-form-control-default-box-shadow);
   background-color: $s2bs-input-bg;
@@ -113,7 +102,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
   font-size: $s2bs-font-size-base;
 }
 
-// @see http://getbootstrap.com/css/#forms-control-validation
+// @see https://getbootstrap.com/docs/4.0/components/forms/#validation
 // @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_forms.scss#L388
 @mixin validation-state-focus($color) {
   $shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px lighten($color, 20%);
@@ -225,9 +214,9 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
 
   /**
    * Adjust Select2's choices hover and selected styles to match
-   * Bootstrap 3's default dropdown styles.
+   * Bootstrap 4's default dropdown styles.
    *
-   * @see http://getbootstrap.com/components/#dropdowns
+   * @see https://getbootstrap.com/docs/4.0/components/dropdowns/
    */
 
   .select2-results__option {
@@ -367,7 +356,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
    * Address disabled Select2 styles.
    *
    * @see https://select2.github.io/examples.html#disabled
-   * @see http://getbootstrap.com/css/#forms-control-disabled
+   * @see hhttps://getbootstrap.com/docs/4.0/components/forms/#disabled-forms
    */
 
   &.select2-container--disabled {
@@ -506,7 +495,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
     }
 
     /**
-     * Make Multi Select2's choices match Bootstrap 3's default button styles.
+     * Make Multi Select2's choices match Bootstrap 4's default button styles.
      */
 
     .select2-selection__choice {
@@ -566,7 +555,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
    * 1. Reset Bootstrap defaults.
    * 2. Adjust the dropdown arrow button icon position.
    *
-   * @see http://getbootstrap.com/css/#forms-control-sizes
+   * @see https://getbootstrap.com/docs/4.0/components/forms/#sizing
    */
 
   /* 1 */
@@ -753,7 +742,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
  * You may apply said classes to the Select2 dropdown (body > .select2-container)
  * via JavaScript match Bootstraps' to make its styles match.
  *
- * @see http://getbootstrap.com/css/#forms-control-validation
+ * @see https://getbootstrap.com/docs/4.0/components/forms/#validation
  */
 
 .is-valid {
@@ -764,7 +753,8 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
   @include validation-state-focus($s2bs-state-danger-text);
 }
 
-/* Validation classes on parent element */
+/* Validation classes on parent element. Preserved Bootstrap 3 validation classes */
+
 .has-warning {
   @include validation-state-focus($s2bs-state-warning-text);
 }
@@ -780,8 +770,8 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
 /**
  * Select2 widgets in Bootstrap Input Groups
  *
- * @see http://getbootstrap.com/components/#input-groups
- * @see https://github.com/twbs/bootstrap/blob/master/less/input-groups.less
+ * @see https://getbootstrap.com/docs/4.0/components/input-group/
+ * @see https://github.com/twbs/bootstrap/blob/v4.0.0-beta.2/scss/_input-group.scss
  */
 
 /**
@@ -836,7 +826,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
    * Multi Select2's height which - depending on how many elements have been selected -
    * may grow taller than its initial size.
    *
-   * @see http://getbootstrap.com/components/#input-groups
+   * @see https://github.com/twbs/bootstrap/blob/v4.0.0-beta.2/scss/_input-group.scss
    */
 
   &,
