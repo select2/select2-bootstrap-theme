@@ -665,7 +665,7 @@ $s2bs-form-control-transition: $input-transition !default;
     #RTL SUPPORT
   \*------------------------------------*/
 
-  &[dir="rtl"] {
+  .select2-dropdown[dir="rtl"] {
 
     /**
      * Single Select2
@@ -719,10 +719,10 @@ $s2bs-form-control-transition: $input-transition !default;
         margin-right: auto;
       }
     }
-  }
 
-  .select2-results__options {
-    text-align: right;
+    .select2-results__options {
+      text-align: right;
+    }
   }
 }
 
