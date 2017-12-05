@@ -95,9 +95,9 @@ $s2bs-form-control-transition: $input-transition !default;
 // @see https://github.com/twbs/bootstrap/blob/v4.0.0-beta.2/scss/_forms.scss#L8
 @mixin bootstrap-input-defaults {
   @include box-shadow($s2bs-form-control-default-box-shadow);
+  @include border-radius($s2bs-input-border-radius);
   background-color: $s2bs-input-bg;
   border: 1px solid $s2bs-input-border;
-  border-radius: $s2bs-input-border-radius;
   color: $s2bs-input-color;
   font-size: $s2bs-font-size-base;
 }
@@ -164,7 +164,7 @@ $s2bs-form-control-transition: $input-transition !default;
     outline: 0;
 
     &.form-control {
-      border-radius: $s2bs-border-radius-base;
+      @include border-radius($s2bs-border-radius-base);
     }
   }
 
@@ -562,7 +562,7 @@ $s2bs-form-control-transition: $input-transition !default;
   .select2-selection--single.form-control-sm,
   .input-group-sm & .select2-selection--single,
   .form-group-sm & .select2-selection--single {
-    border-radius: $s2bs-border-radius-small;
+    @include border-radius($s2bs-border-radius-small);
     font-size: $s2bs-font-size-small;
     height: $s2bs-input-height-small;
     line-height: $s2bs-line-height-small;
@@ -577,8 +577,8 @@ $s2bs-form-control-transition: $input-transition !default;
   .select2-selection--multiple.form-control-sm,
   .input-group-sm & .select2-selection--multiple,
   .form-group-sm & .select2-selection--multiple {
+    @include border-radius($s2bs-border-radius-small);
     min-height: $s2bs-input-height-small;
-    border-radius: $s2bs-border-radius-small;
 
     .select2-selection__choice {
       font-size: $s2bs-font-size-small;
@@ -602,7 +602,7 @@ $s2bs-form-control-transition: $input-transition !default;
   .select2-selection--single.form-control-lg,
   .input-group-lg & .select2-selection--single,
   .form-group-lg & .select2-selection--single {
-    border-radius: $s2bs-border-radius-large;
+    @include border-radius($s2bs-border-radius-large);
     font-size: $s2bs-font-size-large;
     height: $s2bs-input-height-large;
     line-height: $s2bs-line-height-large;

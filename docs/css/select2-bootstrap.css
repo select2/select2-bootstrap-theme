@@ -59,9 +59,9 @@
 }
 
 .select2-container--bootstrap .select2-selection {
+  border-radius: 0.25rem;
   background-color: #fff;
   border: 1px solid #ced4da;
-  border-radius: 0.25rem;
   color: #495057;
   font-size: 1rem;
   outline: 0;
@@ -72,9 +72,9 @@
 }
 
 .select2-container--bootstrap .select2-search--dropdown .select2-search__field {
+  border-radius: 0.25rem;
   background-color: #fff;
   border: 1px solid #ced4da;
-  border-radius: 0.25rem;
   color: #495057;
   font-size: 1rem;
 }
@@ -399,9 +399,9 @@
 .select2-container--bootstrap .select2-selection--multiple.form-control-sm,
 .input-group-sm .select2-container--bootstrap .select2-selection--multiple,
 .form-group-sm .select2-container--bootstrap .select2-selection--multiple {
+  border-radius: 0.2rem;
   min-height: -webkit-calc(1.8125rem + 2px);
   min-height: calc(1.8125rem + 2px);
-  border-radius: 0.2rem;
 }
 
 .select2-container--bootstrap .select2-selection--multiple.form-control-sm .select2-selection__choice,
