@@ -3,7 +3,7 @@
   "version": "0.1.0-beta.10",
   "description": "A theme for Select2 v4 and Bootstrap 3.",
   "main": "",
-  "style": "select2-bootstrap.css",
+  "style": "dist/select2-bootstrap.css",
   "homepage": "https://select2.github.io/select2-bootstrap-theme",
   "directories": {
     "doc": "docs"
