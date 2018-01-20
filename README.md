@@ -6,7 +6,7 @@ Demonstrations [available](https://angel-vladov.github.io/select2-bootstrap-them
 
 #### Compatibility
 
-Built and tested with Bootstrap v4.0.0-beta2 and Select2 v4.0.3 in latest Chrome, Firefox and Safari (Mac) and Internet Explorer 11.
+Built and tested with Bootstrap v4.0.0 and Select2 v4.0.3 in latest Chrome, Firefox and Safari (Mac) and Internet Explorer 11.
 
 #### Installation
 
