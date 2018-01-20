@@ -33,9 +33,11 @@
 			<div class="form-group">
 				<label for="select2-single-append" class="control-label">Select2 append Checkbox</label>
 				<div class="input-group">
-					<span class="input-group-addon">
-						<input type="checkbox" checked>
-					</span>
+					<div class="input-group-prepend">
+						<div class="input-group-text">
+							<input type="checkbox" checked>
+						</div>
+					</div>
 					<select id="select2-single-append" class="form-control select2-allow-clear">
 						<option></option>
 						{% include select2-select.html %}
@@ -46,9 +48,11 @@
 			<div class="form-group">
 				<label for="single-append-radio" class="control-label">Select2 multi append Radiobutton</label>
 				<div class="input-group">
-					<span class="input-group-addon">
-						<input type="radio">
-					</span>
+					<div class="input-group-prepend">
+						<div class="input-group-text">
+							<input type="radio">
+						</div>
+					</div>
 					<select id="single-append-radio" class="form-control select2-allow-clear" multiple>
 						{% include select2-select.html %}
 					</select>
@@ -62,7 +66,7 @@
 						<option></option>
 						{% include select2-select.html %}
 					</select>
-					<span class="input-group-btn">
+					<span class="input-group-append">
 						<button class="btn btn-secondary" type="button" data-select2-open="single-append-text">
 							<span class="fa fa-search"></span>
 						</button>
@@ -73,11 +77,11 @@
 			<div class="form-group">
 				<label for="single-prepend-text" class="control-label">Select2 prepend</label>
 				<div class="input-group">
-					<span class="input-group-btn">
+					<div class="input-group-prepend">
 						<button class="btn btn-secondary" type="button" data-select2-open="single-prepend-text">
 							<span class="fa fa-search"></span>
 						</button>
-					</span>
+					</div>
 					<select id="single-prepend-text" class="form-control select2-single">
 						<option></option>
 						<option value="A">A</option>
@@ -96,22 +100,22 @@
 						<option value="B">B</option>
 						<option value="C">C</option>
 					</select>
-					<span class="input-group-btn">
+					<div class="input-group-append">
 						<button class="btn btn-secondary" type="button" data-select2-open="multi-append">
 							<span class="fa fa-search"></span>
 						</button>
-					</span>
+					</div>
 				</div>
 			</div>
 
 			<div class="form-group">
 				<label for="multi-prepend" class="control-label">Select2 multi prepend</label>
 				<div class="input-group">
-					<span class="input-group-btn">
+					<div class="input-group-prepend">
 						<button class="btn btn-secondary" type="button" data-select2-open="multi-prepend">
 							State
 						</button>
-					</span>
+					</div>
 					<select id="multi-prepend" class="form-control select2-multiple" multiple>
 						<option></option>
 							{% include select2-select.html %}
@@ -122,16 +126,20 @@
 			<div class="form-group">
 				<label for="multi-prepend-append" class="control-label">Select2 multi append + prepend</label>
 				<div class="input-group">
-					<span class="input-group-btn">
+					<div class="input-group-prepend">
 						<button class="btn btn-secondary" type="button" data-select2-open="multi-prepend-append">
 							State
 						</button>
-					</span>
+					</div>
 					<select id="multi-prepend-append" class="form-control select2-multiple" multiple>
 						<option></option>
 						{% include select2-select.html %}
 					</select>
-					<span class="input-group-addon">… is my favorite!</span>
+					<div class="input-group-append">
+						<span class="input-group-text">
+							… is my favorite!
+						</span>
+					</div>
 				</div>
 			</div>
 
@@ -177,9 +185,11 @@
 					<div class="form-group has-success">
 						<label for="select2-single-input-group-sm" class="control-label">col-md-3</label>
 						<div class="input-group input-group-sm">
-							<span class="input-group-addon">
-								<input type="radio">
-							</span>
+							<div class="input-group-prepend">
+								<div class="input-group-text">
+									<input type="radio">
+								</div>
+							</div>
 							<select id="select2-single-input-group-sm" class="form-control select2-single">
 								<option></option>
 								{% include select2-select.html %}
@@ -213,9 +223,11 @@
 					<div class="form-group">
 						<label for="span_large" class="control-label">col-md-3</label>
 						<div class="input-group">
-							<span class="input-group-addon">
-								<input type="checkbox" checked>
-							</span>
+							<div class="input-group-prepend">
+								<div class="input-group-text">
+									<input type="checkbox" checked>
+								</div>
+							</div>
 							<select id="span_large" class="form-control select2-single">
 								<option></option>
 								{% include select2-select.html %}
@@ -247,9 +259,11 @@
 					<div class="form-group has-error">
 						<label for="select2-multiple-input-group-lg" class="control-label">col-md-3</label>
 						<div class="input-group input-group-lg">
-							<span class="input-group-addon">
-								<input type="radio">
-							</span>
+							<div class="input-group-prepend">
+								<div class="input-group-text">
+									<input type="radio">
+								</div>
+							</div>
 							<select id="select2-multiple-input-group-lg" class="form-control select2-single">
 								<option></option>
 								{% include select2-select.html %}
@@ -316,10 +330,12 @@
 				</div>
 
 				<div class="form-group row">
-					<div class="form-check col-sm-offset-2 col-sm-10">
-						<label class="form-check-label">
-							<input type="checkbox" class="form-check-input"> Remember me
-						</label>
+					<div class="col-sm-offset-2 col-sm-10">
+						<div class="form-check">
+							<label class="form-check-label">
+								<input type="checkbox" class="form-check-input"> Remember me
+							</label>
+						</div>
 					</div>
 				</div>
 
@@ -342,12 +358,16 @@
 						<div class="form-group mb-2 mr-sm-2 mb-sm-0">
 							<label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
 							<div class="input-group">
-								<div class="input-group-addon">$</div>
-								<select class="form-control select2-single">
+								<div class="input-group-prepend">
+									<span class="input-group-text">$</span>
+								</div>
+								<select class="form-control select2-single" id="exampleInputAmount">
 									<option></option>
 									{% include select2-select.html %}
 								</select>
-								<div class="input-group-addon">.00</div>
+								<div class="input-group-append">
+									<span class="input-group-text">.00</span>
+								</div>
 							</div>
 						</div>
 						<button type="submit" class="btn btn-primary">Transfer cash</button>
@@ -392,7 +412,7 @@
 				<div class="col-md-7">
 					<label for="select2-button-addons-single-input-group-sm" class="control-label">Select2 custom data load</label>
 					<div class="input-group input-group-sm">
-						<div class="input-group-btn">
+						<div class="input-group-prepend">
 							<button class="btn btn-secondary" type="button" data-select2-open="select2-button-addons-single-input-group-sm">
 								State
 							</button>
@@ -405,11 +425,11 @@
 				<div class="col-md-5">
 					<label for="select2-button-addons-multiple-input-group-sm" class="control-label">col-md-5</label>
 					<div class="input-group input-group-sm">
-						<span class="input-group-btn">
+						<div class="input-group-prepend">
 							<button class="btn btn-secondary" type="button" data-select2-open="select2-button-addons-multiple-input-group-sm">
 								<span class="fa fa-search"></span>
 							</button>
-						</span>
+						</div>
 						<select id="select2-button-addons-multiple-input-group-sm" class="form-control select2-multiple" multiple>
 							{% include select2-select.html %}
 						</select>
@@ -423,7 +443,7 @@
 				<div class="col-md-7">
 					<label for="select2-button-addons-single-input-group" class="control-label">Select2 custom data load</label>
 					<div class="input-group">
-						<div class="input-group-btn">
+						<div class="input-group-prepend">
 							<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
 								Action <span class="caret"></span>
 							</button>
@@ -443,7 +463,7 @@
 				<div class="col-md-5">
 					<label for="select2-input-group-append" class="control-label">col-md-5</label>
 					<div class="input-group has-warning">
-						<span class="input-group-btn">
+						<span class="input-group-prepend">
 							<button class="btn btn-secondary" type="button" data-select2-open="select2-input-group-append">
 								<span class="fa fa-search"></span>
 							</button>
@@ -465,7 +485,7 @@
 							<option value="2126244" selected="selected">twbs/bootstrap</option>
 							<option value="3620194" selected="selected">select2/select2</option>
 						</select>
-						<span class="input-group-btn">
+						<span class="input-group-append">
 							<button class="btn btn-secondary" type="button" data-select2-open="select2-button-addons-single-input-group-lg">
 								<span class="fa fa-search"></span>
 							</button>
@@ -475,7 +495,7 @@
 				<div class="col-md-5">
 					<label for="select2-button-addons-multi-input-group-lg" class="control-label">col-md-5</label>
 					<div class="input-group input-group-lg">
-						<span class="input-group-btn">
+						<span class="input-group-prepend">
 							<button class="btn btn-secondary" type="button" data-select2-open="select2-button-addons-multi-input-group-lg">
 								<span class="fa fa-search"></span>
 							</button>
@@ -502,9 +522,11 @@
 					<div class="form-group">
 						<label for="select2-disabled-inputs-single" class="control-label">Select2 single</label>
 						<div class="input-group">
-							<span class="input-group-addon">
-								<input type="checkbox">
-							</span>
+							<div class="input-group-prepend">
+								<div class="input-group-text">
+									<input type="checkbox">
+								</div>
+							</div>
 							<select id="select2-disabled-inputs-single" class="form-control select2-single" disabled>
 								<option></option>
 								{% include select2-select.html %}
@@ -516,9 +538,11 @@
 					<div class="form-group">
 						<label for="select2-disabled-inputs-multiple" class="control-label">Select2 multiple</label>
 						<div class="input-group">
-							<span class="input-group-addon">
-								<input type="checkbox" checked>
-							</span>
+							<div class="input-group-prepend">
+								<div class="input-group-text">
+									<input type="checkbox" checked>
+								</div>
+							</div>
 							<select id="select2-disabled-inputs-multiple" class="form-control select2-multiple" multiple>
 								<option></option>
 								{% include select2-select.html %}
@@ -632,7 +656,7 @@
 
 			// copy Bootstrap validation states to Select2 dropdown
 			//
-			// add .has-waring, .has-error, .has-succes to the Select2 dropdown
+			// add .has-warning, .has-error, .has-succes to the Select2 dropdown
 			// (was #select2-drop in Select2 v3.x, in Select2 v4 can be selected via
 			// body > .select2-container) if _any_ of the opened Select2's parents
 			// has one of these forementioned classes (YUCK! ;-))

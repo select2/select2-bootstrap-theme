@@ -801,7 +801,7 @@ $s2bs-form-control-transition: $input-transition !default;
   flex: 1 1 auto;
   position: relative;
   z-index: 2;
-  width: 100%;
+  width: 1%;
   margin-bottom: 0;
 
   > .selection {
@@ -832,8 +832,10 @@ $s2bs-form-control-transition: $input-transition !default;
    */
 
   &,
-  .input-group-btn,
-  .input-group-btn .btn {
+  .input-group-append,
+  .input-group-prepend,
+  .input-group-append .btn,
+  .input-group-prepend .btn {
     vertical-align: top;
   }
 }

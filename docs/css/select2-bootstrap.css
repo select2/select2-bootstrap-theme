@@ -1,6 +1,6 @@
 /*!
  * Select2 Bootstrap Theme v0.1.0-beta.10 (https://select2.github.io/select2-bootstrap-theme)
- * Copyright 2015-2017 Florian Kissling and contributors (https://github.com/select2/select2-bootstrap-theme/graphs/contributors)
+ * Copyright 2015-2018 Florian Kissling and contributors (https://github.com/select2/select2-bootstrap-theme/graphs/contributors)
  * Licensed under MIT (https://github.com/select2/select2-bootstrap-theme/blob/master/LICENSE)
  */
 
@@ -90,20 +90,20 @@
 }
 
 .select2-container--bootstrap .select2-search__field::-webkit-input-placeholder {
-  color: #868e96;
+  color: #6c757d;
 }
 
 .select2-container--bootstrap .select2-search__field:-moz-placeholder {
-  color: #868e96;
+  color: #6c757d;
 }
 
 .select2-container--bootstrap .select2-search__field::-moz-placeholder {
-  color: #868e96;
+  color: #6c757d;
   opacity: 1;
 }
 
 .select2-container--bootstrap .select2-search__field:-ms-input-placeholder {
-  color: #868e96;
+  color: #6c757d;
 }
 
 .select2-container--bootstrap .select2-results__option {
@@ -126,7 +126,7 @@
 }
 
 .select2-container--bootstrap .select2-results__option[aria-disabled=true] {
-  color: #868e96;
+  color: #6c757d;
   cursor: not-allowed;
 }
 
@@ -174,7 +174,7 @@
 }
 
 .select2-container--bootstrap .select2-results__group {
-  color: #868e96;
+  color: #6c757d;
   display: block;
   padding: 0.375rem 0.75rem;
   font-size: 0.875rem;
@@ -183,11 +183,11 @@
 }
 
 .select2-container--bootstrap.select2-container--focus .select2-selection, .select2-container--bootstrap.select2-container--open .select2-selection {
-  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
-  transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
-  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   border-color: #80bdff;
 }
 
@@ -201,7 +201,7 @@
 }
 
 .select2-container--bootstrap.select2-container--open .select2-selection .select2-selection__arrow b {
-  border-color: transparent transparent #868e96 transparent;
+  border-color: transparent transparent #6c757d transparent;
   border-width: 0 0.25rem 0.25rem 0.25rem;
 }
 
@@ -218,7 +218,7 @@
 }
 
 .select2-container--bootstrap .select2-selection__clear {
-  color: #868e96;
+  color: #6c757d;
   cursor: pointer;
   float: right;
   font-weight: bold;
@@ -282,7 +282,7 @@
 }
 
 .select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
-  border-color: #868e96 transparent transparent transparent;
+  border-color: #6c757d transparent transparent transparent;
   border-style: solid;
   border-width: 0.25rem 0.25rem 0 0.25rem;
   height: 0;
@@ -300,7 +300,7 @@
 }
 
 .select2-container--bootstrap .select2-selection--single .select2-selection__placeholder {
-  color: #868e96;
+  color: #6c757d;
 }
 
 .select2-container--bootstrap .select2-selection--multiple {
@@ -335,7 +335,7 @@
 }
 
 .select2-container--bootstrap .select2-selection--multiple .select2-selection__placeholder {
-  color: #868e96;
+  color: #6c757d;
   float: left;
   margin-top: 5px;
 }
@@ -343,7 +343,7 @@
 .select2-container--bootstrap .select2-selection--multiple .select2-selection__choice {
   color: #495057;
   background: #e9ecef;
-  border: 1px solid #868e96;
+  border: 1px solid #6c757d;
   border-radius: 0.25rem;
   cursor: default;
   float: left;
@@ -363,7 +363,7 @@
 }
 
 .select2-container--bootstrap .select2-selection--multiple .select2-selection__choice__remove {
-  color: #868e96;
+  color: #6c757d;
   cursor: pointer;
   display: inline-block;
   font-weight: bold;
@@ -499,7 +499,7 @@
 }
 
 .select2-container--bootstrap .select2-selection.form-control-lg.select2-container--open .select2-selection--single .select2-selection__arrow b {
-  border-color: transparent transparent #868e96 transparent;
+  border-color: transparent transparent #6c757d transparent;
   border-width: 0 0.3125rem 0.3125rem 0.3125rem;
 }
 
@@ -510,7 +510,7 @@
 }
 
 .input-group-lg .select2-container--bootstrap .select2-selection.select2-container--open .select2-selection--single .select2-selection__arrow b {
-  border-color: transparent transparent #868e96 transparent;
+  border-color: transparent transparent #6c757d transparent;
   border-width: 0 0.3125rem 0.3125rem 0.3125rem;
 }
 
@@ -737,7 +737,7 @@
           flex: 1 1 auto;
   position: relative;
   z-index: 2;
-  width: 100%;
+  width: 1%;
   margin-bottom: 0;
   /**
    * Adjust z-index like Bootstrap does to show the focus-box-shadow
@@ -772,8 +772,10 @@
 }
 
 .input-group > .select2-container--bootstrap,
-.input-group > .select2-container--bootstrap .input-group-btn,
-.input-group > .select2-container--bootstrap .input-group-btn .btn {
+.input-group > .select2-container--bootstrap .input-group-append,
+.input-group > .select2-container--bootstrap .input-group-prepend,
+.input-group > .select2-container--bootstrap .input-group-append .btn,
+.input-group > .select2-container--bootstrap .input-group-prepend .btn {
   vertical-align: top;
 }
 

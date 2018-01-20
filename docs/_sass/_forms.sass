@@ -1,14 +1,8 @@
-.has-warning
-  @include input-group-addon(theme-color("warning"), $theme-color-interval * 2)
-  .control-label
+.has-warning .control-label
     color: darken(theme-color("warning"), $theme-color-interval * 2)
 
-.has-error
-  @include input-group-addon($form-feedback-invalid-color, $theme-color-interval * 5)
-  .control-label
+.has-error .control-label
     color: $form-feedback-invalid-color
 
-.has-success
-  @include input-group-addon($form-feedback-valid-color, $theme-color-interval * 7)
-  .control-label
+.has-success .control-label
     color: $form-feedback-valid-color

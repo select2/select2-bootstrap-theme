@@ -19,9 +19,11 @@ version: 4.0.3
 		<div class="select2-wrapper">
 			<div class="form-group">
 				<div class="input-group input-group-sm">
-					<span class="input-group-addon">
-						<input type="checkbox">
-					</span>
+					<div class="input-group-prepend">
+						<div class="input-group-text">
+							<input type="checkbox">
+						</div>
+					</div>
 					<select id="select2-single-input-group-sm" class="form-control select2-single" disabled>
 						<option></option>
 						{% include select2-select.html %}
