@@ -358,7 +358,7 @@
   height: -webkit-calc(2.25rem + 2px);
   height: calc(2.25rem + 2px);
   line-height: 1.5;
-  margin-top: 0;
+  margin: -1px 0;
   min-width: 5em;
 }
 

@@ -519,7 +519,7 @@ $s2bs-form-control-transition: $input-transition !default;
         padding: 0 $s2bs-padding-base-horizontal;
         height: $s2bs-input-height-base;
         line-height: $s2bs-line-height-base;
-        margin-top: 0;
+        margin: -$border-width 0; // Compensate for input borders included in height
         min-width: 5em;
       }
     }
