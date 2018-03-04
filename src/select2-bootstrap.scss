@@ -26,6 +26,7 @@
 // Variables directly translating Bootstrap variables
 // -------------------------
 
+$s2bs-enable-shadows: $enable-shadows !default;
 $s2bs-border-radius-base: $border-radius !default;
 $s2bs-border-radius-large: $border-radius-lg !default;
 $s2bs-border-radius-small: $border-radius-sm !default;
@@ -84,18 +85,19 @@ $s2bs-dropdown-header-font-size: $s2bs-font-size-small !default;
 
 // Form control variables
 // -------------------------
-$s2bs-form-control-default-box-shadow: $input-box-shadow !default;
-$s2bs-form-control-focus-box-shadow: $input-box-shadow, $input-btn-focus-box-shadow !default;
+$s2bs-form-control-box-shadow: $input-box-shadow !default;
+$s2bs-form-control-focus-box-shadow: $input-focus-box-shadow !default;
 $s2bs-form-control-transition: $input-transition !default;
 
 //
 // Mixins
 // --------------------------------------------------
 
-// @see https://github.com/twbs/bootstrap/blob/v4.0.0-beta.2/scss/_forms.scss#L8
+// @see https://github.com/twbs/bootstrap/blob/v4.0.0/scss/_forms.scss#L8
 @mixin bootstrap-input-defaults {
-  @include box-shadow($s2bs-form-control-default-box-shadow);
+  @include box-shadow($s2bs-form-control-box-shadow);
   @include border-radius($s2bs-input-border-radius);
+  @include transition($s2bs-form-control-transition);
   background-color: $s2bs-input-bg;
   border: 1px solid $s2bs-input-border;
   color: $s2bs-input-color;
@@ -301,9 +303,13 @@ $s2bs-form-control-transition: $input-transition !default;
   &.select2-container--focus,
   &.select2-container--open {
     .select2-selection {
-      @include box-shadow($s2bs-form-control-focus-box-shadow);
-      @include transition($s2bs-form-control-transition);
       border-color: $s2bs-input-border-focus;
+
+      @if $s2bs-enable-shadows {
+        box-shadow: $s2bs-form-control-box-shadow, $s2bs-form-control-focus-box-shadow;
+      } @else {
+        box-shadow: $s2bs-form-control-focus-box-shadow;
+      }
     }
   }
 
@@ -325,6 +331,7 @@ $s2bs-form-control-transition: $input-transition !default;
       .select2-selection {
         @include border-bottom-radius(0);
         border-bottom-color: transparent;
+        box-shadow: none;
       }
     }
 
@@ -332,6 +339,7 @@ $s2bs-form-control-transition: $input-transition !default;
       .select2-selection {
         @include border-top-radius(0);
         border-top-color: transparent;
+        box-shadow: none;
       }
     }
   }
