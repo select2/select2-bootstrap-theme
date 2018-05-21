@@ -19,13 +19,13 @@ You may install select2-bootstrap-theme with [Bower](https://bower.io/), [npm](h
 ```shell
 
 // npm
-npm install @avladov/select2-bootstrap4-theme
+npm install select2-theme-bootstrap4
 
 // yarn
-yarn add @avladov/select2-bootstrap4-theme
+yarn add select2-theme-bootstrap4
 
 // Bower
-bower install @avladov/select2-bootstrap4-theme
+bower install select2-theme-bootstrap4
 ```
 
 ##### Source select2-bootstrap-theme from CDNJS or jsDelivr
