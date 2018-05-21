@@ -18,13 +18,13 @@ You may install select2-bootstrap-theme with [Bower](https://bower.io/), [npm](h
 
 ```shell
 // Bower
-bower install select2-bootstrap-theme
+bower install select2-bs4-theme
 
 // npm
-npm install select2-bootstrap-theme
+npm install select2-bs4-theme
 
 // yarn
-yarn add select2-bootstrap-theme
+yarn add select2-bs4-theme
 ```
 
 ##### Source select2-bootstrap-theme from CDNJS or jsDelivr
@@ -55,6 +55,11 @@ $.fn.select2.defaults.set( "theme", "bootstrap" );
 ```
 
 #### Changelog
+
+##### 0.2.0-beta.1
+_Fork from Bootsrap 3 theme._
+
+* Switched to Bootstrap 4. All styles updated to work with Bootstrap 4 instead of 3. 
 
 ##### 0.1.0-beta.10
 
