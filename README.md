@@ -29,7 +29,9 @@ yarn add select2-bs4-theme
 
 ##### Source select2-bootstrap-theme from CDNJS or jsDelivr
 
-select2-bootstrap-theme [is also available on CDNJS](https://cdnjs.com/libraries/select2-bootstrap-theme/) and [jsDelivr](http://www.jsdelivr.com/projects/select2-bootstrap-theme).
+~~select2-bootstrap-theme [is also available on CDNJS](https://cdnjs.com/libraries/select2-bootstrap-theme/) and [jsDelivr](http://www.jsdelivr.com/projects/select2-bootstrap-theme).~~
+
+**TBD**
 
 #### Usage
 
