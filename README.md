@@ -57,8 +57,7 @@ $.fn.select2.defaults.set( "theme", "bootstrap" );
 #### Changelog
 
 ##### 0.2.0-beta.1
-_Fork from Bootsrap 3 theme._
-
+* _Forked from Bootsrap 3 theme._
 * Switched to Bootstrap 4. All styles updated to work with Bootstrap 4 instead of 3. 
 
 ##### 0.1.0-beta.10
@@ -153,6 +152,13 @@ Develop in `src/select2-bootstrap.scss` and test your changes using `grunt serve
 
 `grunt scss2less` helps in converting the Sass source to its Less counterpart (and overwrites the existing `src/select2-bootstrap.less`), but doesn't do the full job – please review the changes to the Less source file and make the necessary adjustments.
 
+#### TODO
+* Drop LESS support and update scripts. Bootstrap 4 is SASS only.
+* Add RTL version
+* Update shield.io badge
+
 #### Copyright and license
 
+Forked and modified from [select2 Bootstrap 3 theme](https://github.com/select2/select2-bootstrap-theme). All credits go to the original authors.
+   
 The license is available within the repository in the [LICENSE](LICENSE) file.
