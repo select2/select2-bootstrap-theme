@@ -17,14 +17,15 @@ You can [download select2-bootstrap-theme from this GitHub repo](https://github.
 You may install select2-bootstrap-theme with [Bower](https://bower.io/), [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/):
 
 ```shell
-// Bower
-bower install select2-bs4-theme
 
 // npm
-npm install select2-bs4-theme
+npm install @avladov/select2-bootstrap4-theme
 
 // yarn
-yarn add select2-bs4-theme
+yarn add @avladov/select2-bootstrap4-theme
+
+// Bower
+bower install @avladov/select2-bootstrap4-theme
 ```
 
 ##### Source select2-bootstrap-theme from CDNJS or jsDelivr
