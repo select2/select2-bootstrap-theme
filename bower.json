@@ -1,5 +1,5 @@
 {
-  "name": "select2-bootstrap-theme",
+  "name": "select2-bs4-theme",
   "description": "A theme for Select2 v4 and Bootstrap 4.",
   "keywords": [
     "bootstrap",
@@ -20,7 +20,7 @@
     "components"
   ],
   "dependencies": {
-    "bootstrap": "^4.0.0-beta",
+    "bootstrap": "^4.0.0",
     "select2": "^4.0.0"
   },
   "repository": {
