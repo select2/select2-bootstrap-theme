@@ -8,10 +8,9 @@
     "sass",
     "less"
   ],
-  "homepage": "https://select2.github.io/select2-bootstrap-theme",
+  "homepage": "https://angel-vladov.github.io/select2-bootstrap-theme",
   "main": [
-    "src/select2-bootstrap.scss",
-    "src/select2-bootstrap.less"
+    "src/select2-bootstrap.scss"
   ],
   "license": "MIT",
   "ignore": [
@@ -25,6 +24,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:select2/select2-bootstrap-theme.git"
+    "url": "git@github.com:angel-vladov/select2-bootstrap-theme.git"
   }
 }

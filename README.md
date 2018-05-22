@@ -59,6 +59,10 @@ $.fn.select2.defaults.set( "theme", "bootstrap" );
 
 #### Changelog
 
+##### 0.2.0-beta.2
+* package.json documentation url updates
+* correct `styles` path in package.json
+
 ##### 0.2.0-beta.1
 * _Forked from Bootsrap 3 theme._
 * Switched to Bootstrap 4. All styles updated to work with Bootstrap 4 instead of 3. 
