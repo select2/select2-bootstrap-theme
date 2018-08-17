@@ -437,6 +437,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
     .select2-selection__rendered {
       color: $s2bs-input-color;
       padding: 0;
+      line-height: $s2bs-line-height-base;
     }
 
     .select2-selection__placeholder {
