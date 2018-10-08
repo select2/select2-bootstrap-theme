@@ -28,11 +28,13 @@
   "author": "Florian Kissling",
   "license": "MIT",
   "readmeFilename": "README.md",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+  }
   "devDependencies": {
     "Respond.js": "github:scottjehl/Respond#1.4.2",
     "anchor-js": "^3.2.1",
     "autoprefixer": "^6.4.0",
-    "bootstrap": "^4.0.0",
     "diff": "^2.2.3",
     "grunt": "^1.0.2",
     "grunt-browser-sync": "^2.2.0",
