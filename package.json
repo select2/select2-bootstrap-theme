@@ -29,7 +29,7 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^4.0.0"
   }
   "devDependencies": {
     "Respond.js": "github:scottjehl/Respond#1.4.2",
