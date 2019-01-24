@@ -46,15 +46,25 @@ $s2bs-dropdown-link-hover-color: $dropdown-link-hover-color !default;
 $s2bs-font-size-base: $font-size-base !default;
 $s2bs-font-size-large: $font-size-lg !default;
 $s2bs-font-size-small: $font-size-sm !default;
+
 @if variable-exists(input-font-size) {
+  // Added in Bootstrap 4.2
+  //noinspection SassScssUnresolvedVariable
   $s2bs-font-size-base: $input-font-size !default;
 }
+
 @if variable-exists(input-font-size-lg) {
+  // Added in Bootstrap 4.2
+  //noinspection SassScssUnresolvedVariable
   $s2bs-font-size-large: $input-font-size-lg !default;
 }
+
 @if variable-exists(input-font-size-sm) {
+  // Added in Bootstrap 4.2
+  //noinspection SassScssUnresolvedVariable
   $s2bs-font-size-small: $input-font-size-sm !default;
 }
+
 $s2bs-padding-base-horizontal: $input-btn-padding-x !default;
 $s2bs-padding-large-horizontal: $input-btn-padding-x-lg !default;
 $s2bs-padding-small-horizontal: $input-btn-padding-x-sm !default;
