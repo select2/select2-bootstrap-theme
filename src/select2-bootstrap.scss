@@ -43,9 +43,18 @@ $s2bs-dropdown-link-active-color: $dropdown-link-active-color !default;
 $s2bs-dropdown-link-disabled-color: $dropdown-link-disabled-color !default;
 $s2bs-dropdown-link-hover-bg: $dropdown-link-hover-bg !default;
 $s2bs-dropdown-link-hover-color: $dropdown-link-hover-color !default;
-$s2bs-font-size-base: $input-font-size !default;
-$s2bs-font-size-large: $input-font-size-lg !default;
-$s2bs-font-size-small: $input-font-size-sm !default;
+$s2bs-font-size-base: $font-size-base !default;
+$s2bs-font-size-large: $font-size-lg !default;
+$s2bs-font-size-small: $font-size-sm !default;
+@if variable-exists(input-font-size) {
+  $s2bs-font-size-base: $input-font-size !default;
+}
+@if variable-exists(input-font-size-lg) {
+  $s2bs-font-size-large: $input-font-size-lg !default;
+}
+@if variable-exists(input-font-size-sm) {
+  $s2bs-font-size-small: $input-font-size-sm !default;
+}
 $s2bs-padding-base-horizontal: $input-btn-padding-x !default;
 $s2bs-padding-large-horizontal: $input-btn-padding-x-lg !default;
 $s2bs-padding-small-horizontal: $input-btn-padding-x-sm !default;
