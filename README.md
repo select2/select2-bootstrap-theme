@@ -59,6 +59,9 @@ $.fn.select2.defaults.set( "theme", "bootstrap" );
 
 #### Changelog
 
+##### 0.2.0-beta.3
+* Use Bootstrap 4.2 font-size variables
+
 ##### 0.2.0-beta.2
 * package.json documentation url updates
 * correct `styles` path in package.json
