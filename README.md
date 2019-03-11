@@ -1,8 +1,10 @@
 A [Select2](https://select2.github.io/) v4 [Theme](https://select2.github.io/examples.html#themes) for Bootstrap 4  
-![select2-bootstrap-theme version](https://img.shields.io/badge/select2--bootstrap--theme-v0.1.0--beta.10-brightgreen.svg)
+![select2-bootstrap-theme version](https://img.shields.io/badge/select2--bootstrap--theme-v0.2.0--beta.3-brightgreen.svg)
 [![License](http://img.shields.io/badge/License-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
 Demonstrations [available](https://angel-vladov.github.io/select2-bootstrap-theme/).
+
+angel-vladov/select2-bootstrap-theme
 
 #### Compatibility
 
@@ -164,8 +166,7 @@ Develop in `src/select2-bootstrap.scss` and test your changes using `grunt serve
 
 #### TODO
 * Drop LESS support and update scripts. Bootstrap 4 is SASS only.
-* Add RTL version
-* Update shield.io badge
+* Add RTL version _(When Bootstrap 4 adds official support)_
 
 #### Copyright and license
 
