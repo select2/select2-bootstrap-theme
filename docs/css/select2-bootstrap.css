@@ -1,6 +1,6 @@
 /*!
- * Select2 Bootstrap Theme v0.1.0-beta.10 (https://select2.github.io/select2-bootstrap-theme)
- * Copyright 2015-2018 Florian Kissling and contributors (https://github.com/select2/select2-bootstrap-theme/graphs/contributors)
+ * Select2 Bootstrap Theme v0.2.0-beta.3 (https://angel-vladov.github.io/select2-bootstrap-theme)
+ * Copyright 2015-2019 Florian Kissling and contributors (https://github.com/select2/select2-bootstrap-theme/graphs/contributors)
  * Licensed under MIT (https://github.com/select2/select2-bootstrap-theme/blob/master/LICENSE)
  */
 
@@ -9,7 +9,8 @@
  */
 .select2-container--bootstrap {
   display: block;
-  /*------------------------------------*      #COMMON STYLES
+  /*------------------------------------*\
+      #COMMON STYLES
   \*------------------------------------*/
   /**
    * Search field in the Select2 dropdown.
@@ -33,7 +34,8 @@
    * @see https://select2.github.io/examples.html#disabled
    * @see hhttps://getbootstrap.com/docs/4.0/components/forms/#disabled-forms
    */
-  /*------------------------------------*      #DROPDOWN
+  /*------------------------------------*\
+      #DROPDOWN
   \*------------------------------------*/
   /**
    * Dropdown border color and box-shadow.
@@ -41,9 +43,11 @@
   /**
    * Limit the dropdown height.
    */
-  /*------------------------------------*      #SINGLE SELECT2
+  /*------------------------------------*\
+      #SINGLE SELECT2
   \*------------------------------------*/
-  /*------------------------------------*    #MULTIPLE SELECT2
+  /*------------------------------------*\
+    #MULTIPLE SELECT2
   \*------------------------------------*/
   /**
    * Address Bootstrap control sizing classes
@@ -54,7 +58,8 @@
    * @see https://getbootstrap.com/docs/4.0/components/forms/#sizing
    */
   /* 1 */
-  /*------------------------------------*    #RTL SUPPORT
+  /*------------------------------------*\
+    #RTL SUPPORT
   \*------------------------------------*/
 }
 
@@ -72,6 +77,14 @@
   outline: 0;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .select2-container--bootstrap .select2-selection {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+}
+
 .select2-container--bootstrap .select2-selection.form-control {
   border-radius: 0.25rem;
 }
@@ -87,6 +100,14 @@
   border: 1px solid #ced4da;
   color: #495057;
   font-size: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .select2-container--bootstrap .select2-search--dropdown .select2-search__field {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
 }
 
 .select2-container--bootstrap .select2-search__field {
@@ -275,8 +296,8 @@
 }
 
 .select2-container--bootstrap .select2-selection--single {
-  height: -webkit-calc(2.25rem + 2px);
-  height: calc(2.25rem + 2px);
+  height: -webkit-calc(1.5em + 0.75rem + 2px);
+  height: calc(1.5em + 0.75rem + 2px);
   line-height: 1.5;
   padding: 0.375rem 1.5rem 0.375rem 0.75rem;
   /**
@@ -315,8 +336,8 @@
 }
 
 .select2-container--bootstrap .select2-selection--multiple {
-  min-height: -webkit-calc(2.25rem + 2px);
-  min-height: calc(2.25rem + 2px);
+  min-height: -webkit-calc(1.5em + 0.75rem + 2px);
+  min-height: calc(1.5em + 0.75rem + 2px);
   padding: 0;
   height: auto;
   /**
@@ -366,8 +387,8 @@
 .select2-container--bootstrap .select2-selection--multiple .select2-search--inline .select2-search__field {
   background: transparent;
   padding: 0 0.75rem;
-  height: -webkit-calc(2.25rem + 2px);
-  height: calc(2.25rem + 2px);
+  height: -webkit-calc(1.5em + 0.75rem + 2px);
+  height: calc(1.5em + 0.75rem + 2px);
   line-height: 1.5;
   margin: -1px 0;
   min-width: 5em;
@@ -394,8 +415,8 @@
 .form-group-sm .select2-container--bootstrap .select2-selection--single {
   border-radius: 0.2rem;
   font-size: 0.875rem;
-  height: -webkit-calc(1.8125rem + 2px);
-  height: calc(1.8125rem + 2px);
+  height: -webkit-calc(1.5em + 0.5rem + 2px);
+  height: calc(1.5em + 0.5rem + 2px);
   line-height: 1.5;
   padding: 0.25rem 1.25rem 0.25rem 0.5rem;
   /* 2 */
@@ -411,8 +432,8 @@
 .input-group-sm .select2-container--bootstrap .select2-selection--multiple,
 .form-group-sm .select2-container--bootstrap .select2-selection--multiple {
   border-radius: 0.2rem;
-  min-height: -webkit-calc(1.8125rem + 2px);
-  min-height: calc(1.8125rem + 2px);
+  min-height: -webkit-calc(1.5em + 0.5rem + 2px);
+  min-height: calc(1.5em + 0.5rem + 2px);
 }
 
 .select2-container--bootstrap .select2-selection--multiple.form-control-sm .select2-selection__choice,
@@ -430,8 +451,8 @@
 .form-group-sm .select2-container--bootstrap .select2-selection--multiple .select2-search--inline .select2-search__field {
   padding: 0 0.5rem;
   font-size: 0.875rem;
-  height: -webkit-calc(1.8125rem + 2px);
-  height: calc(1.8125rem + 2px);
+  height: -webkit-calc(1.5em + 0.5rem + 2px);
+  height: calc(1.5em + 0.5rem + 2px);
   line-height: 1.5;
 }
 
@@ -446,8 +467,8 @@
 .form-group-lg .select2-container--bootstrap .select2-selection--single {
   border-radius: 0.3rem;
   font-size: 1.25rem;
-  height: -webkit-calc(2.875rem + 2px);
-  height: calc(2.875rem + 2px);
+  height: -webkit-calc(1.5em + 1rem + 2px);
+  height: calc(1.5em + 1rem + 2px);
   line-height: 1.5;
   padding: 0.5rem 1.9375rem 0.5rem 1rem;
   /* 1 */
@@ -471,8 +492,8 @@
 .select2-container--bootstrap .select2-selection--multiple.form-control-lg,
 .input-group-lg .select2-container--bootstrap .select2-selection--multiple,
 .form-group-lg .select2-container--bootstrap .select2-selection--multiple {
-  min-height: -webkit-calc(2.875rem + 2px);
-  min-height: calc(2.875rem + 2px);
+  min-height: -webkit-calc(1.5em + 1rem + 2px);
+  min-height: calc(1.5em + 1rem + 2px);
   border-radius: 0.3rem;
 }
 
@@ -492,8 +513,8 @@
 .form-group-lg .select2-container--bootstrap .select2-selection--multiple .select2-search--inline .select2-search__field {
   padding: 0 1rem;
   font-size: 1.25rem;
-  height: -webkit-calc(2.875rem + 2px);
-  height: calc(2.875rem + 2px);
+  height: -webkit-calc(1.5em + 1rem + 2px);
+  height: calc(1.5em + 1rem + 2px);
   line-height: 1.5;
 }
 
@@ -582,7 +603,8 @@
   text-align: right;
 }
 
-/*------------------------------------*  #ADDITIONAL GOODIES
+/*------------------------------------*\
+  #ADDITIONAL GOODIES
 \*------------------------------------*/
 /**
  * Address Bootstrap's validation states
