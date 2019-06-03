@@ -1,3 +1,5 @@
+tilde_importer = require('grunt-sass-tilde-importer');
+
 module.exports = function(grunt) {
   // Load all grunt tasks.
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
@@ -11,6 +13,7 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
+        importer: tilde_importer,
         outputStyle: 'expanded',
         sourcemap: 'none',
         // Increase Sass' number "precision" to 8 to match Less output.
