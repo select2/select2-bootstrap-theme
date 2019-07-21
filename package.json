@@ -47,6 +47,7 @@
     "grunt-jekyll": "^0.4.7",
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^2.1.0",
+    "grunt-sass-tilde-importer": "^1.0.2",
     "grunt-scss2less": "0.0.1",
     "grunt-stamp": "^0.3.0",
     "matchdep": "^1.0.1"
