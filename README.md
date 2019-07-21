@@ -61,6 +61,9 @@ $.fn.select2.defaults.set( "theme", "bootstrap" );
 
 #### Changelog
 
+##### 0.2.0-beta.4
+* Use `~` for Bootstrap imports
+
 ##### 0.2.0-beta.3
 * Use Bootstrap 4.2 font-size variables
 

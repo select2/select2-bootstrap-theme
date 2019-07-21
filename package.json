@@ -1,6 +1,6 @@
 {
   "name": "select2-theme-bootstrap4",
-  "version": "0.2.0-beta.3",
+  "version": "0.2.0-beta.4",
   "description": "A theme for Select2 v4 and Bootstrap 4.",
   "main": "",
   "style": "dist/select2-bootstrap.css",
@@ -9,7 +9,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "grunt nodeunit"
+    "test": "grunt nodeunit",
+    "build": "grunt build",
+    "serve": "grunt serve"
   },
   "repository": {
     "type": "git",

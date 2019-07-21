@@ -1,4 +1,4 @@
-tilde_importer = require('grunt-sass-tilde-importer');
+const tildeImporter = require('grunt-sass-tilde-importer');
 
 module.exports = function(grunt) {
   // Load all grunt tasks.
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
-        importer: tilde_importer,
+        importer: tildeImporter,
         outputStyle: 'expanded',
         sourcemap: 'none',
         // Increase Sass' number "precision" to 8 to match Less output.
