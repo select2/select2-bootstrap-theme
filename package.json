@@ -34,7 +34,7 @@
     "autoprefixer": "^6.4.0",
     "bootstrap": "^3.3.7",
     "bootstrap-sass": "^3.3.7",
-    "diff": "^2.2.3",
+    "diff": "^4.0.1",
     "grunt": "^1.0.1",
     "grunt-browser-sync": "^2.2.0",
     "grunt-bump": "^0.8.0",
