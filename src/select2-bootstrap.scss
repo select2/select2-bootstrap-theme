@@ -800,7 +800,7 @@ $s2bs-form-control-transition: $input-transition !default;
  * Select2 widgets in Bootstrap Input Groups
  *
  * @see https://getbootstrap.com/docs/4.0/components/input-group/
- * @see https://github.com/twbs/bootstrap/blob/v4.0.0-beta.2/scss/_input-group.scss
+ * @see https://github.com/twbs/bootstrap/blob/v4.4.1/scss/_input-group.scss
  */
 
 /**
@@ -808,19 +808,14 @@ $s2bs-form-control-transition: $input-transition !default;
  */
 
 .input-group > .select2-hidden-accessible {
-  &:first-child + .select2-container--bootstrap > .selection > .select2-selection,
-  &:first-child + .select2-container--bootstrap > .selection > .select2-selection.form-control {
-    @include border-right-radius(0);
-  }
-
-  &:not(:first-child) + .select2-container--bootstrap:not(:last-child) > .selection > .select2-selection,
-  &:not(:first-child) + .select2-container--bootstrap:not(:last-child) > .selection > .select2-selection.form-control {
-    border-radius: 0;
-  }
-
-  &:not(:first-child):not(:last-child) + .select2-container--bootstrap:last-child > .selection > .select2-selection,
-  &:not(:first-child):not(:last-child) + .select2-container--bootstrap:last-child > .selection > .select2-selection.form-control {
+  &:not(:first-child) + .select2-container--bootstrap > .selection > .select2-selection
+  &:not(:first-child) + .select2-container--bootstrap > .selection > .select2-selection.form-control {
     @include border-left-radius(0);
+  }
+
+  + .select2-container--bootstrap:not(:last-child) > .selection > .select2-selection,
+  + .select2-container--bootstrap:not(:last-child) > .selection > .select2-selection.form-control {
+    @include border-right-radius(0);
   }
 }
 
@@ -855,7 +850,7 @@ $s2bs-form-control-transition: $input-transition !default;
    * Multi Select2's height which - depending on how many elements have been selected -
    * may grow taller than its initial size.
    *
-   * @see https://github.com/twbs/bootstrap/blob/v4.0.0-beta.2/scss/_input-group.scss
+   * @see https://github.com/twbs/bootstrap/blob/v4.4.1/scss/_input-group.scss
    */
 
   &,

@@ -1,12 +1,12 @@
 A [Select2](https://select2.github.io/) v4 [Theme](https://select2.github.io/examples.html#themes) for Bootstrap 4  
-![select2-theme-bootstrap version](https://img.shields.io/badge/select2--theme--bootstrap-v0.2.0--beta.4-brightgreen.svg)
+![select2-theme-bootstrap version](https://img.shields.io/badge/select2--theme--bootstrap-v0.2.0--beta.5-brightgreen.svg)
 [![License](http://img.shields.io/badge/License-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
 Demonstrations [available](https://angel-vladov.github.io/select2-bootstrap-theme/).
 
 #### Compatibility
 
-Built and tested with Bootstrap v4.0.0 and Select2 v4.0.3 in latest Chrome, Firefox and Safari (Mac) and Internet Explorer 11.
+Built and tested with Bootstrap v4 and Select2 v4.0.5 in latest Chrome, Firefox and Safari (Mac) and Internet Explorer 11.
 
 #### Installation
 
@@ -58,6 +58,9 @@ $.fn.select2.defaults.set( "theme", "bootstrap" );
 ```
 
 #### Changelog
+
+##### 0.2.1
+* CSS adjustments for input-group border radius
 
 ##### 0.2.0-beta.4
 * Use `~` for Bootstrap imports
