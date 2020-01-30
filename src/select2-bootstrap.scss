@@ -808,7 +808,7 @@ $s2bs-form-control-transition: $input-transition !default;
  */
 
 .input-group > .select2-hidden-accessible {
-  &:not(:first-child) + .select2-container--bootstrap > .selection > .select2-selection
+  &:not(:first-child) + .select2-container--bootstrap > .selection > .select2-selection,
   &:not(:first-child) + .select2-container--bootstrap > .selection > .select2-selection.form-control {
     @include border-left-radius(0);
   }

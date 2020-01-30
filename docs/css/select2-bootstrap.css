@@ -1,5 +1,5 @@
 /*!
- * Select2 Bootstrap Theme v0.2.0-beta.5 (https://angel-vladov.github.io/select2-bootstrap-theme)
+ * Select2 Bootstrap Theme v0.2.0-beta.6 (https://angel-vladov.github.io/select2-bootstrap-theme)
  * Copyright 2015-2020 Florian Kissling and contributors (https://github.com/select2/select2-bootstrap-theme/graphs/contributors)
  * Licensed under MIT (https://github.com/select2/select2-bootstrap-theme/blob/master/LICENSE)
  */
@@ -746,7 +746,7 @@
 /**
  * Reset rounded corners
  */
-.input-group > .select2-hidden-accessible:not(:first-child) + .select2-container--bootstrap > .selection > .select2-selection
+.input-group > .select2-hidden-accessible:not(:first-child) + .select2-container--bootstrap > .selection > .select2-selection,
 .input-group > .select2-hidden-accessible:not(:first-child) + .select2-container--bootstrap > .selection > .select2-selection.form-control {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
