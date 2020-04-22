@@ -178,26 +178,6 @@ module.exports = function(grunt) {
       }
     },
 
-    scss2less: {
-      convert: {
-        files: [{
-          src: 'src/select2-bootstrap.scss',
-          dest: 'src/select2-bootstrap.less'
-        }]
-      }
-    },
-
-    // Only used to generate CSS for the tests.
-    less: {
-      test: {
-        options: {
-          sourceMap: false
-        },
-        src: 'src/build.less',
-        dest: 'tmp/select2-bootstrap.css'
-      }
-    },
-
     stamp: {
       options: {
         banner: '/*!\n' +
