@@ -2,7 +2,7 @@ A [Select2](https://select2.github.io/) v4 [Theme](https://select2.github.io/exa
 ![select2-theme-bootstrap4 version](https://img.shields.io/badge/select2--theme--bootstrap4-v1.0.0-brightgreen.svg)
 [![License](http://img.shields.io/badge/License-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
-Demonstrations [available](https://angel-vladov.github.io/select2-bootstrap-theme/).
+Demonstrations [available](https://angel-vladov.github.io/select2-theme-bootstrap4/).
 
 #### Compatibility
 
@@ -10,7 +10,7 @@ Built and tested with Bootstrap v4 and Select2 v4.0.5 in latest Chrome, Firefox 
 
 #### Installation
 
-You can [download select2-bootstrap-theme from this GitHub repo](https://github.com/select2/select2-bootstrap-theme/releases), install it using Bower or npm – required if you want to integrate the Sass or Less sources in your build process – or source the compiled CSS directly from CDNJS or jsDelivr.
+You can [download select2-bootstrap-theme from this GitHub repo](https://github.com/angel-vladov/select2-theme-bootstrap4/releases), install it using Bower or npm – required if you want to integrate the Sass or Less sources in your build process – or source the compiled CSS directly from CDNJS or jsDelivr.
 
 ##### Install using Bower or npm/yarn
 

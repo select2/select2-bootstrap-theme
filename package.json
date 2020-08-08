@@ -4,7 +4,7 @@
   "description": "A theme for Select2 v4 and Bootstrap 4.",
   "main": "",
   "style": "dist/select2-bootstrap.css",
-  "homepage": "https://angel-vladov.github.io/select2-bootstrap-theme",
+  "homepage": "https://angel-vladov.github.io/select2-theme-bootstrap4",
   "directories": {
     "doc": "docs"
   },
@@ -15,10 +15,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:angel-vladov/select2-bootstrap-theme.git"
+    "url": "git@github.com:angel-vladov/select2-theme-bootstrap4.git"
   },
   "bugs": {
-    "url": "https://github.com/angel-vladov/select2-bootstrap-theme/issues"
+    "url": "https://github.com/angel-vladov/select2-theme-bootstrap4/issues"
   },
   "keywords": [
     "bootstrap",

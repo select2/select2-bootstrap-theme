@@ -183,7 +183,7 @@ module.exports = function(grunt) {
         banner: '/*!\n' +
                 ' * Select2 Bootstrap Theme v<%= package.version %> (<%= package.homepage %>)\n' +
                 ' * Copyright 2015-<%= grunt.template.today("yyyy") %> <%= package.author %> and contributors (https://github.com/select2/select2-bootstrap-theme/graphs/contributors)\n' +
-                ' * Licensed under MIT (https://github.com/select2/select2-bootstrap-theme/blob/master/LICENSE)\n' +
+                ' * Licensed under MIT (https://github.com/angel-vladov/select2-theme-bootstrap4/blob/master/LICENSE)\n' +
                 ' */\n'
       },
       dist: {

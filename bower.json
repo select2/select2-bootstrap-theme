@@ -8,7 +8,7 @@
     "sass",
     "less"
   ],
-  "homepage": "https://angel-vladov.github.io/select2-bootstrap-theme",
+  "homepage": "https://angel-vladov.github.io/select2-theme-bootstrap4",
   "main": [
     "src/select2-bootstrap.scss"
   ],
@@ -24,6 +24,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:angel-vladov/select2-bootstrap-theme.git"
+    "url": "git@github.com:angel-vladov/select2-theme-bootstrap4.git"
   }
 }
