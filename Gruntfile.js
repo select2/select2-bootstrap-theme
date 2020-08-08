@@ -178,32 +178,12 @@ module.exports = function(grunt) {
       }
     },
 
-    scss2less: {
-      convert: {
-        files: [{
-          src: 'src/select2-bootstrap.scss',
-          dest: 'src/select2-bootstrap.less'
-        }]
-      }
-    },
-
-    // Only used to generate CSS for the tests.
-    less: {
-      test: {
-        options: {
-          sourceMap: false
-        },
-        src: 'src/build.less',
-        dest: 'tmp/select2-bootstrap.css'
-      }
-    },
-
     stamp: {
       options: {
         banner: '/*!\n' +
                 ' * Select2 Bootstrap Theme v<%= package.version %> (<%= package.homepage %>)\n' +
                 ' * Copyright 2015-<%= grunt.template.today("yyyy") %> <%= package.author %> and contributors (https://github.com/select2/select2-bootstrap-theme/graphs/contributors)\n' +
-                ' * Licensed under MIT (https://github.com/select2/select2-bootstrap-theme/blob/master/LICENSE)\n' +
+                ' * Licensed under MIT (https://github.com/angel-vladov/select2-theme-bootstrap4/blob/master/LICENSE)\n' +
                 ' */\n'
       },
       dist: {

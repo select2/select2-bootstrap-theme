@@ -1,8 +1,8 @@
 A [Select2](https://select2.github.io/) v4 [Theme](https://select2.github.io/examples.html#themes) for Bootstrap 4  
-![select2-theme-bootstrap version](https://img.shields.io/badge/select2--theme--bootstrap-v0.2.0--beta.6-brightgreen.svg)
+![select2-theme-bootstrap4 version](https://img.shields.io/badge/select2--theme--bootstrap4-v1.0.0-brightgreen.svg)
 [![License](http://img.shields.io/badge/License-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
-Demonstrations [available](https://angel-vladov.github.io/select2-bootstrap-theme/).
+Demonstrations [available](https://angel-vladov.github.io/select2-theme-bootstrap4/).
 
 #### Compatibility
 
@@ -10,7 +10,7 @@ Built and tested with Bootstrap v4 and Select2 v4.0.5 in latest Chrome, Firefox 
 
 #### Installation
 
-You can [download select2-bootstrap-theme from this GitHub repo](https://github.com/select2/select2-bootstrap-theme/releases), install it using Bower or npm – required if you want to integrate the Sass or Less sources in your build process – or source the compiled CSS directly from CDNJS or jsDelivr.
+You can [download select2-bootstrap-theme from this GitHub repo](https://github.com/angel-vladov/select2-theme-bootstrap4/releases), install it using Bower or npm – required if you want to integrate the Sass or Less sources in your build process – or source the compiled CSS directly from CDNJS or jsDelivr.
 
 ##### Install using Bower or npm/yarn
 
@@ -58,6 +58,10 @@ $.fn.select2.defaults.set( "theme", "bootstrap" );
 ```
 
 #### Changelog
+
+##### 1.0.0
+* Dropped LESS support. _Bootstrap 4 is SASS only_
+* Removed legacy grunt tasks
 
 ##### 0.2.0-beta-6
 * CSS adjustments for input-group border radius

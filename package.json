@@ -1,10 +1,10 @@
 {
   "name": "select2-theme-bootstrap4",
-  "version": "0.2.0-beta.6",
+  "version": "1.0.0",
   "description": "A theme for Select2 v4 and Bootstrap 4.",
   "main": "",
   "style": "dist/select2-bootstrap.css",
-  "homepage": "https://angel-vladov.github.io/select2-bootstrap-theme",
+  "homepage": "https://angel-vladov.github.io/select2-theme-bootstrap4",
   "directories": {
     "doc": "docs"
   },
@@ -15,17 +15,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:angel-vladov/select2-bootstrap-theme.git"
+    "url": "git@github.com:angel-vladov/select2-theme-bootstrap4.git"
   },
   "bugs": {
-    "url": "https://github.com/angel-vladov/select2-bootstrap-theme/issues"
+    "url": "https://github.com/angel-vladov/select2-theme-bootstrap4/issues"
   },
   "keywords": [
     "bootstrap",
     "select2",
     "css",
-    "sass",
-    "less"
+    "sass"
   ],
   "author": "Florian Kissling",
   "license": "MIT",
@@ -42,7 +41,6 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^1.0.1",
     "grunt-contrib-jshint": "^1.0.0",
-    "grunt-contrib-less": "^1.4.0",
     "grunt-contrib-nodeunit": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-gh-pages": "^1.2.0",
@@ -50,7 +48,6 @@
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^2.1.0",
     "grunt-sass-tilde-importer": "^1.0.2",
-    "grunt-scss2less": "0.0.1",
     "grunt-stamp": "^0.3.0",
     "matchdep": "^1.0.1"
   }
