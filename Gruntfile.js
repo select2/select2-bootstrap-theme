@@ -181,8 +181,9 @@ module.exports = function(grunt) {
     stamp: {
       options: {
         banner: '/*!\n' +
-                ' * Select2 Bootstrap Theme v<%= package.version %> (<%= package.homepage %>)\n' +
-                ' * Copyright 2015-<%= grunt.template.today("yyyy") %> <%= package.author %> and contributors (https://github.com/select2/select2-bootstrap-theme/graphs/contributors)\n' +
+                ' * Select2 Bootstrap 4 Theme v<%= package.version %> (<%= package.homepage %>)\n' +
+                ' * Copyright 2018-<%= grunt.template.today("yyyy") %> <%= package.author %> and contributors (https://github.com/angel-vladov/select2-theme-bootstrap5/graphs/contributors)\n' +
+                ' * Based on the original select2/select2-bootstrap-theme theme by Florian Kissling and contributors (https://github.com/select2/select2-bootstrap-theme/graphs/contributors)\n' +
                 ' * Licensed under MIT (https://github.com/angel-vladov/select2-theme-bootstrap4/blob/master/LICENSE)\n' +
                 ' */\n'
       },

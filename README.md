@@ -1,18 +1,21 @@
-A [Select2](https://select2.github.io/) v4 [Theme](https://select2.github.io/examples.html#themes) for Bootstrap 4  
-![select2-theme-bootstrap4 version](https://img.shields.io/badge/select2--theme--bootstrap4-v1.0.0-brightgreen.svg)
+# select2-theme-bootstrap4
+
+![select2-theme-bootstrap4 version](https://img.shields.io/badge/select2--theme--bootstrap4-v1.0.1-brightgreen.svg)
 [![License](http://img.shields.io/badge/License-MIT-blue.svg)](http://opensource.org/licenses/MIT)
+
+A [Select2](https://select2.github.io/) v4 [Theme](https://select2.github.io/examples.html#themes) for Bootstrap 4
 
 Demonstrations [available](https://angel-vladov.github.io/select2-theme-bootstrap4/).
 
-#### Compatibility
+### Compatibility
 
 Built and tested with Bootstrap v4 and Select2 v4.0.5 in latest Chrome, Firefox and Safari (Mac) and Internet Explorer 11.
 
-#### Installation
+### Installation
 
 You can [download select2-bootstrap-theme from this GitHub repo](https://github.com/angel-vladov/select2-theme-bootstrap4/releases), install it using Bower or npm – required if you want to integrate the Sass or Less sources in your build process – or source the compiled CSS directly from CDNJS or jsDelivr.
 
-##### Install using Bower or npm/yarn
+#### Install using Bower or npm/yarn
 
 You may install select2-bootstrap-theme with [Bower](https://bower.io/), [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/):
 
@@ -28,13 +31,7 @@ yarn add select2-theme-bootstrap4
 bower install select2-theme-bootstrap4
 ```
 
-##### Source select2-bootstrap-theme from CDNJS or jsDelivr
-
-~~select2-bootstrap-theme [is also available on CDNJS](https://cdnjs.com/libraries/select2-bootstrap-theme/) and [jsDelivr](http://www.jsdelivr.com/projects/select2-bootstrap-theme).~~
-
-**TBD**
-
-#### Usage
+### Usage
 
 select2-bootstrap-theme only works with Select2 v4.x. Applying the theme requires `select2-bootstrap.css` referenced after the default `select2.css` that comes with Select2:
 
@@ -57,7 +54,12 @@ You may also set it as the default theme for all Select2 widgets like so:
 $.fn.select2.defaults.set( "theme", "bootstrap" );
 ```
 
-#### Changelog
+### Changelog
+
+##### 1.0.1
+* `libsass` friendly division by 2
+* Added additional select2 examples
+* Documentation updates
 
 ##### 1.0.0
 * Dropped LESS support. _Bootstrap 4 is SASS only_
@@ -153,7 +155,7 @@ $.fn.select2.defaults.set( "theme", "bootstrap" );
 
 ##### 0.1.0-beta.1
 
-#### Contributing
+### Contributing
 
 The project offers [Less](http://lesscss.org/) and [Sass](http://sass-lang.com/) sources for building `select2-bootstrap.css`; both make use of variables from either [Bootstrap](https://github.com/twbs/bootstrap) (Less) or [Bootstrap for Sass](https://github.com/twbs/bootstrap-sass). The demo pages are built using [Jekyll](http://jekyllrb.com/) and there are a bunch of [Grunt](http://gruntjs.com/) tasks to ease development.
 
@@ -172,11 +174,7 @@ Develop in `src/select2-bootstrap.scss` and test your changes using `grunt serve
 
 `grunt scss2less` helps in converting the Sass source to its Less counterpart (and overwrites the existing `src/select2-bootstrap.less`), but doesn't do the full job – please review the changes to the Less source file and make the necessary adjustments.
 
-#### TODO
-* Drop LESS support and update scripts. Bootstrap 4 is SASS only.
-* Add RTL version _(When Bootstrap 4 adds official support)_
-
-#### Copyright and license
+### Copyright and license
 
 Forked and modified from [select2 Bootstrap 3 theme](https://github.com/select2/select2-bootstrap-theme). All credits go to the original authors.
    

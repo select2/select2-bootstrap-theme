@@ -1,6 +1,6 @@
 {
   "name": "select2-theme-bootstrap4",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A theme for Select2 v4 and Bootstrap 4.",
   "main": "",
   "style": "dist/select2-bootstrap.css",
@@ -26,7 +26,7 @@
     "css",
     "sass"
   ],
-  "author": "Florian Kissling",
+  "author": "Angel Vladov",
   "license": "MIT",
   "readmeFilename": "README.md",
   "devDependencies": {
