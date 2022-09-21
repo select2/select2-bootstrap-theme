@@ -1,6 +1,6 @@
 # select2-theme-bootstrap4
 
-![select2-theme-bootstrap4 version](https://img.shields.io/badge/select2--theme--bootstrap4-v1.0.1-brightgreen.svg)
+![select2-theme-bootstrap4 version](https://img.shields.io/badge/select2--theme--bootstrap4-v1.0.2-brightgreen.svg)
 [![License](http://img.shields.io/badge/License-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
 A [Select2](https://select2.github.io/) v4 [Theme](https://select2.github.io/examples.html#themes) for Bootstrap 4
@@ -55,6 +55,9 @@ $.fn.select2.defaults.set( "theme", "bootstrap" );
 ```
 
 ### Changelog
+
+##### 1.0.2
+* `libsass` friendly division by 2
 
 ##### 1.0.1
 * `libsass` friendly division by 2
