@@ -1,19 +1,42 @@
 //
+// Functions
+// --------------------------------------------------
+
+/**
+ * We need a clone of bootstrap color-yiq mixin so we can get the same value for color
+ */
+@function bs4-color-yiq($color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) * 0.001;
+
+  @if ($yiq >= 150) {
+    @return "#111";
+  } @else {
+    @return "#fff";
+  }
+}
+
+//
 // Variables
 // --------------------------------------------------
 
 // Variables directly translating Bootstrap variables
 // -------------------------
 
-$s2bs-border-radius-base: $border-radius-base !default;
-$s2bs-border-radius-large: $border-radius-large !default;
-$s2bs-border-radius-small: $border-radius-small !default;
-$s2bs-btn-default-bg: $btn-default-bg !default;
-$s2bs-btn-default-border: $btn-default-border !default;
-$s2bs-btn-default-color: $btn-default-color !default;
-$s2bs-caret-width-base: $caret-width-base !default;
-$s2bs-caret-width-large: $caret-width-large !default;
-$s2bs-cursor-disabled: $cursor-disabled !default;
+$s2bs-enable-shadows: $enable-shadows !default;
+$s2bs-border-radius-base: $border-radius !default;
+$s2bs-border-radius-large: $border-radius-lg !default;
+$s2bs-border-radius-small: $border-radius-sm !default;
+$s2bs-btn-default-bg: $input-group-addon-bg !default; // or $gray-200
+$s2bs-btn-default-border: theme-color("secondary") !default;
+$s2bs-btn-default-color: bs4-color-yiq($s2bs-btn-default-bg) !default;
+$s2bs-caret-width-base: .25rem !default; // 4px
+$s2bs-caret-width-large: .3125rem !default; // 5px
+
+$s2bs-cursor-disabled: not-allowed !default;
 $s2bs-dropdown-header-color: $dropdown-header-color !default;
 $s2bs-dropdown-link-active-bg: $dropdown-link-active-bg !default;
 $s2bs-dropdown-link-active-color: $dropdown-link-active-color !default;
@@ -21,27 +44,49 @@ $s2bs-dropdown-link-disabled-color: $dropdown-link-disabled-color !default;
 $s2bs-dropdown-link-hover-bg: $dropdown-link-hover-bg !default;
 $s2bs-dropdown-link-hover-color: $dropdown-link-hover-color !default;
 $s2bs-font-size-base: $font-size-base !default;
-$s2bs-font-size-large: $font-size-large !default;
-$s2bs-font-size-small: $font-size-small !default;
-$s2bs-padding-base-horizontal: $padding-base-horizontal !default;
-$s2bs-padding-large-horizontal: $padding-large-horizontal !default;
-$s2bs-padding-small-horizontal: $padding-small-horizontal !default;
-$s2bs-padding-base-vertical: $padding-base-vertical !default;
-$s2bs-padding-large-vertical: $padding-large-vertical !default;
-$s2bs-padding-small-vertical: $padding-small-vertical !default;
-$s2bs-line-height-base: $line-height-base !default;
-$s2bs-line-height-large: $line-height-large !default;
-$s2bs-line-height-small: $line-height-small !default;
+$s2bs-font-size-large: $font-size-lg !default;
+$s2bs-font-size-small: $font-size-sm !default;
+
+@if variable-exists(input-font-size) {
+  // Added in Bootstrap 4.2
+  //noinspection SassScssUnresolvedVariable
+  $s2bs-font-size-base: $input-font-size !default;
+}
+
+@if variable-exists(input-font-size-lg) {
+  // Added in Bootstrap 4.2
+  //noinspection SassScssUnresolvedVariable
+  $s2bs-font-size-large: $input-font-size-lg !default;
+}
+
+@if variable-exists(input-font-size-sm) {
+  // Added in Bootstrap 4.2
+  //noinspection SassScssUnresolvedVariable
+  $s2bs-font-size-small: $input-font-size-sm !default;
+}
+
+$s2bs-padding-base-horizontal: $input-btn-padding-x !default;
+$s2bs-padding-large-horizontal: $input-btn-padding-x-lg !default;
+$s2bs-padding-small-horizontal: $input-btn-padding-x-sm !default;
+$s2bs-padding-base-vertical: $input-btn-padding-y  !default;
+$s2bs-padding-large-vertical: $input-btn-padding-y-lg !default;
+$s2bs-padding-small-vertical: $input-btn-padding-y-sm !default;
+$s2bs-line-height-base: $input-btn-line-height !default;
+$s2bs-line-height-large: $input-btn-line-height !default;
+$s2bs-line-height-small: $input-btn-line-height !default;
 $s2bs-input-bg: $input-bg !default;
-$s2bs-input-bg-disabled: $input-bg-disabled !default;
+$s2bs-input-bg-disabled: $input-disabled-bg !default;
 $s2bs-input-color: $input-color !default;
-$s2bs-input-color-placeholder: $input-color-placeholder !default;
-$s2bs-input-border: $input-border !default;
-$s2bs-input-border-focus: $input-border-focus !default;
+$s2bs-input-color-placeholder: $input-placeholder-color !default;
+$s2bs-input-border: $input-border-color !default;
+$s2bs-input-border-focus: $input-focus-border-color !default;
 $s2bs-input-border-radius: $input-border-radius !default;
-$s2bs-input-height-base: $input-height-base !default;
-$s2bs-input-height-large: $input-height-large !default;
-$s2bs-input-height-small: $input-height-small !default;
+$s2bs-input-height-base: $input-height !default;
+$s2bs-input-height-large: $input-height-lg !default;
+$s2bs-input-height-small: $input-height-sm !default;
+$s2bs-state-warning-text: theme-color("warning") !default;
+$s2bs-state-danger-text: $form-feedback-invalid-color !default;
+$s2bs-state-success-text: $form-feedback-valid-color !default;
 
 // Theme-specific variables
 // -------------------------
@@ -57,38 +102,28 @@ $s2bs-selection-choice-border-radius: $s2bs-border-radius-base !default;
 $s2bs-dropdown-header-padding-vertical: $s2bs-padding-base-vertical !default;
 $s2bs-dropdown-header-font-size: $s2bs-font-size-small !default;
 
-
-// Bootstrap defaults not available as pre-defined variables
-// These should not be overridden.
+// Form control variables
 // -------------------------
-
-// @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_forms.scss#L126
-$s2bs-form-control-default-box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !default;
-
-// @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/mixins/_forms.scss#L60
-$s2bs-form-control-focus-box-shadow: $s2bs-form-control-default-box-shadow, 0 0 8px rgba($s2bs-input-border-focus, 0.6) !default;
-
-// @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_forms.scss#L127
-$s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s !default;
-
-
-
+$s2bs-form-control-box-shadow: $input-box-shadow !default;
+$s2bs-form-control-focus-box-shadow: $input-focus-box-shadow !default;
+$s2bs-form-control-transition: $input-transition !default;
 
 //
 // Mixins
 // --------------------------------------------------
 
-// @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_forms.scss#L115
+// @see https://github.com/twbs/bootstrap/blob/v4.0.0/scss/_forms.scss#L8
 @mixin bootstrap-input-defaults {
-  @include box-shadow($s2bs-form-control-default-box-shadow);
+  @include box-shadow($s2bs-form-control-box-shadow);
+  @include border-radius($s2bs-input-border-radius);
+  @include transition($s2bs-form-control-transition);
   background-color: $s2bs-input-bg;
   border: 1px solid $s2bs-input-border;
-  border-radius: $s2bs-input-border-radius;
   color: $s2bs-input-color;
   font-size: $s2bs-font-size-base;
 }
 
-// @see http://getbootstrap.com/css/#forms-control-validation
+// @see https://getbootstrap.com/docs/4.0/components/forms/#validation
 // @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_forms.scss#L388
 @mixin validation-state-focus($color) {
   $shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px lighten($color, 20%);
@@ -102,6 +137,10 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
   .select2-container--open .select2-selection {
     @include box-shadow($shadow);
     border-color: darken($color, 10%);
+
+    &:focus {
+      box-shadow: 0 0 0 .2rem rgba($color,.25);
+    }
   }
 
   &.select2-drop-active {
@@ -146,7 +185,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
     outline: 0;
 
     &.form-control {
-      border-radius: $s2bs-border-radius-base;
+      @include border-radius($s2bs-border-radius-base);
     }
   }
 
@@ -196,9 +235,9 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
 
   /**
    * Adjust Select2's choices hover and selected styles to match
-   * Bootstrap 3's default dropdown styles.
+   * Bootstrap 4's default dropdown styles.
    *
-   * @see http://getbootstrap.com/components/#dropdowns
+   * @see https://getbootstrap.com/docs/4.0/components/dropdowns/
    */
 
   .select2-results__option {
@@ -283,9 +322,13 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
   &.select2-container--focus,
   &.select2-container--open {
     .select2-selection {
-      @include box-shadow($s2bs-form-control-focus-box-shadow);
-      @include transition($s2bs-form-control-transition);
       border-color: $s2bs-input-border-focus;
+
+      @if $s2bs-enable-shadows {
+        box-shadow: $s2bs-form-control-box-shadow, $s2bs-form-control-focus-box-shadow;
+      } @else {
+        box-shadow: $s2bs-form-control-focus-box-shadow;
+      }
     }
   }
 
@@ -307,6 +350,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
       .select2-selection {
         @include border-bottom-radius(0);
         border-bottom-color: transparent;
+        box-shadow: none;
       }
     }
 
@@ -314,6 +358,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
       .select2-selection {
         @include border-top-radius(0);
         border-top-color: transparent;
+        box-shadow: none;
       }
     }
   }
@@ -338,7 +383,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
    * Address disabled Select2 styles.
    *
    * @see https://select2.github.io/examples.html#disabled
-   * @see http://getbootstrap.com/css/#forms-control-disabled
+   * @see hhttps://getbootstrap.com/docs/4.0/components/forms/#disabled-forms
    */
 
   &.select2-container--disabled {
@@ -427,7 +472,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
         height: 0;
         left: 0;
         margin-left: -$s2bs-caret-width-base;
-        margin-top: -$s2bs-caret-width-base/2;
+        margin-top: -$s2bs-caret-width-base * .5;
         position: absolute;
         top: 50%;
         width: 0;
@@ -477,7 +522,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
     }
 
     /**
-     * Make Multi Select2's choices match Bootstrap 3's default button styles.
+     * Make Multi Select2's choices match Bootstrap 4's default button styles.
      */
 
     .select2-selection__choice {
@@ -487,7 +532,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
       border-radius: $s2bs-selection-choice-border-radius;
       cursor: default;
       float: left;
-      margin: ($s2bs-padding-base-vertical - 1) 0 0 $s2bs-padding-base-horizontal/2;
+      margin: calc(#{$s2bs-padding-base-vertical} - 1px) 0 0 ($s2bs-padding-base-horizontal * .5);
       padding: 0 $s2bs-padding-base-vertical;
     }
 
@@ -499,9 +544,9 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
       .select2-search__field {
         background: transparent;
         padding: 0 $s2bs-padding-base-horizontal;
-        height: $s2bs-input-height-base - 2;
+        height: $s2bs-input-height-base;
         line-height: $s2bs-line-height-base;
-        margin-top: 0;
+        margin: -$border-width 0; // Compensate for input borders included in height
         min-width: 5em;
       }
     }
@@ -511,7 +556,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
       cursor: pointer;
       display: inline-block;
       font-weight: bold;
-      margin-right: $s2bs-padding-base-vertical / 2;
+      margin-right: $s2bs-padding-base-vertical * .5;
 
       &:hover {
         color: $s2bs-remove-choice-hover-color;
@@ -537,14 +582,14 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
    * 1. Reset Bootstrap defaults.
    * 2. Adjust the dropdown arrow button icon position.
    *
-   * @see http://getbootstrap.com/css/#forms-control-sizes
+   * @see https://getbootstrap.com/docs/4.0/components/forms/#sizing
    */
 
   /* 1 */
-  .select2-selection--single.input-sm,
+  .select2-selection--single.form-control-sm,
   .input-group-sm & .select2-selection--single,
   .form-group-sm & .select2-selection--single {
-    border-radius: $s2bs-border-radius-small;
+    @include border-radius($s2bs-border-radius-small);
     font-size: $s2bs-font-size-small;
     height: $s2bs-input-height-small;
     line-height: $s2bs-line-height-small;
@@ -556,23 +601,23 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
     }
   }
 
-  .select2-selection--multiple.input-sm,
+  .select2-selection--multiple.form-control-sm,
   .input-group-sm & .select2-selection--multiple,
   .form-group-sm & .select2-selection--multiple {
+    @include border-radius($s2bs-border-radius-small);
     min-height: $s2bs-input-height-small;
-    border-radius: $s2bs-border-radius-small;
 
     .select2-selection__choice {
       font-size: $s2bs-font-size-small;
       line-height: $s2bs-line-height-small;
-      margin: ($s2bs-padding-small-vertical - 1) 0 0 $s2bs-padding-small-horizontal/2;
+      margin: calc(#{$s2bs-padding-small-vertical} - 1px) 0 0 ($s2bs-padding-small-horizontal * .5);
       padding: 0 $s2bs-padding-small-vertical;
     }
 
     .select2-search--inline .select2-search__field {
       padding: 0 $s2bs-padding-small-horizontal;
       font-size: $s2bs-font-size-small;
-      height: $s2bs-input-height-small - 2;
+      height: $s2bs-input-height-small;
       line-height: $s2bs-line-height-small;
     }
 
@@ -581,10 +626,10 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
     }
   }
 
-  .select2-selection--single.input-lg,
+  .select2-selection--single.form-control-lg,
   .input-group-lg & .select2-selection--single,
   .form-group-lg & .select2-selection--single {
-    border-radius: $s2bs-border-radius-large;
+    @include border-radius($s2bs-border-radius-large);
     font-size: $s2bs-font-size-large;
     height: $s2bs-input-height-large;
     line-height: $s2bs-line-height-large;
@@ -598,12 +643,12 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
         border-width: $s2bs-caret-width-large $s2bs-caret-width-large 0 $s2bs-caret-width-large;
         margin-left: -$s2bs-caret-width-large;
         margin-left: -$s2bs-padding-large-vertical;
-        margin-top: -$s2bs-caret-width-large/2;
+        margin-top: -$s2bs-caret-width-large * .5;
       }
     }
   }
 
-  .select2-selection--multiple.input-lg,
+  .select2-selection--multiple.form-control-lg,
   .input-group-lg & .select2-selection--multiple,
   .form-group-lg & .select2-selection--multiple {
     min-height: $s2bs-input-height-large;
@@ -613,14 +658,14 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
       font-size: $s2bs-font-size-large;
       line-height: $s2bs-line-height-large;
       border-radius: $s2bs-selection-choice-border-radius;
-      margin: ($s2bs-padding-large-vertical - 1) 0 0 $s2bs-padding-large-horizontal/2;
+      margin: calc(#{$s2bs-padding-large-vertical} - 1px) 0 0 ($s2bs-padding-large-horizontal * .5);
       padding: 0 $s2bs-padding-large-vertical;
     }
 
     .select2-search--inline .select2-search__field {
       padding: 0 $s2bs-padding-large-horizontal;
       font-size: $s2bs-font-size-large;
-      height: $s2bs-input-height-large - 2;
+      height: $s2bs-input-height-large;
       line-height: $s2bs-line-height-large;
     }
 
@@ -629,7 +674,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
     }
   }
 
-  .select2-selection.input-lg.select2-container--open {
+  .select2-selection.form-control-lg.select2-container--open {
     @include dropdown-arrow;
   }
 
@@ -693,13 +738,19 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
 
       .select2-selection__choice {
         margin-left: 0;
-        margin-right: $s2bs-padding-base-horizontal/2;
+        margin-right: $s2bs-padding-base-horizontal * .5;
       }
 
       .select2-selection__choice__remove {
         margin-left: 2px;
         margin-right: auto;
       }
+    }
+  }
+
+  .select2-dropdown[dir="rtl"] {
+    .select2-results__options {
+      text-align: right;
     }
   }
 }
@@ -720,26 +771,36 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
  * You may apply said classes to the Select2 dropdown (body > .select2-container)
  * via JavaScript match Bootstraps' to make its styles match.
  *
- * @see http://getbootstrap.com/css/#forms-control-validation
+ * @see https://getbootstrap.com/docs/4.0/components/forms/#validation
  */
 
+.is-valid {
+  @include validation-state-focus($s2bs-state-success-text);
+}
+
+.is-invalid {
+  @include validation-state-focus($s2bs-state-danger-text);
+}
+
+/* Validation classes on parent element. Preserved Bootstrap 3 validation classes */
+
 .has-warning {
-  @include validation-state-focus($state-warning-text);
+  @include validation-state-focus($s2bs-state-warning-text);
 }
 
 .has-error {
-  @include validation-state-focus($state-danger-text);
+  @include validation-state-focus($s2bs-state-danger-text);
 }
 
 .has-success {
-  @include validation-state-focus($state-success-text);
+  @include validation-state-focus($s2bs-state-success-text);
 }
 
 /**
  * Select2 widgets in Bootstrap Input Groups
  *
- * @see http://getbootstrap.com/components/#input-groups
- * @see https://github.com/twbs/bootstrap/blob/master/less/input-groups.less
+ * @see https://getbootstrap.com/docs/4.0/components/input-group/
+ * @see https://github.com/twbs/bootstrap/blob/v4.4.1/scss/_input-group.scss
  */
 
 /**
@@ -747,32 +808,31 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
  */
 
 .input-group > .select2-hidden-accessible {
-  &:first-child + .select2-container--bootstrap > .selection > .select2-selection,
-  &:first-child + .select2-container--bootstrap > .selection > .select2-selection.form-control {
-    @include border-right-radius(0);
-  }
-
-  &:not(:first-child) + .select2-container--bootstrap:not(:last-child) > .selection > .select2-selection,
-  &:not(:first-child) + .select2-container--bootstrap:not(:last-child) > .selection > .select2-selection.form-control {
-    border-radius: 0;
-  }
-
-  &:not(:first-child):not(:last-child) + .select2-container--bootstrap:last-child > .selection > .select2-selection,
-  &:not(:first-child):not(:last-child) + .select2-container--bootstrap:last-child > .selection > .select2-selection.form-control {
+  &:not(:first-child) + .select2-container--bootstrap > .selection > .select2-selection,
+  &:not(:first-child) + .select2-container--bootstrap > .selection > .select2-selection.form-control {
     @include border-left-radius(0);
+  }
+
+  + .select2-container--bootstrap:not(:last-child) > .selection > .select2-selection,
+  + .select2-container--bootstrap:not(:last-child) > .selection > .select2-selection.form-control {
+    @include border-right-radius(0);
   }
 }
 
 .input-group > .select2-container--bootstrap {
-  display: table;
-  table-layout: fixed;
+  flex: 1 1 auto;
   position: relative;
   z-index: 2;
-  width: 100%;
+  width: 1%;
   margin-bottom: 0;
 
-  > .selection > .select2-selection.form-control {
-    float: none;
+  > .selection {
+    display: flex;
+    flex: 1 1 auto;
+
+    > .select2-selection.form-control {
+      float: none;
+    }
   }
 
   /**
@@ -790,12 +850,14 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
    * Multi Select2's height which - depending on how many elements have been selected -
    * may grow taller than its initial size.
    *
-   * @see http://getbootstrap.com/components/#input-groups
+   * @see https://github.com/twbs/bootstrap/blob/v4.4.1/scss/_input-group.scss
    */
 
   &,
-  .input-group-btn,
-  .input-group-btn .btn {
+  .input-group-append,
+  .input-group-prepend,
+  .input-group-append .btn,
+  .input-group-prepend .btn {
     vertical-align: top;
   }
 }
@@ -820,7 +882,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
  */
 
 .form-inline .select2-container--bootstrap {
-  @media (min-width: $screen-sm-min) {
+  @include media-breakpoint-up(sm) {
     display: inline-block;
   }
 }

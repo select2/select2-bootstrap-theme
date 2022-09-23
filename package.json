@@ -1,54 +1,53 @@
 {
-  "name": "select2-bootstrap-theme",
-  "version": "0.1.0-beta.10",
-  "description": "A theme for Select2 v4 and Bootstrap 3.",
+  "name": "select2-theme-bootstrap4",
+  "version": "1.0.2",
+  "description": "A theme for Select2 v4 and Bootstrap 4.",
   "main": "",
-  "style": "select2-bootstrap.css",
-  "homepage": "https://select2.github.io/select2-bootstrap-theme",
+  "style": "dist/select2-bootstrap.css",
+  "homepage": "https://angel-vladov.github.io/select2-theme-bootstrap4",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "test": "grunt nodeunit"
+    "test": "grunt nodeunit",
+    "build": "grunt build",
+    "serve": "grunt serve"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/select2/select2-bootstrap-theme.git"
+    "url": "git@github.com:angel-vladov/select2-theme-bootstrap4.git"
   },
   "bugs": {
-    "url": "https://github.com/select2/select2-bootstrap-theme/issues"
+    "url": "https://github.com/angel-vladov/select2-theme-bootstrap4/issues"
   },
   "keywords": [
     "bootstrap",
     "select2",
     "css",
-    "sass",
-    "less"
+    "sass"
   ],
-  "author": "Florian Kissling",
+  "author": "Angel Vladov",
   "license": "MIT",
   "readmeFilename": "README.md",
   "devDependencies": {
     "Respond.js": "github:scottjehl/Respond#1.4.2",
     "anchor-js": "^3.2.1",
     "autoprefixer": "^6.4.0",
-    "bootstrap": "^3.3.7",
-    "bootstrap-sass": "^3.3.7",
+    "bootstrap": "^4.0.0",
     "diff": "^2.2.3",
-    "grunt": "^1.0.1",
+    "grunt": "^1.0.2",
     "grunt-browser-sync": "^2.2.0",
     "grunt-bump": "^0.8.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^1.0.1",
     "grunt-contrib-jshint": "^1.0.0",
-    "grunt-contrib-less": "^1.4.0",
     "grunt-contrib-nodeunit": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-gh-pages": "^1.2.0",
-    "grunt-jekyll": "^0.4.4",
+    "grunt-jekyll": "^0.4.7",
     "grunt-postcss": "^0.8.0",
-    "grunt-sass": "^2.0.0",
-    "grunt-scss2less": "0.0.1",
+    "grunt-sass": "^2.1.0",
+    "grunt-sass-tilde-importer": "^1.0.2",
     "grunt-stamp": "^0.3.0",
     "matchdep": "^1.0.1"
   }

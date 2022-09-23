@@ -1,3 +1,5 @@
+const tildeImporter = require('grunt-sass-tilde-importer');
+
 module.exports = function(grunt) {
   // Load all grunt tasks.
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
@@ -11,6 +13,7 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
+        importer: tildeImporter,
         outputStyle: 'expanded',
         sourcemap: 'none',
         // Increase Sass' number "precision" to 8 to match Less output.
@@ -175,32 +178,13 @@ module.exports = function(grunt) {
       }
     },
 
-    scss2less: {
-      convert: {
-        files: [{
-          src: 'src/select2-bootstrap.scss',
-          dest: 'src/select2-bootstrap.less'
-        }]
-      }
-    },
-
-    // Only used to generate CSS for the tests.
-    less: {
-      test: {
-        options: {
-          sourceMap: false
-        },
-        src: 'src/build.less',
-        dest: 'tmp/select2-bootstrap.css'
-      }
-    },
-
     stamp: {
       options: {
         banner: '/*!\n' +
-                ' * Select2 Bootstrap Theme v<%= package.version %> (<%= package.homepage %>)\n' +
-                ' * Copyright 2015-<%= grunt.template.today("yyyy") %> <%= package.author %> and contributors (https://github.com/select2/select2-bootstrap-theme/graphs/contributors)\n' +
-                ' * Licensed under MIT (https://github.com/select2/select2-bootstrap-theme/blob/master/LICENSE)\n' +
+                ' * Select2 Bootstrap 4 Theme v<%= package.version %> (<%= package.homepage %>)\n' +
+                ' * Copyright 2018-<%= grunt.template.today("yyyy") %> <%= package.author %> and contributors (https://github.com/angel-vladov/select2-theme-bootstrap5/graphs/contributors)\n' +
+                ' * Based on the original select2/select2-bootstrap-theme theme by Florian Kissling and contributors (https://github.com/select2/select2-bootstrap-theme/graphs/contributors)\n' +
+                ' * Licensed under MIT (https://github.com/angel-vladov/select2-theme-bootstrap4/blob/master/LICENSE)\n' +
                 ' */\n'
       },
       dist: {

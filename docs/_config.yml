@@ -3,6 +3,12 @@ versions:
   - 4.0.1
   - 4.0.2
   - 4.0.3
+  - 4.0.4
+  - 4.0.5
+  - 4.0.10
+  - 4.0.11
+  - 4.0.12
+  - 4.0.13
 
 title:
-  select2-bootstrap-theme
+  select2-theme-bootstrap4
